@@ -1,0 +1,20 @@
+# Ambiente Virtual
+venv/
+.venv/
+env/
+
+# python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# variaveis de ambiente
+.env
+
+# Editor / SO
+.vscode/
+.ideia/
+.DS_Store
+
+# logs
+*.log
