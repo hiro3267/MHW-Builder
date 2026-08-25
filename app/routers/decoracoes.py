@@ -1,4 +1,5 @@
 import json
+from functools import lru_cache
 from pathlib import Path
 
 from fastapi import APIRouter, Request
@@ -11,7 +12,7 @@ templates = Jinja2Templates(directory="app/templates")
 
 DATA_PATH = Path("app/data/decoracoes.json")
 
-
+@lru_cache
 def carregar_decoracoes() -> list[Decoracao]:
     with open(DATA_PATH, encoding="utf-8") as f:
         dados = json.load(f)
