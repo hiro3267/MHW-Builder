@@ -1,1 +1,3834 @@
-[]
+[
+  {
+    "id": "234-1",
+    "nome": "Poison Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Poison Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "234-2",
+    "nome": "Poison Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Poison Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "234-3",
+    "nome": "Poison Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Poison Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "235-1",
+    "nome": "Attack Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "235-2",
+    "nome": "Attack Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "235-3",
+    "nome": "Attack Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "235-4",
+    "nome": "Attack Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "235-5",
+    "nome": "Attack Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "236-1",
+    "nome": "Defense Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Defense Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "236-2",
+    "nome": "Defense Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Defense Boost",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "236-3",
+    "nome": "Defense Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Defense Boost",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "236-4",
+    "nome": "Defense Charm 4",
+    "nivel": 4,
+    "raridade": 9,
+    "skills": [
+      {
+        "nome": "Defense Boost",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "236-5",
+    "nome": "Defense Charm 5",
+    "nivel": 5,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Defense Boost",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "237-1",
+    "nome": "Paralysis Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Paralysis Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "237-2",
+    "nome": "Paralysis Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Paralysis Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "237-3",
+    "nome": "Paralysis Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Paralysis Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "238-1",
+    "nome": "Sleep Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Sleep Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "238-2",
+    "nome": "Sleep Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Sleep Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "238-3",
+    "nome": "Sleep Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Sleep Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "239-1",
+    "nome": "Stun Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Stun Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "239-2",
+    "nome": "Stun Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Stun Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "239-3",
+    "nome": "Stun Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Stun Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "240-1",
+    "nome": "Windproof Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "240-2",
+    "nome": "Windproof Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "240-3",
+    "nome": "Windproof Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "240-4",
+    "nome": "Windproof Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "240-5",
+    "nome": "Windproof Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "241-1",
+    "nome": "Health Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "241-2",
+    "nome": "Health Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "241-3",
+    "nome": "Health Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "242-1",
+    "nome": "Recovery Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "242-2",
+    "nome": "Recovery Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "242-3",
+    "nome": "Recovery Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "243-1",
+    "nome": "Fire Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Fire Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "243-2",
+    "nome": "Fire Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Fire Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "243-3",
+    "nome": "Fire Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Fire Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "244-1",
+    "nome": "Water Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Water Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "244-2",
+    "nome": "Water Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Water Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "244-3",
+    "nome": "Water Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Water Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "245-1",
+    "nome": "Thunder Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Thunder Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "245-2",
+    "nome": "Thunder Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Thunder Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "245-3",
+    "nome": "Thunder Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Thunder Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "246-1",
+    "nome": "Blaze Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Fire Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "246-2",
+    "nome": "Blaze Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Fire Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "246-3",
+    "nome": "Blaze Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Fire Attack",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "246-4",
+    "nome": "Blaze Charm 4",
+    "nivel": 4,
+    "raridade": 10,
+    "skills": [
+      {
+        "nome": "Fire Attack",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "246-5",
+    "nome": "Blaze Charm 5",
+    "nivel": 5,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Fire Attack",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "247-1",
+    "nome": "Flood Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Water Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "247-2",
+    "nome": "Flood Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Water Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "247-3",
+    "nome": "Flood Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Water Attack",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "247-4",
+    "nome": "Flood Charm 4",
+    "nivel": 4,
+    "raridade": 10,
+    "skills": [
+      {
+        "nome": "Water Attack",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "247-5",
+    "nome": "Flood Charm 5",
+    "nivel": 5,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Water Attack",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "248-1",
+    "nome": "Shock Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Thunder Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "248-2",
+    "nome": "Shock Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Thunder Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "248-3",
+    "nome": "Shock Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Thunder Attack",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "248-4",
+    "nome": "Shock Charm 4",
+    "nivel": 4,
+    "raridade": 10,
+    "skills": [
+      {
+        "nome": "Thunder Attack",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "248-5",
+    "nome": "Shock Charm 5",
+    "nivel": 5,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Thunder Attack",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "249-1",
+    "nome": "Venom Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Poison Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "249-2",
+    "nome": "Venom Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Poison Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "249-3",
+    "nome": "Venom Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Poison Attack",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "249-4",
+    "nome": "Venom Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Poison Attack",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "250-1",
+    "nome": "Immobilize Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Paralysis Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "250-2",
+    "nome": "Immobilize Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Paralysis Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "250-3",
+    "nome": "Immobilize Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Paralysis Attack",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "250-4",
+    "nome": "Immobilize Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Paralysis Attack",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "251-1",
+    "nome": "Tranq Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Sleep Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "251-2",
+    "nome": "Tranq Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Sleep Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "251-3",
+    "nome": "Tranq Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Sleep Attack",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "251-4",
+    "nome": "Tranq Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Sleep Attack",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "252-1",
+    "nome": "KO Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Slugger",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "252-2",
+    "nome": "KO Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Slugger",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "252-3",
+    "nome": "KO Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Slugger",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "253-1",
+    "nome": "Enervate Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Stamina Thief",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "253-2",
+    "nome": "Enervate Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Stamina Thief",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "253-3",
+    "nome": "Enervate Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Stamina Thief",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "254-1",
+    "nome": "Artillery Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Artillery",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "254-2",
+    "nome": "Artillery Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Artillery",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "254-3",
+    "nome": "Artillery Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Artillery",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "255-1",
+    "nome": "Hungerless Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Hunger Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "255-2",
+    "nome": "Hungerless Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Hunger Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "255-3",
+    "nome": "Hungerless Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Hunger Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "256-1",
+    "nome": "Ironside Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "256-2",
+    "nome": "Ironside Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Guard",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "256-3",
+    "nome": "Ironside Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Guard",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "256-4",
+    "nome": "Ironside Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Guard",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "256-5",
+    "nome": "Ironside Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Guard",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "257-1",
+    "nome": "Friendship Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Wide-Range",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "257-2",
+    "nome": "Friendship Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Wide-Range",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "257-3",
+    "nome": "Friendship Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Wide-Range",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "257-4",
+    "nome": "Friendship Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Wide-Range",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "257-5",
+    "nome": "Friendship Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Wide-Range",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "258-1",
+    "nome": "Extension Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Item Prolonger",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "258-2",
+    "nome": "Extension Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Item Prolonger",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "258-3",
+    "nome": "Extension Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Item Prolonger",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "259-1",
+    "nome": "Glutton's Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Speed Eating",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "259-2",
+    "nome": "Glutton's Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Speed Eating",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "259-3",
+    "nome": "Glutton's Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Speed Eating",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "260-1",
+    "nome": "Blessing Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "260-2",
+    "nome": "Blessing Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Divine Blessing",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "260-3",
+    "nome": "Blessing Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Divine Blessing",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "261-1",
+    "nome": "Rally Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Palico Rally",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "261-2",
+    "nome": "Rally Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Palico Rally",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "261-3",
+    "nome": "Rally Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Palico Rally",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "261-4",
+    "nome": "Rally Charm 4",
+    "nivel": 4,
+    "raridade": 9,
+    "skills": [
+      {
+        "nome": "Palico Rally",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "261-5",
+    "nome": "Rally Charm 5",
+    "nivel": 5,
+    "raridade": 10,
+    "skills": [
+      {
+        "nome": "Palico Rally",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "262-1",
+    "nome": "Botany Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Botanist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "262-2",
+    "nome": "Botany Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Botanist",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "262-3",
+    "nome": "Botany Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Botanist",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "262-4",
+    "nome": "Botany Charm 4",
+    "nivel": 4,
+    "raridade": 9,
+    "skills": [
+      {
+        "nome": "Botanist",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "263-1",
+    "nome": "Geology Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Geologist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "263-2",
+    "nome": "Geology Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Geologist",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "263-3",
+    "nome": "Geology Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Geologist",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "264-1",
+    "nome": "Slinger Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Slinger Capacity",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "264-2",
+    "nome": "Slinger Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Slinger Capacity",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "264-3",
+    "nome": "Slinger Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Slinger Capacity",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "265-1",
+    "nome": "Stealth Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Stealth",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "265-2",
+    "nome": "Stealth Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Stealth",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "265-3",
+    "nome": "Stealth Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Stealth",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "266-1",
+    "nome": "Smoke Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Survival Expert",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "266-2",
+    "nome": "Smoke Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Survival Expert",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "266-3",
+    "nome": "Smoke Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Survival Expert",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "267-1",
+    "nome": "Mirewalker Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Aquatic/Polar Mobility",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "267-2",
+    "nome": "Mirewalker Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Aquatic/Polar Mobility",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "267-3",
+    "nome": "Mirewalker Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Aquatic/Polar Mobility",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "268-1",
+    "nome": "Insect Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Entomologist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "268-2",
+    "nome": "Insect Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Entomologist",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "268-3",
+    "nome": "Insect Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Entomologist",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "269-1",
+    "nome": "Intimidator Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Intimidator",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "269-2",
+    "nome": "Intimidator Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Intimidator",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "269-3",
+    "nome": "Intimidator Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Intimidator",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "270-1",
+    "nome": "Heavy Artillery Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Heavy Artillery",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "270-2",
+    "nome": "Heavy Artillery Charm 2",
+    "nivel": 2,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Heavy Artillery",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "271-1",
+    "nome": "Light Eater's Charm",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Free Meal",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "272-1",
+    "nome": "Tracker Charm",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Scenthound",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "273-1",
+    "nome": "Fortification Charm",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Fortify",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "274-1",
+    "nome": "Performer's Charm",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Horn Maestro",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "274-2",
+    "nome": "Performer's Charm 2",
+    "nivel": 2,
+    "raridade": 9,
+    "skills": [
+      {
+        "nome": "Horn Maestro",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "275-1",
+    "nome": "Capacity Charm",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Capacity Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "276-1",
+    "nome": "Bleed Charm 1",
+    "nivel": 1,
+    "raridade": 4,
+    "skills": [
+      {
+        "nome": "Bleeding Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "276-2",
+    "nome": "Bleed Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Bleeding Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "276-3",
+    "nome": "Bleed Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Bleeding Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "277-1",
+    "nome": "Speed Heal Charm 1",
+    "nivel": 1,
+    "raridade": 4,
+    "skills": [
+      {
+        "nome": "Recovery Speed",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "277-2",
+    "nome": "Speed Heal Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Recovery Speed",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "277-3",
+    "nome": "Speed Heal Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Recovery Speed",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "278-1",
+    "nome": "Ice Charm 1",
+    "nivel": 1,
+    "raridade": 4,
+    "skills": [
+      {
+        "nome": "Ice Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "278-2",
+    "nome": "Ice Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Ice Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "278-3",
+    "nome": "Ice Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Ice Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "279-1",
+    "nome": "Blight Charm 1",
+    "nivel": 1,
+    "raridade": 4,
+    "skills": [
+      {
+        "nome": "Blight Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "279-2",
+    "nome": "Blight Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Blight Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "279-3",
+    "nome": "Blight Charm 3",
+    "nivel": 3,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Blight Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "280-1",
+    "nome": "Frost Charm 1",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Ice Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "280-2",
+    "nome": "Frost Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Ice Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "280-3",
+    "nome": "Frost Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Ice Attack",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "280-4",
+    "nome": "Frost Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Ice Attack",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "280-5",
+    "nome": "Frost Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Ice Attack",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "281-1",
+    "nome": "Master's Charm 1",
+    "nivel": 1,
+    "raridade": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "281-2",
+    "nome": "Master's Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "281-3",
+    "nome": "Master's Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "281-4",
+    "nome": "Master's Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "281-5",
+    "nome": "Master's Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "282-1",
+    "nome": "Evasion Charm 1",
+    "nivel": 1,
+    "raridade": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "282-2",
+    "nome": "Evasion Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "282-3",
+    "nome": "Evasion Charm 3",
+    "nivel": 3,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "282-4",
+    "nome": "Evasion Charm 4",
+    "nivel": 4,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "282-5",
+    "nome": "Evasion Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "283-1",
+    "nome": "Sheath Charm 1",
+    "nivel": 1,
+    "raridade": 4,
+    "skills": [
+      {
+        "nome": "Quick Sheath",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "283-2",
+    "nome": "Sheath Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Quick Sheath",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "283-3",
+    "nome": "Sheath Charm 3",
+    "nivel": 3,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Quick Sheath",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "284-1",
+    "nome": "Whetstone Charm 1",
+    "nivel": 1,
+    "raridade": 4,
+    "skills": [
+      {
+        "nome": "Speed Sharpening",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "284-2",
+    "nome": "Whetstone Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Speed Sharpening",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "284-3",
+    "nome": "Whetstone Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Speed Sharpening",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "285-1",
+    "nome": "Blast Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Blast Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "285-2",
+    "nome": "Blast Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Blast Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "285-3",
+    "nome": "Blast Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Blast Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "286-1",
+    "nome": "Dragon Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Dragon Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "286-2",
+    "nome": "Dragon Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Dragon Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "286-3",
+    "nome": "Dragon Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Dragon Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "287-1",
+    "nome": "Wyrmsbane Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Dragon Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "287-2",
+    "nome": "Wyrmsbane Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Dragon Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "287-3",
+    "nome": "Wyrmsbane Charm 3",
+    "nivel": 3,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Dragon Attack",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "287-4",
+    "nome": "Wyrmsbane Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Dragon Attack",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "287-5",
+    "nome": "Wyrmsbane Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Dragon Attack",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "288-1",
+    "nome": "Demolition Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Blast Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "288-2",
+    "nome": "Demolition Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Blast Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "288-3",
+    "nome": "Demolition Charm 3",
+    "nivel": 3,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Blast Attack",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "288-4",
+    "nome": "Demolition Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Blast Attack",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "289-1",
+    "nome": "Draw Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Critical Draw",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "289-2",
+    "nome": "Draw Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Critical Draw",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "289-3",
+    "nome": "Draw Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Critical Draw",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "290-1",
+    "nome": "Trickshot Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Dungmaster",
+        "nivel": 1
+      },
+      {
+        "nome": "Blindsider",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "291-1",
+    "nome": "Marathon Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Marathon Runner",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "291-2",
+    "nome": "Marathon Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Marathon Runner",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "291-3",
+    "nome": "Marathon Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Marathon Runner",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "292-1",
+    "nome": "Fitness Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "292-2",
+    "nome": "Fitness Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "292-3",
+    "nome": "Fitness Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "292-4",
+    "nome": "Fitness Charm 4",
+    "nivel": 4,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "292-5",
+    "nome": "Fitness Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "293-1",
+    "nome": "Surge Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Stamina Surge",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "293-2",
+    "nome": "Surge Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Stamina Surge",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "293-3",
+    "nome": "Surge Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Stamina Surge",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "294-1",
+    "nome": "Leaping Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Evade Extender",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "294-2",
+    "nome": "Leaping Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Evade Extender",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "294-3",
+    "nome": "Leaping Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Evade Extender",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "295-1",
+    "nome": "Bombardier Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Bombardier",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "295-2",
+    "nome": "Bombardier Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Bombardier",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "295-3",
+    "nome": "Bombardier Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Bombardier",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "296-1",
+    "nome": "Mushroom Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Mushroomancer",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "296-2",
+    "nome": "Mushroom Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Mushroomancer",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "296-3",
+    "nome": "Mushroom Charm 3",
+    "nivel": 3,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Mushroomancer",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "297-1",
+    "nome": "Awakening Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "297-2",
+    "nome": "Awakening Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "297-3",
+    "nome": "Awakening Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "298-1",
+    "nome": "Handicraft Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "298-2",
+    "nome": "Handicraft Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "298-3",
+    "nome": "Handicraft Charm 3",
+    "nivel": 3,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "298-4",
+    "nome": "Handicraft Charm 4",
+    "nivel": 4,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "298-5",
+    "nome": "Handicraft Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "299-1",
+    "nome": "Mud Puppy Charm",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Muck Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Leap of Faith",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "300-1",
+    "nome": "Hunter's Life Charm",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Master Fisher",
+        "nivel": 1
+      },
+      {
+        "nome": "BBQ Master",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "301-1",
+    "nome": "Procurer's Charm",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Pro Transporter",
+        "nivel": 1
+      },
+      {
+        "nome": "Honey Hunter",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "302-1",
+    "nome": "Gatherer's Charm",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Master Gatherer",
+        "nivel": 1
+      },
+      {
+        "nome": "Carving Pro",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "303-1",
+    "nome": "Guard Charm 1",
+    "nivel": 1,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Iron Skin",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "303-2",
+    "nome": "Guard Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Iron Skin",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "303-3",
+    "nome": "Guard Charm 3",
+    "nivel": 3,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Iron Skin",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "304-1",
+    "nome": "Earplugs Charm 1",
+    "nivel": 1,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "304-2",
+    "nome": "Earplugs Charm 2",
+    "nivel": 2,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "304-3",
+    "nome": "Earplugs Charm 3",
+    "nivel": 3,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "304-4",
+    "nome": "Earplugs Charm 4",
+    "nivel": 4,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "304-5",
+    "nome": "Earplugs Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "305-1",
+    "nome": "Tremor Charm 1",
+    "nivel": 1,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Tremor Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "305-2",
+    "nome": "Tremor Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Tremor Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "305-3",
+    "nome": "Tremor Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Tremor Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "306-1",
+    "nome": "Exploiter Charm 1",
+    "nivel": 1,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Weakness Exploit",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "306-2",
+    "nome": "Exploiter Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Weakness Exploit",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "306-3",
+    "nome": "Exploiter Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Weakness Exploit",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "307-1",
+    "nome": "Focus Charm 1",
+    "nivel": 1,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Focus",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "307-2",
+    "nome": "Focus Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Focus",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "307-3",
+    "nome": "Focus Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Focus",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "308-1",
+    "nome": "Breaker Charm 1",
+    "nivel": 1,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Partbreaker",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "308-2",
+    "nome": "Breaker Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Partbreaker",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "308-3",
+    "nome": "Breaker Charm 3",
+    "nivel": 3,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Partbreaker",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "309-1",
+    "nome": "Fury Charm 1",
+    "nivel": 1,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "309-2",
+    "nome": "Fury Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "309-3",
+    "nome": "Fury Charm 3",
+    "nivel": 3,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "309-4",
+    "nome": "Fury Charm 4",
+    "nivel": 4,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "309-5",
+    "nome": "Fury Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "310-1",
+    "nome": "Grit Charm 1",
+    "nivel": 1,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "310-2",
+    "nome": "Grit Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "310-3",
+    "nome": "Grit Charm 3",
+    "nivel": 3,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "310-4",
+    "nome": "Grit Charm 4",
+    "nivel": 4,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "310-5",
+    "nome": "Grit Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "311-1",
+    "nome": "Maintenance Charm 1",
+    "nivel": 1,
+    "raridade": 6,
+    "skills": [
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "311-2",
+    "nome": "Maintenance Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Tool Specialist",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "311-3",
+    "nome": "Maintenance Charm 3",
+    "nivel": 3,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Tool Specialist",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "312-1",
+    "nome": "Power Charm 1",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "312-2",
+    "nome": "Power Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "312-3",
+    "nome": "Power Charm 3",
+    "nivel": 3,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "312-4",
+    "nome": "Power Charm 4",
+    "nivel": 4,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "312-5",
+    "nome": "Power Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "313-1",
+    "nome": "Challenger Charm 1",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "313-2",
+    "nome": "Challenger Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "313-3",
+    "nome": "Challenger Charm 3",
+    "nivel": 3,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "313-4",
+    "nome": "Challenger Charm 4",
+    "nivel": 4,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "313-5",
+    "nome": "Challenger Charm 5",
+    "nivel": 5,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 5
+      }
+    ]
+  },
+  {
+    "id": "314-1",
+    "nome": "Unscathed Charm 1",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Peak Performance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "314-2",
+    "nome": "Unscathed Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Peak Performance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "314-3",
+    "nome": "Unscathed Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Peak Performance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "315-1",
+    "nome": "Mighty Charm 1",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Maximum Might",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "315-2",
+    "nome": "Mighty Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Maximum Might",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "315-3",
+    "nome": "Mighty Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Maximum Might",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "316-1",
+    "nome": "Impact Charm 1",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Flinch Free",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "316-2",
+    "nome": "Impact Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Flinch Free",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "316-3",
+    "nome": "Impact Charm 3",
+    "nivel": 3,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Flinch Free",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "317-1",
+    "nome": "Miasma Charm 1",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Effluvia Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "317-2",
+    "nome": "Miasma Charm 2",
+    "nivel": 2,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Effluvia Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "317-3",
+    "nome": "Miasma Charm 3",
+    "nivel": 3,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Effluvia Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "318-1",
+    "nome": "Normal Shots Charm",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Normal Shots",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "318-2",
+    "nome": "Normal Shots Charm 2",
+    "nivel": 2,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Normal Shots",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "319-1",
+    "nome": "Clearmind Charm",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Effluvial Expert",
+        "nivel": 1
+      },
+      {
+        "nome": "Heat Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "320-1",
+    "nome": "Rider's Charm",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Master Mounter",
+        "nivel": 1
+      },
+      {
+        "nome": "Jump Master",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "321-1",
+    "nome": "Surveyor's Charm",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Scoutfly Range Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Scholar",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "322-1",
+    "nome": "Critical Charm 1",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Critical Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "322-2",
+    "nome": "Critical Charm 2",
+    "nivel": 2,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Critical Boost",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "322-3",
+    "nome": "Critical Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Critical Boost",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "323-1",
+    "nome": "Invigorate Charm 1",
+    "nivel": 1,
+    "raridade": 7,
+    "skills": [
+      {
+        "nome": "Power Prolonger",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "323-2",
+    "nome": "Invigorate Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Power Prolonger",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "323-3",
+    "nome": "Invigorate Charm 3",
+    "nivel": 3,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Power Prolonger",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "324-1",
+    "nome": "Penetration Charm",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Piercing Shots",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "324-2",
+    "nome": "Penetration Charm 2",
+    "nivel": 2,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Piercing Shots",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "325-1",
+    "nome": "Dispersal Charm",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Spread/Power Shots",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "325-2",
+    "nome": "Dispersal Charm 2",
+    "nivel": 2,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Spread/Power Shots",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "326-1",
+    "nome": "Poison Coating Charm",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Poison Functionality",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "327-1",
+    "nome": "Para Coating Charm",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Para Functionality",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "328-1",
+    "nome": "Sleep Coating Charm",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Sleep Functionality",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "329-1",
+    "nome": "Blast Coating Charm",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Blast Functionality",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "330-1",
+    "nome": "Geomancy Charm",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Forager's Luck",
+        "nivel": 1
+      },
+      {
+        "nome": "Detector",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "331-1",
+    "nome": "Gale Charm",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Airborne",
+        "nivel": 1
+      },
+      {
+        "nome": "Affinity Sliding",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "332-1",
+    "nome": "Wyrmslayer Charm",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Dragon Attack",
+        "nivel": 1
+      },
+      {
+        "nome": "Elderseal Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "333-1",
+    "nome": "Bulwark Charm",
+    "nivel": 1,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Resuscitate",
+        "nivel": 1
+      },
+      {
+        "nome": "Guard Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "334-1",
+    "nome": "Fair Wind Charm",
+    "nivel": 1,
+    "raridade": 3,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "335-1",
+    "nome": "Special Shot Charm 1",
+    "nivel": 1,
+    "raridade": 5,
+    "skills": [
+      {
+        "nome": "Special Ammo Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "335-2",
+    "nome": "Special Shot Charm 2",
+    "nivel": 2,
+    "raridade": 8,
+    "skills": [
+      {
+        "nome": "Special Ammo Boost",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "336-1",
+    "nome": "Guardian Charm 1",
+    "nivel": 1,
+    "raridade": 9,
+    "skills": [
+      {
+        "nome": "Offensive Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "336-2",
+    "nome": "Guardian Charm 2",
+    "nivel": 2,
+    "raridade": 10,
+    "skills": [
+      {
+        "nome": "Offensive Guard",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "336-3",
+    "nome": "Guardian Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Offensive Guard",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "337-1",
+    "nome": "Phoenix Charm 1",
+    "nivel": 1,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Coalescence",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "337-2",
+    "nome": "Phoenix Charm 2",
+    "nivel": 2,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Coalescence",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "337-3",
+    "nome": "Phoenix Charm 3",
+    "nivel": 3,
+    "raridade": 12,
+    "skills": [
+      {
+        "nome": "Coalescence",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "338-1",
+    "nome": "Adamantine Charm 1",
+    "nivel": 1,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Bludgeoner",
+        "nivel": 1
+      },
+      {
+        "nome": "Non-elemental Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "339-1",
+    "nome": "Sealer's Charm 1",
+    "nivel": 1,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Adrenaline",
+        "nivel": 1
+      },
+      {
+        "nome": "Elderseal Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "340-1",
+    "nome": "Razor Sharp Charm 1",
+    "nivel": 1,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Razor Sharp/Spare Shot",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "341-1",
+    "nome": "Gutsy Charm 1",
+    "nivel": 1,
+    "raridade": 11,
+    "skills": [
+      {
+        "nome": "Guts",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "342-1",
+    "nome": "Shaver Charm 1",
+    "nivel": 1,
+    "raridade": 9,
+    "skills": [
+      {
+        "nome": "Cliffhanger",
+        "nivel": 1
+      },
+      {
+        "nome": "Clutch Claw Boost",
+        "nivel": 1
+      }
+    ]
+  }
+]

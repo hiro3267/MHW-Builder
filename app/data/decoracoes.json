@@ -1,1 +1,5798 @@
-[]
+[
+  {
+    "id": "1",
+    "nome": "Antidote Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Poison Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "nome": "Geology Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Geologist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "nome": "Heavy Artillery Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Heavy Artillery",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "nome": "Hungerless Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Hunger Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "nome": "Satiated Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Free Meal",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "nome": "Protection Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "7",
+    "nome": "Meowster Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Palico Rally",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "8",
+    "nome": "Botany Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Botanist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "nome": "Tip Toe Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Stealth",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "nome": "Flight Jewel 2",
+    "raridade": 5,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Airborne",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "nome": "Smoke Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Survival Expert",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "nome": "Mirewalker Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Aquatic/Polar Mobility",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "nome": "Specimen Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Entomologist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "14",
+    "nome": "Miasma Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Effluvia Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "nome": "Scent Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Scenthound",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "nome": "Intimidator Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Intimidator",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "17",
+    "nome": "Crisis Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Resuscitate",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "nome": "Antipara Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Paralysis Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "19",
+    "nome": "Fortitude Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Fortify",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "20",
+    "nome": "Water Res Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Water Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "21",
+    "nome": "Suture Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Bleeding Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "22",
+    "nome": "Dragon Res Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Dragon Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "23",
+    "nome": "Fire Res Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Fire Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "24",
+    "nome": "Ice Res Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Ice Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "25",
+    "nome": "Def Lock Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Iron Skin",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "26",
+    "nome": "Thunder Res Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Thunder Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "27",
+    "nome": "Pep Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Sleep Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "28",
+    "nome": "Antiblast Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Blast Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "29",
+    "nome": "Gobbler Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Speed Eating",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "30",
+    "nome": "Physique Jewel 2",
+    "raridade": 6,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "31",
+    "nome": "Blaze Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Fire Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "32",
+    "nome": "Evasion Jewel 2",
+    "raridade": 6,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "33",
+    "nome": "Jumping Jewel 2",
+    "raridade": 6,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Evade Extender",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "34",
+    "nome": "Sheath Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Quick Sheath",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "35",
+    "nome": "Friendship Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Wide-Range",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "36",
+    "nome": "Enduring Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Item Prolonger",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "37",
+    "nome": "Medicine Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "38",
+    "nome": "Grinder Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Speed Sharpening",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "39",
+    "nome": "Steadfast Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Stun Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "40",
+    "nome": "Bomber Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Bombardier",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "41",
+    "nome": "Recovery Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Recovery Speed",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "42",
+    "nome": "Slider Jewel 2",
+    "raridade": 6,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Affinity Sliding",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "43",
+    "nome": "Defense Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Defense Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "44",
+    "nome": "Stonethrower Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Slinger Capacity",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "45",
+    "nome": "Footing Jewel 2",
+    "raridade": 6,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Tremor Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "46",
+    "nome": "Brace Jewel 3",
+    "raridade": 6,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Flinch Free",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "47",
+    "nome": "Wind Resist Jewel 2",
+    "raridade": 6,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "48",
+    "nome": "Earplug Jewel 3",
+    "raridade": 6,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "49",
+    "nome": "Vitality Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "50",
+    "nome": "Resistor Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Blight Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "51",
+    "nome": "Sonorous Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Horn Maestro",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "52",
+    "nome": "KO Jewel 2",
+    "raridade": 6,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Slugger",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "53",
+    "nome": "Stream Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Water Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "54",
+    "nome": "Frost Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Ice Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "55",
+    "nome": "Bolt Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Thunder Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "56",
+    "nome": "Dragon Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Dragon Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "57",
+    "nome": "Venom Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Poison Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "58",
+    "nome": "Poisoncoat Jewel 3",
+    "raridade": 6,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Poison Functionality",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "59",
+    "nome": "Expert Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "60",
+    "nome": "Tenderizer Jewel 2",
+    "raridade": 6,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Weakness Exploit",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "61",
+    "nome": "Destroyer Jewel 2",
+    "raridade": 6,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Partbreaker",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "62",
+    "nome": "Elementless Jewel 2",
+    "raridade": 6,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Non-elemental Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "63",
+    "nome": "Drain Jewel 1",
+    "raridade": 6,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Stamina Thief",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "64",
+    "nome": "Paracoat Jewel 3",
+    "raridade": 7,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Para Functionality",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "65",
+    "nome": "Sharp Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Protective Polish",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "66",
+    "nome": "Shield Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Guard Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "67",
+    "nome": "Dragonseal Jewel 3",
+    "raridade": 7,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Elderseal Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "68",
+    "nome": "Trueshot Jewel 1",
+    "raridade": 7,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Special Ammo Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "69",
+    "nome": "Enhancer Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Power Prolonger",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "70",
+    "nome": "Forceshot Jewel 3",
+    "raridade": 7,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Normal Shots",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "71",
+    "nome": "Furor Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "72",
+    "nome": "Potential Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "73",
+    "nome": "Paralyzer Jewel 1",
+    "raridade": 7,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Paralysis Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "74",
+    "nome": "Sleep Jewel 1",
+    "raridade": 7,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Sleep Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "75",
+    "nome": "Ironwall Jewel 1",
+    "raridade": 7,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "76",
+    "nome": "Refresh Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Stamina Surge",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "77",
+    "nome": "Blast Jewel 1",
+    "raridade": 7,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Blast Attack",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "78",
+    "nome": "Sleepcoat Jewel 3",
+    "raridade": 7,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Sleep Functionality",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "79",
+    "nome": "Blastcoat Jewel 3",
+    "raridade": 7,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Blast Functionality",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "80",
+    "nome": "Throttle Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "81",
+    "nome": "Challenger Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "82",
+    "nome": "Attack Jewel 1",
+    "raridade": 7,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "83",
+    "nome": "Flawless Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Peak Performance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "84",
+    "nome": "Magazine Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Capacity Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "85",
+    "nome": "Mighty Jewel 2",
+    "raridade": 7,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Maximum Might",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "86",
+    "nome": "Sprinter Jewel 2",
+    "raridade": 8,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Marathon Runner",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "87",
+    "nome": "Critical Jewel 2",
+    "raridade": 8,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Critical Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "88",
+    "nome": "Artillery Jewel 1",
+    "raridade": 8,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Artillery",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "89",
+    "nome": "Fungiform Jewel 1",
+    "raridade": 8,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Mushroomancer",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "90",
+    "nome": "Release Jewel 3",
+    "raridade": 8,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "91",
+    "nome": "Spread Jewel 3",
+    "raridade": 8,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Spread/Power Shots",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "92",
+    "nome": "Charger Jewel 2",
+    "raridade": 8,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Focus",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "93",
+    "nome": "Handicraft Jewel 3",
+    "raridade": 8,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "94",
+    "nome": "Mighty Bow Jewel 2",
+    "raridade": 8,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Bow Charge Plus",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "95",
+    "nome": "Mind's Eye Jewel 2",
+    "raridade": 8,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Mind's Eye/Ballistics",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "96",
+    "nome": "Draw Jewel 2",
+    "raridade": 8,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Critical Draw",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "97",
+    "nome": "Pierce Jewel 3",
+    "raridade": 8,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Piercing Shots",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "98",
+    "nome": "Maintenance Jewel 1",
+    "raridade": 5,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "99",
+    "nome": "Survival Jewel 1",
+    "raridade": 9,
+    "tamanho": 1,
+    "skills": [
+      {
+        "nome": "Survival Expert",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "100",
+    "nome": "Guardian Jewel 2",
+    "raridade": 10,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Offensive Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "101",
+    "nome": "Cooling Jewel 2",
+    "raridade": 9,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Heat Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "102",
+    "nome": "Warming Jewel 2",
+    "raridade": 9,
+    "tamanho": 2,
+    "skills": [
+      {
+        "nome": "Coldproof",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "103",
+    "nome": "Phoenix Jewel 3",
+    "raridade": 11,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Coalescence",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "104",
+    "nome": "Fire Res Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Fire Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "105",
+    "nome": "Water Res Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Water Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "106",
+    "nome": "Ice Res Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Ice Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "107",
+    "nome": "Thunder Res Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Thunder Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "108",
+    "nome": "Dragon Res Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Dragon Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "109",
+    "nome": "Blaze Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Fire Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "110",
+    "nome": "Stream Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Water Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "111",
+    "nome": "Frost Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Ice Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "112",
+    "nome": "Bolt Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Thunder Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "113",
+    "nome": "Dragon Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Dragon Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "114",
+    "nome": "Venom Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Poison Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "115",
+    "nome": "Paralyzer Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Paralysis Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "116",
+    "nome": "Sleep Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Sleep Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "117",
+    "nome": "Blast Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Blast Attack",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "118",
+    "nome": "Hard Fire Res Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Fire Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "119",
+    "nome": "Hard Water Res Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Water Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "120",
+    "nome": "Hard Ice Res Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Ice Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "121",
+    "nome": "Hard Thunder Res Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Thunder Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "122",
+    "nome": "Hard Dragon Res Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Dragon Resistance",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "123",
+    "nome": "Antidote Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Poison Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "124",
+    "nome": "Antipara Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Paralysis Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "125",
+    "nome": "Pep Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Sleep Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "126",
+    "nome": "Steadfast Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Stun Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "127",
+    "nome": "Antiblast Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Blast Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "128",
+    "nome": "Suture Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Bleeding Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "129",
+    "nome": "Def Lock Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Iron Skin",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "130",
+    "nome": "Miasma Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Effluvia Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "131",
+    "nome": "Hungerless Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Hunger Resistance",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "132",
+    "nome": "Recovery Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Speed",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "133",
+    "nome": "Tip Toe Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Stealth",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "134",
+    "nome": "Intimidator Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Intimidator",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "135",
+    "nome": "Meowster Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Palico Rally",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "136",
+    "nome": "Hard Tip Toe Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Stealth",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "137",
+    "nome": "Hard Intimidator Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Intimidator",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "138",
+    "nome": "Hard Meowster Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Palico Rally",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "139",
+    "nome": "Trueshot Jewel+ 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Special Ammo Boost",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "140",
+    "nome": "Heavy Artillery Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Heavy Artillery",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "141",
+    "nome": "Botany Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Botanist",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "142",
+    "nome": "Geology Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Geologist",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "143",
+    "nome": "Survival Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Survival Expert",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "144",
+    "nome": "Mirewalker Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Aquatic/Polar Mobility",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "145",
+    "nome": "Specimen Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Entomologist",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "146",
+    "nome": "Sonorous Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Horn Maestro",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "147",
+    "nome": "Hard Botany Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Botanist",
+        "nivel": 4
+      }
+    ]
+  },
+  {
+    "id": "148",
+    "nome": "Hard Geology Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Geologist",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "149",
+    "nome": "Hard Survival Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Survival Expert",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "150",
+    "nome": "Hard Specimen Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Entomologist",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "151",
+    "nome": "Enduring Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Item Prolonger",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "152",
+    "nome": "Defense Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Defense Boost",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "153",
+    "nome": "Hard Enduring Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Item Prolonger",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "154",
+    "nome": "Hard Defense Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Defense Boost",
+        "nivel": 3
+      }
+    ]
+  },
+  {
+    "id": "155",
+    "nome": "Artillery Jewel+ 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Artillery",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "156",
+    "nome": "Earplug Jewel+ 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "157",
+    "nome": "Wind Resist Jewel+ 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "158",
+    "nome": "Attack Jewel+ 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "159",
+    "nome": "Expert Jewel+ 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "160",
+    "nome": "Handicraft Jewel+ 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "161",
+    "nome": "Throttle Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "162",
+    "nome": "Challenger Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "163",
+    "nome": "Potential Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "164",
+    "nome": "Furor Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "165",
+    "nome": "Physique Jewel+ 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "166",
+    "nome": "Evasion Jewel+ 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "167",
+    "nome": "Ironwall Jewel+ 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Guard",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "168",
+    "nome": "Friendship Jewel+ 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Wide-Range",
+        "nivel": 2
+      }
+    ]
+  },
+  {
+    "id": "169",
+    "nome": "Drain/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Stamina Thief",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "170",
+    "nome": "Fortitude/Physique Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Fortify",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "171",
+    "nome": "Crisis/Physique Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Resuscitate",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "172",
+    "nome": "Ironwall/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "173",
+    "nome": "Friendship/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Wide-Range",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "174",
+    "nome": "Satiated/Physique Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Free Meal",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "175",
+    "nome": "Stonethrower/Physique Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Slinger Capacity",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "176",
+    "nome": "Resistor/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Blight Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "177",
+    "nome": "Flight/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Airborne",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "178",
+    "nome": "Sprinter/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Marathon Runner",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "179",
+    "nome": "Refresh/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Stamina Surge",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "180",
+    "nome": "Jumping/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Extender",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "181",
+    "nome": "Sheath/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Quick Sheath",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "182",
+    "nome": "Gobbler/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Eating",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "183",
+    "nome": "Grinder/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Sharpening",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "184",
+    "nome": "Bomber/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Bombardier",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "185",
+    "nome": "Fungiform/Physique Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Mushroomancer",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "186",
+    "nome": "Slider/Physique Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Affinity Sliding",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "187",
+    "nome": "Guardian/Physique Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Offensive Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "188",
+    "nome": "Drain/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Stamina Thief",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "189",
+    "nome": "Fortitude/Evasion Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Fortify",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "190",
+    "nome": "Crisis/Evasion Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Resuscitate",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "191",
+    "nome": "Ironwall/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "192",
+    "nome": "Friendship/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Wide-Range",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "193",
+    "nome": "Satiated/Evasion Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Free Meal",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "194",
+    "nome": "Stonethrower/Evasion Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Slinger Capacity",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "195",
+    "nome": "Resistor/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Blight Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "196",
+    "nome": "Flight/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Airborne",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "197",
+    "nome": "Sprinter/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Marathon Runner",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "198",
+    "nome": "Refresh/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Stamina Surge",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "199",
+    "nome": "Jumping/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Extender",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "200",
+    "nome": "Sheath/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Quick Sheath",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "201",
+    "nome": "Gobbler/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Eating",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "202",
+    "nome": "Grinder/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Sharpening",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "203",
+    "nome": "Bomber/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Bombardier",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "204",
+    "nome": "Fungiform/Evasion Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Mushroomancer",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "205",
+    "nome": "Slider/Evasion Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Affinity Sliding",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "206",
+    "nome": "Guardian/Evasion Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Offensive Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "207",
+    "nome": "Drain/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Stamina Thief",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "208",
+    "nome": "Fortitude/Attack Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Fortify",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "209",
+    "nome": "Crisis/Attack Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Resuscitate",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "210",
+    "nome": "Ironwall/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "211",
+    "nome": "Friendship/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Wide-Range",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "212",
+    "nome": "Satiated/Attack Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Free Meal",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "213",
+    "nome": "Stonethrower/Attack Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Slinger Capacity",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "214",
+    "nome": "Resistor/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Blight Resistance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "215",
+    "nome": "Flight/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Airborne",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "216",
+    "nome": "Sprinter/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Marathon Runner",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "217",
+    "nome": "Refresh/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Stamina Surge",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "218",
+    "nome": "Jumping/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Extender",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "219",
+    "nome": "Sheath/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Quick Sheath",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "220",
+    "nome": "Gobbler/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Eating",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "221",
+    "nome": "Grinder/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Sharpening",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "222",
+    "nome": "Bomber/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Bombardier",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "223",
+    "nome": "Fungiform/Attack Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Mushroomancer",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "224",
+    "nome": "Slider/Attack Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Affinity Sliding",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "225",
+    "nome": "Guardian/Attack Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Attack Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Offensive Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "226",
+    "nome": "Drain/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Stamina Thief",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "227",
+    "nome": "Fortitude/Expert Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Fortify",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "228",
+    "nome": "Crisis/Expert Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Resuscitate",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "229",
+    "nome": "Ironwall/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "230",
+    "nome": "Friendship/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Wide-Range",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "231",
+    "nome": "Satiated/Expert Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Free Meal",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "232",
+    "nome": "Stonethrower/Expert Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Slinger Capacity",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "233",
+    "nome": "Resistor/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Blight Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "234",
+    "nome": "Flight/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Airborne",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "235",
+    "nome": "Sprinter/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Marathon Runner",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "236",
+    "nome": "Refresh/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Stamina Surge",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "237",
+    "nome": "Jumping/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Extender",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "238",
+    "nome": "Sheath/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Quick Sheath",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "239",
+    "nome": "Gobbler/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Eating",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "240",
+    "nome": "Grinder/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Sharpening",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "241",
+    "nome": "Bomber/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Bombardier",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "242",
+    "nome": "Fungiform/Expert Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Mushroomancer",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "243",
+    "nome": "Slider/Expert Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Affinity Sliding",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "244",
+    "nome": "Guardian/Expert Jewel 4",
+    "raridade": 9,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Eye",
+        "nivel": 1
+      },
+      {
+        "nome": "Offensive Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "245",
+    "nome": "Drain/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Stamina Thief",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "246",
+    "nome": "Fortitude/Release Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Fortify",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "247",
+    "nome": "Crisis/Release Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Resuscitate",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "248",
+    "nome": "Ironwall/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "249",
+    "nome": "Friendship/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Wide-Range",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "250",
+    "nome": "Satiated/Release Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Free Meal",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "251",
+    "nome": "Stonethrower/Release Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Slinger Capacity",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "252",
+    "nome": "Resistor/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Blight Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "253",
+    "nome": "Flight/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Airborne",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "254",
+    "nome": "Sprinter/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Marathon Runner",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "255",
+    "nome": "Refresh/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Stamina Surge",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "256",
+    "nome": "Jumping/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Extender",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "257",
+    "nome": "Sheath/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Quick Sheath",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "258",
+    "nome": "Gobbler/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Eating",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "259",
+    "nome": "Grinder/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Sharpening",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "260",
+    "nome": "Bomber/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Bombardier",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "261",
+    "nome": "Fungiform/Release Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Mushroomancer",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "262",
+    "nome": "Slider/Release Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Affinity Sliding",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "263",
+    "nome": "Guardian/Release Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Offensive Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "264",
+    "nome": "Drain/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Stamina Thief",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "265",
+    "nome": "Fortitude/Handicraft Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Fortify",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "266",
+    "nome": "Crisis/Handicraft Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Resuscitate",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "267",
+    "nome": "Ironwall/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "268",
+    "nome": "Friendship/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Wide-Range",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "269",
+    "nome": "Satiated/Handicraft Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Free Meal",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "270",
+    "nome": "Stonethrower/Handicraft Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Slinger Capacity",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "271",
+    "nome": "Resistor/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Blight Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "272",
+    "nome": "Flight/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Airborne",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "273",
+    "nome": "Sprinter/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Marathon Runner",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "274",
+    "nome": "Refresh/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Stamina Surge",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "275",
+    "nome": "Jumping/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Extender",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "276",
+    "nome": "Sheath/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Quick Sheath",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "277",
+    "nome": "Gobbler/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Eating",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "278",
+    "nome": "Grinder/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Speed Sharpening",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "279",
+    "nome": "Bomber/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Bombardier",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "280",
+    "nome": "Fungiform/Handicraft Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Mushroomancer",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "281",
+    "nome": "Slider/Handicraft Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Affinity Sliding",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "282",
+    "nome": "Guardian/Handicraft Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Offensive Guard",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "283",
+    "nome": "Footing/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Tremor Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "284",
+    "nome": "Charger/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Focus",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "285",
+    "nome": "Enhancer/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Power Prolonger",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "286",
+    "nome": "Destroyer/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Partbreaker",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "287",
+    "nome": "KO/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Slugger",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "288",
+    "nome": "Potential/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "289",
+    "nome": "Wind Resist/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "290",
+    "nome": "Draw/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Draw",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "291",
+    "nome": "Throttle/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "292",
+    "nome": "Challenger/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "293",
+    "nome": "Flawless/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Peak Performance",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "294",
+    "nome": "Furor/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "295",
+    "nome": "Mighty/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      },
+      {
+        "nome": "Maximum Might",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "296",
+    "nome": "Brace/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      },
+      {
+        "nome": "Flinch Free",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "297",
+    "nome": "Phoenix/Protection Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      },
+      {
+        "nome": "Coalescence",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "298",
+    "nome": "Earplug/Protection Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "299",
+    "nome": "Critical/Protection Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "300",
+    "nome": "Tenderizer/Protection Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Weakness Exploit",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "301",
+    "nome": "Handicraft/Protection Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "302",
+    "nome": "Release/Protection Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Divine Blessing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "303",
+    "nome": "Footing/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Tremor Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "304",
+    "nome": "Charger/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Focus",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "305",
+    "nome": "Enhancer/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Power Prolonger",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "306",
+    "nome": "Destroyer/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Partbreaker",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "307",
+    "nome": "KO/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Slugger",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "308",
+    "nome": "Potential/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Heroics",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "309",
+    "nome": "Wind Resist/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 1
+      },
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "310",
+    "nome": "Draw/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Critical Draw",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "311",
+    "nome": "Throttle/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Latent Power",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "312",
+    "nome": "Challenger/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Agitator",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "313",
+    "nome": "Flawless/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Peak Performance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "314",
+    "nome": "Furor/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Resentment",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "315",
+    "nome": "Mighty/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Maximum Might",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "316",
+    "nome": "Brace/Medicine Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Flinch Free",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "317",
+    "nome": "Phoenix/Medicine Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Coalescence",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "318",
+    "nome": "Earplug/Medicine Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 1
+      },
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "319",
+    "nome": "Critical/Medicine Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Critical Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "320",
+    "nome": "Tenderizer/Medicine Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Weakness Exploit",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "321",
+    "nome": "Handicraft/Medicine Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "322",
+    "nome": "Release/Medicine Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Recovery Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "323",
+    "nome": "Footing/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Tremor Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "324",
+    "nome": "Charger/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Focus",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "325",
+    "nome": "Enhancer/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Power Prolonger",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "326",
+    "nome": "Destroyer/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Partbreaker",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "327",
+    "nome": "KO/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Slugger",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "328",
+    "nome": "Potential/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Heroics",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "329",
+    "nome": "Wind Resist/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 1
+      },
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "330",
+    "nome": "Draw/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Critical Draw",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "331",
+    "nome": "Throttle/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Latent Power",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "332",
+    "nome": "Challenger/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Agitator",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "333",
+    "nome": "Flawless/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Peak Performance",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "334",
+    "nome": "Furor/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Resentment",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "335",
+    "nome": "Mighty/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Maximum Might",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "336",
+    "nome": "Brace/Vitality Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Flinch Free",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "337",
+    "nome": "Phoenix/Vitality Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Coalescence",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "338",
+    "nome": "Earplug/Vitality Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 1
+      },
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "339",
+    "nome": "Critical/Vitality Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Critical Boost",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "340",
+    "nome": "Tenderizer/Vitality Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Weakness Exploit",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "341",
+    "nome": "Handicraft/Vitality Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "342",
+    "nome": "Release/Vitality Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Health Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "343",
+    "nome": "Footing/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Tremor Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "344",
+    "nome": "Charger/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Focus",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "345",
+    "nome": "Enhancer/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Power Prolonger",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "346",
+    "nome": "Destroyer/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Partbreaker",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "347",
+    "nome": "KO/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Slugger",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "348",
+    "nome": "Potential/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "349",
+    "nome": "Wind Resist/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "350",
+    "nome": "Draw/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Draw",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "351",
+    "nome": "Throttle/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "352",
+    "nome": "Challenger/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "353",
+    "nome": "Flawless/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Peak Performance",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "354",
+    "nome": "Furor/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "355",
+    "nome": "Mighty/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Maximum Might",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "356",
+    "nome": "Brace/Maintenance Jewel 4",
+    "raridade": 10,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Flinch Free",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "357",
+    "nome": "Phoenix/Maintenance Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      },
+      {
+        "nome": "Coalescence",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "358",
+    "nome": "Earplug/Maintenance Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "359",
+    "nome": "Critical/Maintenance Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "360",
+    "nome": "Tenderizer/Maintenance Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Weakness Exploit",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "361",
+    "nome": "Handicraft/Maintenance Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "362",
+    "nome": "Release/Maintenance Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Tool Specialist",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "363",
+    "nome": "Footing/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Tremor Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "364",
+    "nome": "Charger/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Focus",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "365",
+    "nome": "Enhancer/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Power Prolonger",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "366",
+    "nome": "Destroyer/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Partbreaker",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "367",
+    "nome": "KO/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Slugger",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "368",
+    "nome": "Potential/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "369",
+    "nome": "Wind Resist/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "370",
+    "nome": "Draw/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Draw",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "371",
+    "nome": "Throttle/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "372",
+    "nome": "Challenger/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "373",
+    "nome": "Flawless/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Peak Performance",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "374",
+    "nome": "Furor/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "375",
+    "nome": "Mighty/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Maximum Might",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "376",
+    "nome": "Brace/Physique Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Flinch Free",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "377",
+    "nome": "Phoenix/Physique Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      },
+      {
+        "nome": "Coalescence",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "378",
+    "nome": "Earplug/Physique Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "379",
+    "nome": "Critical/Physique Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "380",
+    "nome": "Tenderizer/Physique Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Weakness Exploit",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "381",
+    "nome": "Handicraft/Physique Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "382",
+    "nome": "Release/Physique Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "383",
+    "nome": "Footing/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Tremor Resistance",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "384",
+    "nome": "Charger/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Focus",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "385",
+    "nome": "Enhancer/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Power Prolonger",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "386",
+    "nome": "Destroyer/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Partbreaker",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "387",
+    "nome": "KO/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Slugger",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "388",
+    "nome": "Potential/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Heroics",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "389",
+    "nome": "Wind Resist/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Windproof",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "390",
+    "nome": "Draw/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Draw",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "391",
+    "nome": "Throttle/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Latent Power",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "392",
+    "nome": "Challenger/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Agitator",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "393",
+    "nome": "Flawless/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Peak Performance",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "394",
+    "nome": "Furor/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Resentment",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "395",
+    "nome": "Mighty/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Maximum Might",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "396",
+    "nome": "Brace/Evasion Jewel 4",
+    "raridade": 11,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Flinch Free",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "397",
+    "nome": "Phoenix/Evasion Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      },
+      {
+        "nome": "Coalescence",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "398",
+    "nome": "Earplug/Evasion Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Earplugs",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "399",
+    "nome": "Critical/Evasion Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Critical Boost",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "400",
+    "nome": "Tenderizer/Evasion Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Weakness Exploit",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "401",
+    "nome": "Handicraft/Evasion Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Handicraft",
+        "nivel": 1
+      },
+      {
+        "nome": "Evade Window",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "402",
+    "nome": "Release/Evasion Jewel 4",
+    "raridade": 12,
+    "tamanho": 4,
+    "skills": [
+      {
+        "nome": "Free Elem/Ammo Up",
+        "nivel": 1
+      },
+      {
+        "nome": "Constitution",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "403",
+    "nome": "Diversion Jewel 3",
+    "raridade": 9,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Provoker",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "404",
+    "nome": "Acrobat Jewel 3",
+    "raridade": 9,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Safe Landing",
+        "nivel": 1
+      }
+    ]
+  },
+  {
+    "id": "405",
+    "nome": "Shaver Jewel 3",
+    "raridade": 9,
+    "tamanho": 3,
+    "skills": [
+      {
+        "nome": "Clutch Claw Boost",
+        "nivel": 1
+      }
+    ]
+  }
+]

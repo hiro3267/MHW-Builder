@@ -1,7 +1,7 @@
 <ul>
 {% for decoracao in decoracoes %}
     <li>
-        <strong>{{ decoracao.nome }}</strong> (tamanho {{ decoracao.tamanho }})
+        <strong>{{ decoracao.nome }}</strong> (tamanho {{ decoracao.tamanho }}, raridade {{ decoracao.raridade }})
         {% if decoracao.skills %}
             — Skills: {% for skill in decoracao.skills %}{{ skill.nome }} {{ skill.nivel }}{% if not loop.last %}, {% endif %}{% endfor %}
         {% endif %}
