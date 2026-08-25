@@ -1,0 +1,16 @@
+<ul>
+{% for arma in armas %}
+    <li>
+        <strong>{{ arma.nome }}</strong> ({{ arma.tipo }}, raridade {{ arma.raridade }})
+        — Ataque: {{ arma.ataque_display }}
+        {% for elemento in arma.elementos %}
+            | Elemento: {{ elemento.tipo }} {{ elemento.valor }}{% if elemento.oculto %} (oculto){% endif %}
+        {% endfor %}
+        {% if arma.afinidade %}
+            | Afinidade: {{ arma.afinidade }}%
+        {% endif %}
+    </li>
+{% else %}
+    <li>Nenhuma arma cadastrada ainda.</li>
+{% endfor %}
+</ul>

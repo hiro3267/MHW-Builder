@@ -1,0 +1,12 @@
+<ul>
+{% for decoracao in decoracoes %}
+    <li>
+        <strong>{{ decoracao.nome }}</strong> (tamanho {{ decoracao.tamanho }})
+        {% if decoracao.skills %}
+            — Skills: {% for skill in decoracao.skills %}{{ skill.nome }} {{ skill.nivel }}{% if not loop.last %}, {% endif %}{% endfor %}
+        {% endif %}
+    </li>
+{% else %}
+    <li>Nenhuma decoração cadastrada ainda.</li>
+{% endfor %}
+</ul>

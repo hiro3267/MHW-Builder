@@ -1,0 +1,13 @@
+<ul>
+{% for armadura in armaduras %}
+    <li>
+        <strong>{{ armadura.nome }}</strong> ({{ armadura.peca }}, raridade {{ armadura.raridade }})
+        — Defesa: {{ armadura.defesa }}
+        {% if armadura.skills %}
+            | Skills: {% for skill in armadura.skills %}{{ skill.nome }} {{ skill.nivel }}{% if not loop.last %}, {% endif %}{% endfor %}
+        {% endif %}
+    </li>
+{% else %}
+    <li>Nenhuma armadura cadastrada ainda.</li>
+{% endfor %}
+</ul>

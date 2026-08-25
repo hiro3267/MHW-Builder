@@ -1,0 +1,12 @@
+<ul>
+{% for talisma in talismas %}
+    <li>
+        <strong>{{ talisma.nome }}</strong> (raridade {{ talisma.raridade }})
+        {% if talisma.skills %}
+            — Skills: {% for skill in talisma.skills %}{{ skill.nome }} {{ skill.nivel }}{% if not loop.last %}, {% endif %}{% endfor %}
+        {% endif %}
+    </li>
+{% else %}
+    <li>Nenhum talismã cadastrado ainda.</li>
+{% endfor %}
+</ul>

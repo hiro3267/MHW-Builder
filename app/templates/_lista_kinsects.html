@@ -1,0 +1,12 @@
+<ul>
+{% for kinsect in kinsects %}
+    <li>
+        <strong>{{ kinsect.nome }}</strong> ({{ kinsect.tipo }}, raridade {{ kinsect.raridade }})
+        — Poder: {{ kinsect.poder }} | Velocidade: {{ kinsect.velocidade }}
+        | Alcance: {{ kinsect.alcance }} | Resistência: {{ kinsect.resistencia }}
+        | Bônus de extração: {{ kinsect.bonus_extracao }}
+    </li>
+{% else %}
+    <li>Nenhum kinsect cadastrado ainda.</li>
+{% endfor %}
+</ul>
