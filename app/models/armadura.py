@@ -1,3 +1,5 @@
+from typing import Optional
+
 from pydantic import BaseModel
 
 
@@ -10,6 +12,7 @@ class Armadura(BaseModel):
     id: str
     nome: str
     peca: str  # "cabeca", "peito", "braco", "cintura", "perna"
+    rank: Optional[str] = None  # "low" ou "high"
     raridade: int
     defesa: int
     resistencia_fogo: int = 0
