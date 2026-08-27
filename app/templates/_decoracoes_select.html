@@ -1,0 +1,12 @@
+<div id="{{ campo }}-decoracoes-container">
+  {% for slot in slots %}
+    <select name="{{ campo }}_decoracoes" class="decoracao-select">
+      <option value="">-- vazio (slot nível {{ slot }}) --</option>
+      {% for decoracao in decoracoes %}
+        {% if decoracao.tamanho <= slot %}
+          <option value="{{ decoracao.id }}">{{ decoracao.nome }} (tamanho {{ decoracao.tamanho }})</option>
+        {% endif %}
+      {% endfor %}
+    </select>
+  {% endfor %}
+</div>

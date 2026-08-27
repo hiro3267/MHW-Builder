@@ -67,67 +67,76 @@
                 <span id="arma-selecionada-nome">Selecionar arma...</span>
             </button>
             <input type="hidden"
-                   name="arma_id"
-                   id="arma_id_input"
-                   hx-get="/kinsect-select"
-                   hx-trigger="change"
-                   hx-target="#kinsect-container"
-                   hx-include="this">
+                name="arma_id"
+                id="arma_id_input"
+                hx-get="/kinsect-select"
+                hx-trigger="change"
+                hx-target="#kinsect-container"
+                hx-include="this">
         </div>
 
         <div id="modal-container"></div>
 
         <div id="kinsect-container"></div>
 
+        <div id="arma-decoracoes-container"></div>
+
+
         <label>
             Cabeça:
-            <select name="cabeca_id">
+            <select name="cabeca_id" id="cabeca_id_select">
                 <option value="">—</option>
                 {% for peca in cabecas %}
                 <option value="{{ peca.id }}">{{ peca.nome }}</option>
                 {% endfor %}
             </select>
         </label>
+        <div id="cabeca-decoracoes-container"></div>
 
         <label>
             Peito:
-            <select name="peito_id">
+            <select name="peito_id" id="peito_id_select">
                 <option value="">—</option>
                 {% for peca in peitos %}
                 <option value="{{ peca.id }}">{{ peca.nome }}</option>
                 {% endfor %}
             </select>
         </label>
+        <div id="peito-decoracoes-container"></div>
+
 
         <label>
             Braços:
-            <select name="bracos_id">
+            <select name="bracos_id" id="bracos_id_select">
                 <option value="">—</option>
                 {% for peca in bracos %}
                 <option value="{{ peca.id }}">{{ peca.nome }}</option>
                 {% endfor %}
             </select>
         </label>
+        <div id="bracos-decoracoes-container"></div>
 
         <label>
             Cintura:
-            <select name="cintura_id">
+            <select name="cintura_id" id="cintura_id_select">
                 <option value="">—</option>
                 {% for peca in cinturas %}
                 <option value="{{ peca.id }}">{{ peca.nome }}</option>
                 {% endfor %}
             </select>
         </label>
+        <div id="cintura-decoracoes-container"></div>
 
         <label>
             Pernas:
-            <select name="pernas_id">
+            <select name="pernas_id" id="pernas_id_select">
                 <option value="">—</option>
                 {% for peca in pernas %}
                 <option value="{{ peca.id }}">{{ peca.nome }}</option>
                 {% endfor %}
             </select>
         </label>
+        <div id="pernas-decoracoes-container"></div>
 
         <label>
             Talismã:
@@ -145,5 +154,43 @@
     <div id="build-resultado">
         {% include "_build_resumo.html" %}
     </div>
+
+
+    <script>
+        function selecionarArma(id, nome) {
+            const input = document.getElementById('arma_id_input');
+            input.value = id;
+            document.getElementById('arma-selecionada-nome').textContent = nome;
+
+            input.dispatchEvent(new Event('change', { bubbles: true }));
+
+            htmx.ajax('GET', `/decoracoes-select/arma/${id}`, {
+                target: '#arma-decoracoes-container',
+                swap: 'innerHTML'
+            });
+
+            document.getElementById('modal-container').innerHTML = '';
+        }
+
+        const pecasArmadura = ['cabeca', 'peito', 'bracos', 'cintura', 'pernas'];
+
+        pecasArmadura.forEach(campo => {
+            const select = document.getElementById(`${campo}_id_select`);
+            select.addEventListener('change', () => {
+                const id = select.value;
+                const container = document.getElementById(`${campo}-decoracoes-container`);
+
+                if (!id) {
+                    container.innerHTML = '';
+                    return;
+                }
+
+                htmx.ajax('GET', `/decoracoes-select/${campo}/${id}`, {
+                    target: `#${campo}-decoracoes-container`,
+                    swap: 'innerHTML'
+                });
+            });
+        });
+    </script>
 </body>
 </html>

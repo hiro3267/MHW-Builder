@@ -8,12 +8,26 @@
            hx-include="[name='tipo']">
 
     <div class="filtros-tipo">
-      <button type="button" class="filtro-tipo-btn" data-tipo="espada_grande"
+      <button type="button" class="filtro-tipo-btn" data-tipo="grande_espada"
               hx-get="/armas-modal-lista"
               hx-target="#lista-armas-modal"
               hx-include="#busca-arma"
-              hx-vals='{"tipo": "espada_grande"}'>
+              hx-vals='{"tipo": "grande_espada"}'>
         Espada Grande
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="espada_e_escudo"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "espada_e_escudo"}'>
+        Espada e Escudo
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="laminas_duplas"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "laminas_duplas"}'>
+        Lâminas Duplas
       </button>
       <button type="button" class="filtro-tipo-btn" data-tipo="espada_longa"
               hx-get="/armas-modal-lista"
@@ -22,7 +36,76 @@
               hx-vals='{"tipo": "espada_longa"}'>
         Espada Longa
       </button>
-      <!-- outros tipos depois -->
+      <button type="button" class="filtro-tipo-btn" data-tipo="martelo"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "martelo"}'>
+        Martelo
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="chifre_de_caca"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "chifre_de_caca"}'>
+        Chifre de Caça
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="lanca"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "lanca"}'>
+        Lança
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="lanca_de_fogo"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "lanca_de_fogo"}'>
+        Lança de Fogo
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="machado_de_troca"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "machado_de_troca"}'>
+        Machado de Troca
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="espada_e_machado_de_carga"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "espada_e_machado_de_carga"}'>
+        Espada e Machado de Carga
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="glaive_insetos"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "glaive_insetos"}'>
+        Glaive de Insetos
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="arco"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "arco"}'>
+        Arco
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="bowgun_leve"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "bowgun_leve"}'>
+        Bowgun Leve
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="bowgun_pesado"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "bowgun_pesado"}'>
+        Bowgun Pesado
+      </button>
     </div>
 
     <div id="lista-armas-modal">

@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import List, Optional
 
 
 class Build(BaseModel):
@@ -10,3 +11,10 @@ class Build(BaseModel):
     cintura_id: str | None = None
     pernas_id: str | None = None
     talisma_id: str | None = None
+
+    arma_decoracoes: List[Optional[int]] = []
+    cabeca_decoracoes: List[Optional[int]] = []
+    peito_decoracoes: List[Optional[int]] = []
+    bracos_decoracoes: List[Optional[int]] = []
+    cintura_decoracoes: List[Optional[int]] = []
+    pernas_decoracoes: List[Optional[int]] = []

@@ -1,5 +1,8 @@
 <ul>
   {% for arma in armas %}
-    <li>{{ arma.nome }}</li>
+    <li style="cursor:pointer;"
+        data-id="{{ arma.id }}" data-nome="{{ arma.nome }}" onclick="selecionarArma(this.dataset.id, this.dataset.nome)">
+      {{ arma.nome }}
+    </li>
   {% endfor %}
 </ul>

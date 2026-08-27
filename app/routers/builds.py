@@ -10,6 +10,7 @@ from app.routers.armas import carregar_armas
 from app.routers.armaduras import carregar_armaduras
 from app.routers.kinsects import carregar_kinsects
 from app.routers.talismas import carregar_talismas
+from app.routers.decoracoes import carregar_decoracoes
 
 
 router = APIRouter()
@@ -56,6 +57,37 @@ def kinsect_select(request: Request, arma_id: Optional[str] = None):
         request=request,
         name="_kinsect_select.html",
         context={"kinsects": carregar_kinsects()},
+    )
+
+@router.get("/decoracoes-select/{campo}/{item_id}")
+def decoracoes_select(request: Request, campo: str, item_id: Optional[str] = None):
+    origem = {
+        "arma": carregar_armas(),
+        "cabeca": carregar_armaduras(),
+        "peito": carregar_armaduras(),
+        "bracos": carregar_armaduras(),
+        "cintura": carregar_armaduras(),
+        "pernas": carregar_armaduras(),
+    }
+
+    itens = origem.get(campo)
+    item = next((i for i in itens if str(i.id) == str(item_id)), None) if itens else None
+
+    if not item or not item.slots:
+        return templates.TemplateResponse(
+            request=request,
+            name="_decoracoes_select_vazio.html",
+            context={"campo": campo},
+        )
+
+    return templates.TemplateResponse(
+        request=request,
+        name="_decoracoes_select.html",
+        context={
+            "campo": campo,
+            "slots": item.slots,
+            "decoracoes": carregar_decoracoes(),
+        },
     )
 
 
