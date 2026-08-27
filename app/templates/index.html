@@ -43,10 +43,107 @@
     <div id="lista-talismas"></div>
 
     <hr>
- 
+
     <button hx-get="/kinsects" hx-target="#lista-kinsects">
         Listar Kinsects (teste — depois vira condicional à Glaive de Insetos)
     </button>
     <div id="lista-kinsects"></div>
+
+    <hr>
+
+    <form
+        id="build-form"
+        hx-post="/build"
+        hx-target="#build-resultado"
+        hx-trigger="change"
+    >
+
+        <div>
+            <label>Arma:</label>
+            <button type="button"
+                hx-get="/arma-modal"
+                hx-target="#modal-container"
+                hx-swap="innerHTML">
+                <span id="arma-selecionada-nome">Selecionar arma...</span>
+            </button>
+            <input type="hidden"
+                   name="arma_id"
+                   id="arma_id_input"
+                   hx-get="/kinsect-select"
+                   hx-trigger="change"
+                   hx-target="#kinsect-container"
+                   hx-include="this">
+        </div>
+
+        <div id="modal-container"></div>
+
+        <div id="kinsect-container"></div>
+
+        <label>
+            Cabeça:
+            <select name="cabeca_id">
+                <option value="">—</option>
+                {% for peca in cabecas %}
+                <option value="{{ peca.id }}">{{ peca.nome }}</option>
+                {% endfor %}
+            </select>
+        </label>
+
+        <label>
+            Peito:
+            <select name="peito_id">
+                <option value="">—</option>
+                {% for peca in peitos %}
+                <option value="{{ peca.id }}">{{ peca.nome }}</option>
+                {% endfor %}
+            </select>
+        </label>
+
+        <label>
+            Braços:
+            <select name="bracos_id">
+                <option value="">—</option>
+                {% for peca in bracos %}
+                <option value="{{ peca.id }}">{{ peca.nome }}</option>
+                {% endfor %}
+            </select>
+        </label>
+
+        <label>
+            Cintura:
+            <select name="cintura_id">
+                <option value="">—</option>
+                {% for peca in cinturas %}
+                <option value="{{ peca.id }}">{{ peca.nome }}</option>
+                {% endfor %}
+            </select>
+        </label>
+
+        <label>
+            Pernas:
+            <select name="pernas_id">
+                <option value="">—</option>
+                {% for peca in pernas %}
+                <option value="{{ peca.id }}">{{ peca.nome }}</option>
+                {% endfor %}
+            </select>
+        </label>
+
+        <label>
+            Talismã:
+            <select name="talisma_id">
+                <option value="">—</option>
+                {% for talisma in talismas %}
+                <option value="{{ talisma.id }}">{{ talisma.nome }}</option>
+                {% endfor %}
+            </select>
+        </label>
+
+        <button type="submit">Montar Build</button>
+    </form>
+
+    <div id="build-resultado">
+        {% include "_build_resumo.html" %}
+    </div>
 </body>
 </html>

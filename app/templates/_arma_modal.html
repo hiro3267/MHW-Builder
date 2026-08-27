@@ -1,0 +1,34 @@
+<div class="modal-overlay">
+  <div class="modal-box">
+    <input type="text" placeholder="Buscar arma..." id="busca-arma"
+           name="busca"
+           hx-get="/armas-modal-lista"
+           hx-trigger="keyup changed delay:300ms"
+           hx-target="#lista-armas-modal"
+           hx-include="[name='tipo']">
+
+    <div class="filtros-tipo">
+      <button type="button" class="filtro-tipo-btn" data-tipo="espada_grande"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "espada_grande"}'>
+        Espada Grande
+      </button>
+      <button type="button" class="filtro-tipo-btn" data-tipo="espada_longa"
+              hx-get="/armas-modal-lista"
+              hx-target="#lista-armas-modal"
+              hx-include="#busca-arma"
+              hx-vals='{"tipo": "espada_longa"}'>
+        Espada Longa
+      </button>
+      <!-- outros tipos depois -->
+    </div>
+
+    <div id="lista-armas-modal">
+      <!-- lista virá preenchida via HTMX -->
+    </div>
+
+    <button type="button" onclick="document.getElementById('modal-container').innerHTML = ''">Fechar</button>
+  </div>
+</div>

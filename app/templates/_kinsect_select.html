@@ -1,0 +1,9 @@
+<label>
+    Kinsect:
+    <select name="kinsect_id">
+        <option value="">—</option>
+        {% for kinsect in kinsects %}
+        <option value="{{ kinsect.id }}">{{ kinsect.nome }}</option>
+        {% endfor %}
+    </select>
+</label>

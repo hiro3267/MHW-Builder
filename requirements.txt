@@ -2,3 +2,5 @@ fastapi
 uvicorn[standard]
 jinja2
 requests
+python-multipart
+starlette<1.0.0
