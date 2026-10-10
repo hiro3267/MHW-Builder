@@ -3,7 +3,291 @@
 <head>
     <meta charset="UTF-8">
     <title>{{ titulo }}</title>
-    <script src="https://unpkg.com/htmx.org@2.0.3"></script>
+    <script
+     src="https://unpkg.com/htmx.org@2.0.3">
+    </script>
+
+    <script>
+    function abrirModalArma() {
+        htmx.ajax('GET', '/armas/modal', {
+            target: '#modal-container',
+            swap: 'innerHTML'
+        });
+    }
+
+
+    function abrirModalArmadura(campo) {
+        htmx.ajax('GET', `/armaduras/modal?campo=${encodeURIComponent(campo)}`, {
+            target: '#modal-container',
+            swap: 'innerHTML'
+        });
+    }
+
+    function selecionarArma(id, nome) {
+        const input = document.getElementById('arma_id_input');
+        const nomeElemento = document.getElementById('arma-selecionada-nome');
+
+        if (!input || !nomeElemento) {
+            console.error('Não encontrei o campo ou o elemento do nome da arma.');
+            return;
+        }
+
+        input.value = id;
+        nomeElemento.textContent = nome;
+
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+
+        document.getElementById('modal-container').innerHTML = '';
+    }
+
+    function selecionarArmadura(id, nome, campo) {
+        const input = document.getElementById(`${campo}_id_select`);
+        const nomeElemento = document.getElementById(
+            `${campo}-selecionada-nome`
+        );
+
+        input.value = id;
+        nomeElemento.textContent = nome;
+
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+
+        htmx.ajax('GET', `/decoracoes-select/${campo}/${id}`, {
+            target: `#${campo}-decoracoes-container`,
+            swap: 'innerHTML'
+        });
+
+        document.getElementById('modal-container').innerHTML = '';
+    }
+
+    function abrirModalTalisma() {
+        // A seleção de talismãs pode usar um modal semelhante.
+        // Por enquanto, este botão ainda precisa da rota e do template próprios.
+        htmx.ajax('GET', '/talismas', {
+            target: '#modal-container',
+            swap: 'innerHTML'
+        });
+    }
+
+    let tipoArmaSelecionado = null;
+
+    function mostrarArmas(tipo) {
+        tipoArmaSelecionado = tipo;
+
+        document.getElementById('filtros-elementos').hidden = false;
+
+        filtrarElemento('todos');
+    }
+
+    function filtrarElemento(elemento) {
+        if (!tipoArmaSelecionado) return;
+
+        const url = `/armas/modal/lista?tipo=${encodeURIComponent(tipoArmaSelecionado)}&elemento=${encodeURIComponent(elemento)}`;
+
+        htmx.ajax('GET', url, {
+            target: '#lista-armas-filtradas',
+            swap: 'innerHTML'
+        });
+    }
+
+</script>
+
+
+    <style>
+        body {
+            background: #171a1f;
+            color: #e4e8ef;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .equipamentos {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            max-width: 1000px;
+        }
+
+        .equipamento-linha {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            min-height: 82px;
+            padding: 12px 18px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            background: #20242b;
+            color: #dce4f0;
+            cursor: pointer;
+            box-sizing: border-box;
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .equipamento-linha:hover {
+            background: #292f38;
+            border-color: #485363;
+        }
+
+        .equipamento-icone {
+            width: 52px;
+            height: 52px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+        }
+
+        .equipamento-nome {
+            flex: 1;
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .equipamento-seta {
+            color: #8995a5;
+            font-size: 20px;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            background: rgb(0 0 0 / 70%);
+        }
+
+        .modal-box {
+            width: min(700px, 100%);
+            max-height: 85vh;
+            overflow-y: auto;
+            padding: 24px;
+            border-radius: 12px;
+            background: #20242b;
+            color: #e4e8ef;
+            box-sizing: border-box;
+        }
+
+        .modal-box input[type="text"] {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 16px;
+            border: 1px solid #485363;
+            border-radius: 6px;
+            background: #171a1f;
+            color: white;
+            box-sizing: border-box;
+        }
+
+        .modal-box li {
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .modal-box li:hover {
+            background: #343b46;
+        }
+
+        .modal-fechar {
+            margin-top: 16px;
+            padding: 10px 16px;
+            cursor: pointer;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.75);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-armaduras {
+            width: 100%;
+            max-width: 550px;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: #1e1e1e;
+            color: #fff;
+            border: 1px solid #555;
+            border-radius: 10px;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .modal-cabecalho {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-bottom: 15px;
+        }
+
+        .modal-cabecalho h2 {
+            margin: 0;
+        }
+
+        .modal-cabecalho button {
+            cursor: pointer;
+            font-size: 18px;
+            color: white;
+            background: transparent;
+            border: none;
+        }
+
+        .lista-armaduras {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .lista-armaduras li {
+            padding: 12px;
+            border-bottom: 1px solid #444;
+            cursor: pointer;
+        }
+
+        .lista-armaduras li:hover {
+            background: #383838;
+        }
+
+        .caixas-tipos,
+        .caixas-elementos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 8px;
+            margin: 12px 0 20px;
+        }
+
+        .caixa-filtro {
+            padding: 12px 8px;
+            border: 1px solid #555;
+            border-radius: 8px;
+            background: #2a2a2a;
+            color: white;
+            cursor: pointer;
+        }
+
+        .caixa-filtro:hover {
+            background: #444;
+            border-color: #aaa;
+        }
+
+        #filtros-elementos {
+            margin-top: 20px;
+        }
+
+        #filtros-elementos[hidden] {
+            display: none;
+        }
+    </style>
+
 </head>
 <body>
     <h1>{{ titulo }}</h1>
@@ -55,142 +339,104 @@
         id="build-form"
         hx-post="/build"
         hx-target="#build-resultado"
-        hx-trigger="change"
+        hx-swap="innerHTML"
+        hx-trigger="change delay:200ms"
     >
+        <div class="equipamentos">
 
-        <div>
-            <label>Arma:</label>
             <button type="button"
-                hx-get="/arma-modal"
-                hx-target="#modal-container"
-                hx-swap="innerHTML">
-                <span id="arma-selecionada-nome">Selecionar arma...</span>
+                    class="equipamento-linha"
+                    onclick="abrirModalArma()">
+                <span class="equipamento-icone">⚔</span>
+                <span class="equipamento-nome" id="arma-selecionada-nome">
+                    Selecione uma arma
+                </span>
+                <span class="equipamento-seta">›</span>
             </button>
-            <input type="hidden"
-                name="arma_id"
-                id="arma_id_input"
-                hx-get="/kinsect-select"
-                hx-trigger="change"
-                hx-target="#kinsect-container"
-                hx-include="this">
+
+            <input type="hidden" name="arma_id" id="arma_id_input">
+
+            <button type="button"
+                    class="equipamento-linha"
+                    onclick="abrirModalArmadura('cabeca')">
+                <span class="equipamento-icone">⛑</span>
+                <span class="equipamento-nome" id="cabeca-selecionada-nome">
+                    Selecione uma peça de armadura
+                </span>
+                <span class="equipamento-seta">›</span>
+            </button>
+            <input type="hidden" name="cabeca_id" id="cabeca_id_select">
+            <div id="cabeca-decoracoes-container"></div>
+
+            <button type="button"
+                    class="equipamento-linha"
+                    onclick="abrirModalArmadura('peito')">
+                <span class="equipamento-icone">🛡</span>
+                <span class="equipamento-nome" id="peito-selecionada-nome">
+                    Selecione uma peça de armadura
+                </span>
+                <span class="equipamento-seta">›</span>
+            </button>
+            <input type="hidden" name="peito_id" id="peito_id_select">
+            <div id="peito-decoracoes-container"></div>
+
+            <button type="button"
+                    class="equipamento-linha"
+                    onclick="abrirModalArmadura('bracos')">
+                <span class="equipamento-icone">🧤</span>
+                <span class="equipamento-nome" id="bracos-selecionada-nome">
+                    Selecione uma peça de armadura
+                </span>
+                <span class="equipamento-seta">›</span>
+            </button>
+            <input type="hidden" name="bracos_id" id="bracos_id_select">
+            <div id="bracos-decoracoes-container"></div>
+
+            <button type="button"
+                    class="equipamento-linha"
+                    onclick="abrirModalArmadura('cintura')">
+                <span class="equipamento-icone">🥋</span>
+                <span class="equipamento-nome" id="cintura-selecionada-nome">
+                    Selecione uma peça de armadura
+                </span>
+                <span class="equipamento-seta">›</span>
+            </button>
+            <input type="hidden" name="cintura_id" id="cintura_id_select">
+            <div id="cintura-decoracoes-container"></div>
+
+            <button type="button"
+                    class="equipamento-linha"
+                    onclick="abrirModalArmadura('pernas')">
+                <span class="equipamento-icone">🥾</span>
+                <span class="equipamento-nome" id="pernas-selecionada-nome">
+                    Selecione uma peça de armadura
+                </span>
+                <span class="equipamento-seta">›</span>
+            </button>
+            <input type="hidden" name="pernas_id" id="pernas_id_select">
+            <div id="pernas-decoracoes-container"></div>
+
+            <button type="button"
+                    class="equipamento-linha"
+                    onclick="abrirModalTalisma()">
+                <span class="equipamento-icone">💎</span>
+                <span class="equipamento-nome" id="talisma-selecionada-nome">
+                    Selecione um talismã
+                </span>
+                <span class="equipamento-seta">›</span>
+            </button>
+            <input type="hidden" name="talisma_id" id="talisma_id_select">
+
+            <div id="kinsect-container"></div>
+            <div id="arma-decoracoes-container"></div>
         </div>
-
-        <div id="modal-container"></div>
-
-        <div id="kinsect-container"></div>
-
-        <div id="arma-decoracoes-container"></div>
-
-
-        <label>
-            Cabeça:
-            <select name="cabeca_id" id="cabeca_id_select">
-                <option value="">—</option>
-                {% for peca in cabecas %}
-                <option value="{{ peca.id }}">{{ peca.nome }}</option>
-                {% endfor %}
-            </select>
-        </label>
-        <div id="cabeca-decoracoes-container"></div>
-
-        <label>
-            Peito:
-            <select name="peito_id" id="peito_id_select">
-                <option value="">—</option>
-                {% for peca in peitos %}
-                <option value="{{ peca.id }}">{{ peca.nome }}</option>
-                {% endfor %}
-            </select>
-        </label>
-        <div id="peito-decoracoes-container"></div>
-
-
-        <label>
-            Braços:
-            <select name="bracos_id" id="bracos_id_select">
-                <option value="">—</option>
-                {% for peca in bracos %}
-                <option value="{{ peca.id }}">{{ peca.nome }}</option>
-                {% endfor %}
-            </select>
-        </label>
-        <div id="bracos-decoracoes-container"></div>
-
-        <label>
-            Cintura:
-            <select name="cintura_id" id="cintura_id_select">
-                <option value="">—</option>
-                {% for peca in cinturas %}
-                <option value="{{ peca.id }}">{{ peca.nome }}</option>
-                {% endfor %}
-            </select>
-        </label>
-        <div id="cintura-decoracoes-container"></div>
-
-        <label>
-            Pernas:
-            <select name="pernas_id" id="pernas_id_select">
-                <option value="">—</option>
-                {% for peca in pernas %}
-                <option value="{{ peca.id }}">{{ peca.nome }}</option>
-                {% endfor %}
-            </select>
-        </label>
-        <div id="pernas-decoracoes-container"></div>
-
-        <label>
-            Talismã:
-            <select name="talisma_id">
-                <option value="">—</option>
-                {% for talisma in talismas %}
-                <option value="{{ talisma.id }}">{{ talisma.nome }}</option>
-                {% endfor %}
-            </select>
-        </label>
-
-        <button type="submit">Montar Build</button>
     </form>
+
+    <div id="modal-container"></div>
 
     <div id="build-resultado">
         {% include "_build_resumo.html" %}
     </div>
-
-
-    <script>
-        function selecionarArma(id, nome) {
-            const input = document.getElementById('arma_id_input');
-            input.value = id;
-            document.getElementById('arma-selecionada-nome').textContent = nome;
-
-            input.dispatchEvent(new Event('change', { bubbles: true }));
-
-            htmx.ajax('GET', `/decoracoes-select/arma/${id}`, {
-                target: '#arma-decoracoes-container',
-                swap: 'innerHTML'
-            });
-
-            document.getElementById('modal-container').innerHTML = '';
-        }
-
-        const pecasArmadura = ['cabeca', 'peito', 'bracos', 'cintura', 'pernas'];
-
-        pecasArmadura.forEach(campo => {
-            const select = document.getElementById(`${campo}_id_select`);
-            select.addEventListener('change', () => {
-                const id = select.value;
-                const container = document.getElementById(`${campo}-decoracoes-container`);
-
-                if (!id) {
-                    container.innerHTML = '';
-                    return;
-                }
-
-                htmx.ajax('GET', `/decoracoes-select/${campo}/${id}`, {
-                    target: `#${campo}-decoracoes-container`,
-                    swap: 'innerHTML'
-                });
-            });
-        });
-    </script>
+    
 </body>
 </html>

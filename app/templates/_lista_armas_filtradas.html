@@ -1,0 +1,14 @@
+<ul class="lista-armaduras">
+    {% for arma in armas %}
+    <li
+        data-id="{{ arma.id }}"
+        data-nome="{{ arma.nome }}"
+        onclick="selecionarArma(this.dataset.id, this.dataset.nome)"
+    >
+        {{ arma.nome }}
+        <small> — Raridade {{ arma.raridade }}</small>
+    </li>
+    {% else %}
+    <li>Nenhuma arma encontrada para esses filtros.</li>
+    {% endfor %}
+</ul>

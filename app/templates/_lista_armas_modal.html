@@ -1,8 +1,48 @@
-<ul>
-  {% for arma in armas %}
-    <li style="cursor:pointer;"
-        data-id="{{ arma.id }}" data-nome="{{ arma.nome }}" onclick="selecionarArma(this.dataset.id, this.dataset.nome)">
-      {{ arma.nome }}
-    </li>
-  {% endfor %}
-</ul>
+<div class="modal-overlay" onclick="if (event.target === this) this.remove()">
+    <div class="modal-armaduras">
+        <div class="modal-cabecalho">
+            <h2>Selecionar arma</h2>
+            <button type="button"
+                    onclick="this.closest('.modal-overlay').remove()">
+                ✕
+            </button>
+        </div>
+
+        <h3>Tipo de arma</h3>
+
+        <div class="caixas-tipos">
+            {% for chave, nome in tipos_armas.items() %}
+            <button
+                type="button"
+                class="caixa-filtro"
+                onclick="mostrarArmas('{{ chave }}')"
+            >
+                {{ nome }}
+            </button>
+            {% endfor %}
+        </div>
+
+        <div id="filtros-elementos" hidden>
+            <h3>Elemento</h3>
+
+            <div class="caixas-elementos">
+                <button type="button" class="caixa-filtro"
+                        onclick="filtrarElemento('todos')">
+                    Todos
+                </button>
+
+                {% for chave, nome in elementos.items() %}
+                <button
+                    type="button"
+                    class="caixa-filtro"
+                    onclick="filtrarElemento('{{ chave }}')"
+                >
+                    {{ nome }}
+                </button>
+                {% endfor %}
+            </div>
+        </div>
+
+        <div id="lista-armas-filtradas"></div>
+    </div>
+</div>

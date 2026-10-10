@@ -1,0 +1,29 @@
+<div class="modal-overlay" onclick="if (event.target === this) this.remove()">
+    <div class="modal-armaduras">
+        <div class="modal-cabecalho">
+            <h2>Selecionar armadura</h2>
+            <button type="button" onclick="this.closest('.modal-overlay').remove()">
+                ✕
+            </button>
+        </div>
+
+        <ul class="lista-armaduras">
+            {% for peca in armaduras %}
+            <li
+                data-id="{{ peca.id }}"
+                data-nome="{{ peca.nome }}"
+                data-campo="{{ campo }}"
+                onclick="selecionarArmadura(
+                    this.dataset.id,
+                    this.dataset.nome,
+                    this.dataset.campo
+                )"
+            >
+                {{ peca.nome }}
+            </li>
+            {% else %}
+            <li>Nenhuma armadura encontrada.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

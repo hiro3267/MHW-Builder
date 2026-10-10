@@ -3,6 +3,7 @@ from fastapi.templating import Jinja2Templates
 from fastapi.requests import Request
 
 from app.models.build import Build
+from app.database import inicializar_banco
 
 from app.routers import armas, armaduras, decoracoes, kinsects, talismas, builds
 from app.routers.armas import carregar_armas
@@ -11,6 +12,8 @@ from app.routers.kinsects import carregar_kinsects
 from app.routers.talismas import carregar_talismas
 
 app = FastAPI(title="MHW Build Planner")
+
+inicializar_banco()
 
 templates = Jinja2Templates(directory="app/templates")
 
