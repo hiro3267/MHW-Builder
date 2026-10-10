@@ -1,12 +1,42 @@
-<ul>
-{% for talisma in talismas %}
-    <li>
-        <strong>{{ talisma.nome }}</strong> (raridade {{ talisma.raridade }})
-        {% if talisma.skills %}
-            — Skills: {% for skill in talisma.skills %}{{ skill.nome }} {{ skill.nivel }}{% if not loop.last %}, {% endif %}{% endfor %}
-        {% endif %}
-    </li>
-{% else %}
-    <li>Nenhum talismã cadastrado ainda.</li>
-{% endfor %}
-</ul>
+<div class="modal-overlay">
+    <div class="modal-box">
+        <div class="modal-cabecalho">
+            <h2>Selecionar Talismã</h2>
+
+            <button type="button"
+                    onclick="document.getElementById('modal-container').innerHTML = ''">
+                ✕
+            </button>
+        </div>
+
+        <ul class="lista-armaduras">
+            {% for talisma in talismas %}
+                <li>
+                    <button
+                        type="button"
+                        onclick="selecionarTalisma(
+                            '{{ talisma.id }}',
+                            this.dataset.nome
+                        )"
+                        data-nome="{{ talisma.nome }}"
+                        style="width: 100%; background: transparent;
+                               color: inherit; border: none;
+                               text-align: left; cursor: pointer;"
+                    >
+                        <strong>{{ talisma.nome }}</strong>
+                        (raridade {{ talisma.raridade }})
+
+                        {% if talisma.skills %}
+                            — Skills:
+                            {% for skill in talisma.skills %}
+                                {{ skill.nome }} {{ skill.nivel }}{% if not loop.last %}, {% endif %}
+                            {% endfor %}
+                        {% endif %}
+                    </button>
+                </li>
+            {% else %}
+                <li>Nenhum talismã cadastrado ainda.</li>
+            {% endfor %}
+        </ul>
+    </div>
+</div>

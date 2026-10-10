@@ -1,13 +1,33 @@
 <div id="build-resultado">
-    <h3>Seu Build</h3>
-    <ul>
-        <li>Arma: {{ arma_nome or "—" }}</li>
-        <li>Kinsect: {{ kinsect_nome or "—" }}</li>
-        <li>Cabeça: {{ cabeca_nome or "—" }}</li>
-        <li>Peito: {{ peito_nome or "—" }}</li>
-        <li>Braços: {{ bracos_nome or "—" }}</li>
-        <li>Cintura: {{ cintura_nome or "—" }}</li>
-        <li>Pernas: {{ pernas_nome or "—" }}</li>
-        <li>Talismã: {{ talisma_nome or "—" }}</li>
-    </ul>
+    <h3>Atributos do Build</h3>
+
+    <section>
+        <h4>Defesa total</h4>
+        <p>{{ defesa_total | default(0) }}</p>
+    </section>
+
+    <section>
+        <h4>Resistências elementais</h4>
+        <ul>
+            <li>Fogo: {{ resistencias.fogo | default(0) if resistencias is defined else 0 }}</li>
+            <li>Água: {{ resistencias.agua | default(0) if resistencias is defined else 0 }}</li>
+            <li>Trovão: {{ resistencias.trovao | default(0) if resistencias is defined else 0 }}</li>
+            <li>Gelo: {{ resistencias.gelo | default(0) if resistencias is defined else 0 }}</li>
+            <li>Dragão: {{ resistencias.dragao | default(0) if resistencias is defined else 0 }}</li>
+        </ul>
+    </section>
+
+    <section>
+        <h4>Habilidades</h4>
+
+        {% if habilidades is defined and habilidades %}
+            <ul>
+                {% for nome, nivel in habilidades.items() %}
+                    <li>{{ nome }}: nível {{ nivel }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>Nenhuma habilidade ativa.</p>
+        {% endif %}
+    </section>
 </div>

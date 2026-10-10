@@ -1,12 +1,28 @@
-<div id="{{ campo }}-decoracoes-container">
-  {% for slot in slots %}
-    <select name="{{ campo }}_decoracoes" class="decoracao-select">
-      <option value="">-- vazio (slot nível {{ slot }}) --</option>
-      {% for decoracao in decoracoes %}
-        {% if decoracao.tamanho <= slot %}
-          <option value="{{ decoracao.id }}">{{ decoracao.nome }} (tamanho {{ decoracao.tamanho }})</option>
+<div id="{{ campo }}-decoracoes-container" class="slots-decoracoes">
+    {% for slot in slots %}
+        {% if slot > 0 %}
+            <div class="slot-decoracao">
+                <label for="{{ campo }}_decoracao_{{ loop.index }}">
+                    Decoração {{ loop.index }}
+                    <span class="slot-nivel">Nível {{ slot }}</span>
+                </label>
+
+                <select
+                    id="{{ campo }}_decoracao_{{ loop.index }}"
+                    name="{{ campo }}_decoracoes"
+                    class="decoracao-select"
+                >
+                    <option value="">-- Escolher decoração --</option>
+
+                    {% for decoracao in decoracoes %}
+                        {% if decoracao.tamanho <= slot %}
+                            <option value="{{ decoracao.id }}">
+                                {{ decoracao.nome }} (nível {{ decoracao.tamanho }})
+                            </option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+            </div>
         {% endif %}
-      {% endfor %}
-    </select>
-  {% endfor %}
+    {% endfor %}
 </div>

@@ -2,7 +2,8 @@
     <div class="modal-armaduras">
         <div class="modal-cabecalho">
             <h2>Selecionar armadura</h2>
-            <button type="button" onclick="this.closest('.modal-overlay').remove()">
+            <button type="button"
+                    onclick="this.closest('.modal-overlay').remove()">
                 ✕
             </button>
         </div>
@@ -19,7 +20,48 @@
                     this.dataset.campo
                 )"
             >
-                {{ peca.nome }}
+                <div class="armadura-info">
+                    <strong>{{ peca.nome }}</strong>
+
+                    <span class="armadura-raridade">
+                        Raridade {{ peca.raridade }}
+                    </span>
+
+                    {% if peca.rank %}
+                    <span>Rank: {{ peca.rank }}</span>
+                    {% endif %}
+                </div>
+
+                <div class="armadura-atributos">
+                    <span>Defesa: {{ peca.defesa }}</span>
+                    <span>🔥 {{ peca.resistencia_fogo }}</span>
+                    <span>💧 {{ peca.resistencia_agua }}</span>
+                    <span>⚡ {{ peca.resistencia_trovao }}</span>
+                    <span>❄️ {{ peca.resistencia_gelo }}</span>
+                    <span>🐉 {{ peca.resistencia_dragao }}</span>
+                </div>
+
+                {% if peca.skills %}
+                <div class="armadura-skills">
+                    <strong>Habilidades:</strong>
+                    {% for skill in peca.skills %}
+                        <span>{{ skill.nome }} +{{ skill.nivel }}</span>{% if not loop.last %}, {% endif %}
+                    {% endfor %}
+                </div>
+                {% endif %}
+
+                {% if peca.slots %}
+                <div class="armadura-slots">
+                    <strong>Slots:</strong>
+                    {% for slot in peca.slots %}
+                        <span class="slot-nivel">Nível {{ slot }}</span>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <div class="armadura-slots">
+                    Sem slots para decorações
+                </div>
+                {% endif %}
             </li>
             {% else %}
             <li>Nenhuma armadura encontrada.</li>

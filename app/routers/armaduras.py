@@ -50,6 +50,20 @@ def modal_armaduras(request: Request, campo: str):
 
     armaduras = carregar_armaduras()
 
+    peca_por_campo = {
+        "cabeca": "cabeca",
+        "peito": "peito",
+        "bracos": "gloves",
+        "cintura": "cintura",
+        "pernas": "perna",
+    }
+
+    armaduras = [
+        armadura
+        for armadura in armaduras
+        if armadura.peca == peca_por_campo[campo]
+    ]
+
     return templates.TemplateResponse(
         request=request,
         name="_lista_armaduras_modal.html",

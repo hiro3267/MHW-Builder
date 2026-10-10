@@ -101,7 +101,14 @@ def montar_build(
     bracos_id: Annotated[str | None, Form()] = None,
     cintura_id: Annotated[str | None, Form()] = None,
     pernas_id: Annotated[str | None, Form()] = None,
-    talisma_id: Annotated[str | None, Form()] = None
+    talisma_id: Annotated[str | None, Form()] = None,
+
+    arma_decoracoes: Annotated[list[str] | None, Form()] = None,
+    cabeca_decoracoes: Annotated[list[str] | None, Form()] = None,
+    peito_decoracoes: Annotated[list[str] | None, Form()] = None,
+    bracos_decoracoes: Annotated[list[str] | None, Form()] = None,
+    cintura_decoracoes: Annotated[list[str] | None, Form()] = None,
+    pernas_decoracoes: Annotated[list[str] | None, Form()] = None,
 ):
     build = Build(
         arma_id=arma_id,
@@ -118,6 +125,40 @@ def montar_build(
     todas_armaduras = carregar_armaduras()
     talismas = carregar_talismas()
 
+
+    pecas_ids = [
+        build.cabeca_id,
+        build.peito_id,
+        build.bracos_id,
+        build.cintura_id,
+        build.pernas_id,
+    ]
+
+    pecas = [
+        armadura
+        for armadura in todas_armaduras
+        if armadura.id in pecas_ids
+    ]
+
+    defesa_total = sum(armadura.defesa for armadura in pecas)
+
+    resistencias = {
+        "fogo": sum(a.resistencia_fogo for a in pecas),
+        "agua": sum(a.resistencia_agua for a in pecas),
+        "trovao": sum(a.resistencia_trovao for a in pecas),
+        "gelo": sum(a.resistencia_gelo for a in pecas),
+        "dragao": sum(a.resistencia_dragao for a in pecas),
+    }
+
+    habilidades = {}
+
+    for armadura in pecas:
+        for skill in armadura.skills:
+            habilidades[skill.nome] = (
+                habilidades.get(skill.nome, 0) + skill.nivel
+            )
+
+
     context = {
         "build": build,
         "arma_nome": resolver_nome(armas, build.arma_id),
@@ -128,6 +169,10 @@ def montar_build(
         "cintura_nome": resolver_nome(todas_armaduras, build.cintura_id),
         "pernas_nome": resolver_nome(todas_armaduras, build.pernas_id),
         "talisma_nome": resolver_nome(talismas, build.talisma_id),
+
+        "defesa_total": defesa_total,
+        "resistencias": resistencias,
+        "habilidades": habilidades,
     }
 
     return templates.TemplateResponse(
