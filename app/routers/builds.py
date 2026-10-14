@@ -11,6 +11,7 @@ from app.routers.armaduras import carregar_armaduras
 from app.routers.kinsects import carregar_kinsects
 from app.routers.talismas import carregar_talismas
 from app.routers.decoracoes import carregar_decoracoes
+from app.routers.skills import carregar_niveis_maximos
 
 
 router = APIRouter()
@@ -21,6 +22,36 @@ def resolver_nome(lista, id_):
     if not id_:
         return None
     return next((item.nome for item in lista if str(item.id) == str(id_)), None)
+
+def validar_decoracoes(item, decoracoes_ids, decoracoes):
+    slots = [slot for slot in item.slots if slot > 0] if item else []
+
+    for indice, decoracao_id in enumerate(decoracoes_ids):
+        if not decoracao_id:
+            continue
+
+        if item is None:
+            return f"Selecione um equipamento antes de adicionar decorações."
+
+        decoracao = next(
+            (d for d in decoracoes if str(d.id) == str(decoracao_id)),
+            None,
+        )
+
+        if decoracao is None:
+            return "Uma das decorações selecionadas não existe."
+
+        if indice >= len(slots):
+            return "Há mais decorações selecionadas do que slots disponíveis."
+
+        if decoracao.tamanho > slots[indice]:
+            return (
+                f"A decoração {decoracao.nome} não cabe no slot "
+                f"de nível {slots[indice]}."
+            )
+
+    return None
+
 
 @router.get("/arma-modal", response_class=HTMLResponse)
 def arma_modal(request: Request):
@@ -118,12 +149,46 @@ def montar_build(
         bracos_id=bracos_id,
         cintura_id=cintura_id,
         pernas_id=pernas_id,
-        talisma_id=talisma_id
+        talisma_id=talisma_id,
+        arma_decoracoes=arma_decoracoes or [],
+        cabeca_decoracoes=cabeca_decoracoes or [],
+        peito_decoracoes=peito_decoracoes or [],
+        bracos_decoracoes=bracos_decoracoes or [],
+        cintura_decoracoes=cintura_decoracoes or [],
+        pernas_decoracoes=pernas_decoracoes or [],
     )
     armas = carregar_armas()
     kinsects = carregar_kinsects()
     todas_armaduras = carregar_armaduras()
     talismas = carregar_talismas()
+    decoracoes = carregar_decoracoes()
+
+    equipamentos_decoracoes = [
+        (build.arma_id, build.arma_decoracoes, armas),
+        (build.cabeca_id, build.cabeca_decoracoes, todas_armaduras),
+        (build.peito_id, build.peito_decoracoes, todas_armaduras),
+        (build.bracos_id, build.bracos_decoracoes, todas_armaduras),
+        (build.cintura_id, build.cintura_decoracoes, todas_armaduras),
+        (build.pernas_id, build.pernas_decoracoes, todas_armaduras),
+    ]
+
+    for equipamento_id, decoracoes_ids, equipamentos in equipamentos_decoracoes:
+        equipamento = next(
+            (
+                item for item in equipamentos
+                if str(item.id) == str(equipamento_id)
+            ),
+            None,
+        )
+
+        erro = validar_decoracoes(equipamento, decoracoes_ids, decoracoes)
+
+        if erro:
+            return templates.TemplateResponse(
+                request=request,
+                name="_build_resumo.html",
+                context={"erro": erro},
+            )
 
 
     pecas_ids = [
@@ -136,8 +201,10 @@ def montar_build(
 
     pecas = [
         armadura
+        for id_ in pecas_ids
+        if id_
         for armadura in todas_armaduras
-        if armadura.id in pecas_ids
+        if str(armadura.id) == str(id_)
     ]
 
     defesa_total = sum(armadura.defesa for armadura in pecas)
@@ -150,13 +217,65 @@ def montar_build(
         "dragao": sum(a.resistencia_dragao for a in pecas),
     }
 
-    habilidades = {}
+    # Carrega os níveis máximos das habilidades
+    niveis_maximos = carregar_niveis_maximos()
+
+    # Soma os níveis das habilidades das armaduras
+    habilidades_totais = {}
 
     for armadura in pecas:
         for skill in armadura.skills:
-            habilidades[skill.nome] = (
-                habilidades.get(skill.nome, 0) + skill.nivel
+            habilidades_totais[skill.nome] = (
+                habilidades_totais.get(skill.nome, 0) + skill.nivel
             )
+
+    # Soma as habilidades do talismã selecionado
+    talisma = next(
+        (t for t in talismas if str(t.id) == str(build.talisma_id)),
+        None,
+    )
+
+    if talisma:
+        for skill in talisma.skills:
+            habilidades_totais[skill.nome] = (
+                habilidades_totais.get(skill.nome, 0) + skill.nivel
+            )
+
+    # Soma as habilidades das decorações selecionadas
+
+    decoracoes_ids = (
+        build.arma_decoracoes
+        + build.cabeca_decoracoes
+        + build.peito_decoracoes
+        + build.bracos_decoracoes
+        + build.cintura_decoracoes
+        + build.pernas_decoracoes
+    )
+
+    for decoracao_id in decoracoes_ids:
+        if not decoracao_id:
+            continue
+
+        decoracao = next(
+            (d for d in decoracoes if str(d.id) == str(decoracao_id)),
+            None,
+        )
+
+        if decoracao:
+            for skill in decoracao.skills:
+                habilidades_totais[skill.nome] = (
+                    habilidades_totais.get(skill.nome, 0) + skill.nivel
+                )
+
+    # Monta o resultado com nível atual e máximo
+    habilidades = {}
+
+    for nome, nivel in habilidades_totais.items():
+        maximo = niveis_maximos.get(nome, nivel)
+        habilidades[nome] = {
+            "nivel": min(nivel, maximo),
+            "maximo": maximo,
+        }
 
 
     context = {

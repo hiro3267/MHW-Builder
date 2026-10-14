@@ -22,8 +22,10 @@
 
         {% if habilidades is defined and habilidades %}
             <ul>
-                {% for nome, nivel in habilidades.items() %}
-                    <li>{{ nome }}: nível {{ nivel }}</li>
+                {% for nome, dados in habilidades.items() %}
+                    <li>
+                        {{ nome }}: {{ dados.nivel }}/{{ dados.maximo }}
+                    </li>
                 {% endfor %}
             </ul>
         {% else %}
@@ -31,3 +33,7 @@
         {% endif %}
     </section>
 </div>
+
+{% if erro is defined and erro %}
+    <p class="erro-validacao">{{ erro }}</p>
+{% endif %}

@@ -40,23 +40,40 @@
         document.getElementById('modal-container').innerHTML = '';
     }
 
-    function selecionarArmadura(id, nome, campo) {
+    
+
+    function selecionarArmadura(id, nome, campo, detalhesHtml) {
         const input = document.getElementById(`${campo}_id_select`);
+
         const nomeElemento = document.getElementById(
             `${campo}-selecionada-nome`
         );
 
+        const detalhesElemento = document.getElementById(
+            `${campo}-selecionada-detalhes`
+        );
+
+        if (!input || !nomeElemento || !detalhesElemento) {
+            console.error(
+                `Elementos da armadura não encontrados para: ${campo}`
+            );
+            return;
+        }
+
         input.value = id;
         nomeElemento.textContent = nome;
 
-        input.dispatchEvent(new Event('change', { bubbles: true }));
+        detalhesElemento.innerHTML = detalhesHtml;
+        detalhesElemento.hidden = false;
 
-        htmx.ajax('GET', `/decoracoes-select/${campo}/${id}`, {
+        input.dispatchEvent(new Event("change", { bubbles: true }));
+
+        htmx.ajax("GET", `/decoracoes-select/${campo}/${id}`, {
             target: `#${campo}-decoracoes-container`,
-            swap: 'innerHTML'
+            swap: "innerHTML"
         });
 
-        document.getElementById('modal-container').innerHTML = '';
+        document.getElementById("modal-container").innerHTML = "";
     }
 
     function abrirModalTalisma() {
@@ -127,7 +144,7 @@
             align-items: center;
             gap: 16px;
             width: 100%;
-            min-height: 82px;
+            min-height: 76px;
             padding: 12px 18px;
             border: 1px solid transparent;
             border-radius: 10px;
@@ -135,6 +152,7 @@
             color: #dce4f0;
             cursor: pointer;
             box-sizing: border-box;
+            text-align: left;
             transition: background 0.15s, border-color 0.15s;
         }
 
@@ -144,22 +162,48 @@
         }
 
         .equipamento-icone {
-            width: 52px;
-            height: 52px;
+            width: 44px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 30px;
+            font-size: 28px;
+        }
+
+        .equipamento-conteudo {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
         }
 
         .equipamento-nome {
-            flex: 1;
-            text-align: center;
             font-size: 15px;
+            font-weight: 600;
+        }
+
+        .equipamento-detalhes {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+            font-size: 13px;
+            font-weight: normal;
+            color: #c4cfdd;
+        }
+
+        .equipamento-detalhes .armadura-info,
+        .equipamento-detalhes .armadura-atributos {
+            margin: 0;
+        }
+
+        .equipamento-detalhes .armadura-skills,
+        .equipamento-detalhes .armadura-slots {
+            margin-top: 0;
         }
 
         .equipamento-seta {
+            flex-shrink: 0;
             color: #8995a5;
             font-size: 20px;
         }
@@ -421,6 +465,14 @@
             display: inline-block;
             margin: 3px;
         }
+
+        .erro-validacao {
+            color: #ff7777;
+            background: #351f23;
+            border: 1px solid #8f3d48;
+            border-radius: 8px;
+            padding: 12px;
+        }
     </style>
 
 </head>
@@ -483,64 +535,143 @@
             <input type="hidden" name="arma_id" id="arma_id_input">
 
             <button type="button"
-                    class="equipamento-linha"
-                    onclick="abrirModalArmadura('cabeca')">
-                <span class="equipamento-icone">⛑</span>
-                <span class="equipamento-nome" id="cabeca-selecionada-nome">
+                class="equipamento-linha"
+                onclick="abrirModalArmadura('cabeca')">
+
+            <span class="equipamento-icone">⛑</span>
+
+            <span class="equipamento-conteudo">
+                <span class="equipamento-nome"
+                    id="cabeca-selecionada-nome">
                     Selecione uma peça de armadura
                 </span>
-                <span class="equipamento-seta">›</span>
-            </button>
-            <input type="hidden" name="cabeca_id" id="cabeca_id_select">
-            <div id="cabeca-decoracoes-container"></div>
+
+                <span class="equipamento-detalhes"
+                    id="cabeca-selecionada-detalhes"
+                    hidden>
+                </span>
+            </span>
+
+            <span class="equipamento-seta">›</span>
+        </button>
+
+        <input type="hidden"
+            name="cabeca_id"
+            id="cabeca_id_select">
+
+        <div id="cabeca-decoracoes-container"></div>
 
             <button type="button"
-                    class="equipamento-linha"
-                    onclick="abrirModalArmadura('peito')">
-                <span class="equipamento-icone">🛡</span>
-                <span class="equipamento-nome" id="peito-selecionada-nome">
+                class="equipamento-linha"
+                onclick="abrirModalArmadura('peito')">
+
+            <span class="equipamento-icone">🛡</span>
+
+            <span class="equipamento-conteudo">
+                <span class="equipamento-nome"
+                    id="peito-selecionada-nome">
                     Selecione uma peça de armadura
                 </span>
-                <span class="equipamento-seta">›</span>
-            </button>
-            <input type="hidden" name="peito_id" id="peito_id_select">
-            <div id="peito-decoracoes-container"></div>
+
+                <span class="equipamento-detalhes"
+                    id="peito-selecionada-detalhes"
+                    hidden>
+                </span>
+            </span>
+
+            <span class="equipamento-seta">›</span>
+        </button>
+
+        <input type="hidden"
+            name="peito_id"
+            id="peito_id_select">
+
+        <div id="peito-decoracoes-container"></div>
 
             <button type="button"
-                    class="equipamento-linha"
-                    onclick="abrirModalArmadura('bracos')">
-                <span class="equipamento-icone">🧤</span>
-                <span class="equipamento-nome" id="bracos-selecionada-nome">
+                class="equipamento-linha"
+                onclick="abrirModalArmadura('bracos')">
+
+            <span class="equipamento-icone">🧤</span>
+
+            <span class="equipamento-conteudo">
+                <span class="equipamento-nome"
+                    id="bracos-selecionada-nome">
                     Selecione uma peça de armadura
                 </span>
-                <span class="equipamento-seta">›</span>
-            </button>
-            <input type="hidden" name="bracos_id" id="bracos_id_select">
-            <div id="bracos-decoracoes-container"></div>
 
+                <span class="equipamento-detalhes"
+                    id="bracos-selecionada-detalhes"
+                    hidden>
+                </span>
+            </span>
+
+            <span class="equipamento-seta">›</span>
+        </button>
+
+        <input type="hidden"
+            name="bracos_id"
+            id="bracos_id_select">
+
+        <div id="bracos-decoracoes-container"></div>
+
+            
             <button type="button"
                     class="equipamento-linha"
                     onclick="abrirModalArmadura('cintura')">
+
                 <span class="equipamento-icone">🥋</span>
-                <span class="equipamento-nome" id="cintura-selecionada-nome">
-                    Selecione uma peça de armadura
+
+                <span class="equipamento-conteudo">
+                    <span class="equipamento-nome"
+                        id="cintura-selecionada-nome">
+                        Selecione uma peça de armadura
+                    </span>
+
+                    <span class="equipamento-detalhes"
+                        id="cintura-selecionada-detalhes"
+                        hidden>
+                    </span>
                 </span>
+
                 <span class="equipamento-seta">›</span>
             </button>
-            <input type="hidden" name="cintura_id" id="cintura_id_select">
+
+            <input type="hidden"
+                name="cintura_id"
+                id="cintura_id_select">
+
             <div id="cintura-decoracoes-container"></div>
 
+
+            
             <button type="button"
                     class="equipamento-linha"
                     onclick="abrirModalArmadura('pernas')">
+
                 <span class="equipamento-icone">🥾</span>
-                <span class="equipamento-nome" id="pernas-selecionada-nome">
-                    Selecione uma peça de armadura
+
+                <span class="equipamento-conteudo">
+                    <span class="equipamento-nome"
+                        id="pernas-selecionada-nome">
+                        Selecione uma peça de armadura
+                    </span>
+
+                    <span class="equipamento-detalhes"
+                        id="pernas-selecionada-detalhes"
+                        hidden>
+                    </span>
                 </span>
+
                 <span class="equipamento-seta">›</span>
             </button>
-            <input type="hidden" name="pernas_id" id="pernas_id_select">
+
+            <input type="hidden"
+                name="pernas_id"
+                id="pernas_id_select">
+
             <div id="pernas-decoracoes-container"></div>
+
 
             <button type="button"
                     class="equipamento-linha"

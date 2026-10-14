@@ -68,7 +68,6 @@ def modal_armaduras(request: Request, campo: str):
         request=request,
         name="_lista_armaduras_modal.html",
         context={
-            "request": request,
             "armaduras": armaduras,
             "campo": campo,
         },
