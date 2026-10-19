@@ -8,16 +8,52 @@
             </button>
         </div>
 
+
+        <div class="filtros-equipamento">
+            <input
+                type="search"
+                id="busca-arma"
+                placeholder="Buscar arma pelo nome..."
+                oninput="filtrarArmasModal()"
+            >
+
+            <select id="filtro-raridade-arma"
+                    onchange="filtrarArmasModal()">
+                <option value="todas">Todas as raridades</option>
+                {% for raridade in range(1, 13) %}
+                <option value="{{ raridade }}">Raridade {{ raridade }}</option>
+                {% endfor %}
+            </select>
+
+            <select id="ordem-arma" onchange="ordenarArmasModal()">
+                <option value="nome">Nome (A–Z)</option>
+                <option value="raridade-desc">Maior raridade</option>
+                <option value="ataque-desc">Maior ataque exibido</option>
+                <option value="afinidade-desc">Maior afinidade</option>
+            </select>
+        </div>
+
         <h3>Tipo de arma</h3>
 
         <div class="caixas-tipos">
             {% for chave, nome in tipos_armas.items() %}
+            {% set arma_tipo = armas | selectattr("tipo", "equalto", chave) | first %}
+
             <button
                 type="button"
-                class="caixa-filtro"
+                class="caixa-filtro caixa-filtro-arma"
                 onclick="mostrarArmas('{{ chave }}')"
             >
-                {{ nome }}
+                {% if arma_tipo and arma_tipo.icone %}
+                <img
+                    src="{{ arma_tipo.icone }}"
+                    alt=""
+                    class="icone-tipo-arma"
+                    loading="lazy"
+                >
+                {% endif %}
+
+                <span>{{ nome }}</span>
             </button>
             {% endfor %}
         </div>

@@ -1,12 +1,89 @@
-<ul class="lista-armaduras">
+<ul class="lista-armaduras lista-armas" id="lista-armas-modal">
     {% for arma in armas %}
     <li
         data-id="{{ arma.id }}"
         data-nome="{{ arma.nome }}"
-        onclick="selecionarArma(this.dataset.id, this.dataset.nome)"
+        data-raridade="{{ arma.raridade }}"
+        data-ataque="{{ arma.ataque_display }}"
+        data-afinidade="{{ arma.afinidade }}"
+        onclick="selecionarArma(
+            this.dataset.id,
+            this.dataset.nome,
+            this.querySelector('.arma-detalhes-selecao').innerHTML
+        )"
     >
-        {{ arma.nome }}
-        <small> — Raridade {{ arma.raridade }}</small>
+        <div class="arma-imagem">
+            {% if arma.imagem %}
+            <img
+                src="{{ arma.imagem }}"
+                alt="{{ arma.nome }}"
+                loading="lazy"
+                onerror="this.hidden = true"
+            >
+            {% else %}
+            <span class="arma-imagem-placeholder">⚔️</span>
+            {% endif %}
+        </div>
+
+        <div class="arma-detalhes-selecao">
+            <div class="armadura-info">
+                <strong>{{ arma.nome }}</strong>
+                <span class="armadura-raridade">
+                    Raridade {{ arma.raridade }}
+                </span>
+            </div>
+
+            <div class="armadura-atributos">
+                <span>⚔️ Ataque: {{ arma.ataque_display }}</span>
+                <span>🎯 Afinidade: {{ arma.afinidade }}%</span>
+
+                {% if arma.defesa_bonus %}
+                <span>🛡️ Defesa: +{{ arma.defesa_bonus }}</span>
+                {% endif %}
+            </div>
+
+            {% if arma.elementos %}
+            <div class="armadura-skills">
+                <strong>Elementos e efeitos:</strong>
+                {% for elemento in arma.elementos %}
+                    {% if not elemento.oculto %}
+                    <span>{{ elemento.tipo }}: {{ elemento.valor }}</span>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% else %}
+            <div class="armadura-skills">Sem elemento listado</div>
+            {% endif %}
+
+            <div class="armadura-slots">
+                <strong>Slots:</strong>
+                {% if arma.slots %}
+                    {% for slot in arma.slots %}
+                    <span class="slot-nivel">Nível {{ slot }}</span>
+                    {% endfor %}
+                {% else %}
+                    <span>Sem slots para decorações</span>
+                {% endif %}
+            </div>
+
+            {% if arma.tipo_disparo %}
+            <div class="armadura-skills">
+                Disparo: {{ arma.tipo_disparo }}
+                {% if arma.nivel_disparo %}
+                    — Nível {{ arma.nivel_disparo }}
+                {% endif %}
+            </div>
+            {% endif %}
+
+            {% if arma.tipo_frasco %}
+            <div class="armadura-skills">
+                Tipo de frasco: {{ arma.tipo_frasco }}
+                {% if arma.nivel_frasco %}
+                    — Nível {{ arma.nivel_frasco }}
+                {% endif %}
+            </div>
+            {% endif %}
+        </div>
     </li>
     {% else %}
     <li>Nenhuma arma encontrada para esses filtros.</li>

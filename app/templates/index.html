@@ -23,34 +23,45 @@
         });
     }
 
-    function selecionarArma(id, nome) {
-        const input = document.getElementById('arma_id_input');
-        const nomeElemento = document.getElementById('arma-selecionada-nome');
+    function selecionarArma(id, nome, detalhesHtml) {
+        const input = document.getElementById("arma_id_input");
+        const nomeElemento = document.getElementById("arma-selecionada-nome");
+        const detalhesElemento = document.getElementById("arma-selecionada-detalhes");
 
-        if (!input || !nomeElemento) {
-            console.error('Não encontrei o campo ou o elemento do nome da arma.');
+        if (!input || !nomeElemento || !detalhesElemento) {
+            console.error("Não encontrei os campos da arma selecionada.");
             return;
         }
 
         input.value = id;
         nomeElemento.textContent = nome;
+        document.getElementById("arma-placeholder")?.classList.add("equipamento-placeholder-selecionado");
 
-        input.dispatchEvent(new Event('change', { bubbles: true }));
+        detalhesElemento.innerHTML = detalhesHtml || "";
+        detalhesElemento.hidden = !detalhesHtml;
 
-        document.getElementById('modal-container').innerHTML = '';
-    }
+        input.dispatchEvent(new Event("change", { bubbles: true }));
 
-    
+        document.getElementById("modal-container").innerHTML = "";
+    }   
 
-    function selecionarArmadura(id, nome, campo, detalhesHtml) {
+    function selecionarArmadura(
+        id,
+        nome,
+        campo,
+        detalhesHtml,
+        imagemMale = "",
+        imagemFemale = ""
+    ) {
         const input = document.getElementById(`${campo}_id_select`);
-
         const nomeElemento = document.getElementById(
             `${campo}-selecionada-nome`
         );
-
         const detalhesElemento = document.getElementById(
             `${campo}-selecionada-detalhes`
+        );
+        const imagemElemento = document.getElementById(
+            `${campo}-selecionada-imagem`
         );
 
         if (!input || !nomeElemento || !detalhesElemento) {
@@ -62,10 +73,16 @@
 
         input.value = id;
         nomeElemento.textContent = nome;
+        detalhesElemento.innerHTML = detalhesHtml || "";
+        detalhesElemento.hidden = !detalhesHtml;
 
-        detalhesElemento.innerHTML = detalhesHtml;
-        detalhesElemento.hidden = false;
-
+        // Guarda as duas imagens para que a escolha Male/Female
+        // também atualize a peça depois de selecionada.
+        if (imagemElemento) {
+            imagemElemento.dataset.imageMale = imagemMale || "";
+            imagemElemento.dataset.imageFemale = imagemFemale || "";
+            atualizarImagemSelecionada(imagemElemento);
+        }
         input.dispatchEvent(new Event("change", { bubbles: true }));
 
         htmx.ajax("GET", `/decoracoes-select/${campo}/${id}`, {
@@ -94,6 +111,7 @@
 
         input.value = id;
         nomeElemento.textContent = nome;
+        document.getElementById("talisma-placeholder")?.classList.add("equipamento-placeholder-selecionado");
 
         input.dispatchEvent(new Event('change', { bubbles: true }));
 
@@ -121,8 +139,477 @@
         });
     }
 
-</script>
+    function filtrarArmadurasModal() {
+        const busca = document
+            .getElementById("busca-armadura")
+            .value.toLocaleLowerCase("pt-BR");
 
+        const rank = document.getElementById("filtro-rank-armadura").value;
+        const raridade = document.getElementById("filtro-raridade-armadura").value;
+
+        document.querySelectorAll("#lista-armaduras-modal li[data-id]")
+            .forEach(item => {
+                const nome = item.dataset.nome.toLocaleLowerCase("pt-BR");
+
+                const nomeValido = nome.includes(busca);
+                const rankValido = rank === "todos" || item.dataset.rank === rank;
+                const raridadeValida =
+                    raridade === "todas" || item.dataset.raridade === raridade;
+
+                item.hidden = !(nomeValido && rankValido && raridadeValida);
+            });
+    }
+
+    function ordenarArmadurasModal() {
+        const lista = document.getElementById("lista-armaduras-modal");
+        if (!lista) return;
+
+        const ordem = document.getElementById("ordem-armadura").value;
+        const itens = [...lista.querySelectorAll("li[data-id]")];
+
+        itens.sort((a, b) => {
+            if (ordem === "raridade-desc") {
+                return Number(b.dataset.raridade) - Number(a.dataset.raridade);
+            }
+            if (ordem === "raridade-asc") {
+                return Number(a.dataset.raridade) - Number(b.dataset.raridade);
+            }
+            if (ordem === "defesa-desc") {
+                return Number(b.dataset.defesa) - Number(a.dataset.defesa);
+            }
+            if (ordem === "defesa-asc") {
+                return Number(a.dataset.defesa) - Number(b.dataset.defesa);
+            }
+
+            return a.dataset.nome.localeCompare(b.dataset.nome, "pt-BR");
+        });
+
+        itens.forEach(item => lista.appendChild(item));
+    }
+
+    function filtrarArmasModal() {
+        const busca = document
+            .getElementById("busca-arma")
+            .value.toLocaleLowerCase("pt-BR");
+
+        const raridade = document.getElementById("filtro-raridade-arma").value;
+
+        document.querySelectorAll("#lista-armas-modal li[data-id]")
+            .forEach(item => {
+                const nome = item.dataset.nome.toLocaleLowerCase("pt-BR");
+
+                const nomeValido = nome.includes(busca);
+                const raridadeValida =
+                    raridade === "todas" || item.dataset.raridade === raridade;
+
+                item.hidden = !(nomeValido && raridadeValida);
+            });
+    }
+
+    function ordenarArmasModal() {
+        const lista = document.getElementById("lista-armas-modal");
+        if (!lista) return;
+
+        const ordem = document.getElementById("ordem-arma").value;
+        const itens = [...lista.querySelectorAll("li[data-id]")];
+
+        itens.sort((a, b) => {
+            if (ordem === "raridade-desc") {
+                return Number(b.dataset.raridade) - Number(a.dataset.raridade);
+            }
+            if (ordem === "ataque-desc") {
+                return Number(b.dataset.ataque) - Number(a.dataset.ataque);
+            }
+            if (ordem === "afinidade-desc") {
+                return Number(b.dataset.afinidade) - Number(a.dataset.afinidade);
+            }
+
+            return a.dataset.nome.localeCompare(b.dataset.nome, "pt-BR");
+        });
+
+        itens.forEach(item => lista.appendChild(item));
+    }
+
+    let sexoArmaduraSelecionado = "male";
+
+    function alterarSexoArmadura(sexo) {
+        sexoArmaduraSelecionado = sexo;
+
+        document.querySelectorAll(".armadura-imagem img").forEach(img => {
+            atualizarImagemSelecionada(img);
+        });
+
+        document.querySelectorAll('input[name="sexo-armadura"]').forEach(input => {
+            input.checked = input.value === sexo;
+        });
+
+        document.querySelectorAll(".imagem-armadura-selecionada")
+            .forEach(atualizarImagemSelecionada);
+    }
+
+    function atualizarModalArmaduras() {
+        alterarSexoArmadura(sexoArmaduraSelecionado);
+    }
+    
+    document.body.addEventListener("htmx:afterSwap", function (event) {
+        if (event.target.id === "lista-armas-filtradas") {
+            filtrarArmasModal();
+            ordenarArmasModal();
+        }
+
+        if (event.target.id === "modal-container") {
+            atualizarModalArmaduras();
+        }
+    });
+
+    function atualizarImagemSelecionada(img) {
+        const placeholder = document.getElementById(img.id.replace("-selecionada-imagem", "-placeholder"));
+        const principal = sexoArmaduraSelecionado === "female"
+            ? img.dataset.imageFemale
+            : img.dataset.imageMale;
+
+        const alternativa = sexoArmaduraSelecionado === "female"
+            ? img.dataset.imageMale
+            : img.dataset.imageFemale;
+
+        // Cada tentativa é feita no máximo uma vez. Isso trata URLs
+        // quebradas, mas não consegue detectar imagens que carregam em branco.
+        const tentarImagem = (url, urlAlternativa) => {
+            if (!url) {
+                if (urlAlternativa) {
+                    tentarImagem(urlAlternativa, "");
+                } else {
+                    img.hidden = true;
+                    img.removeAttribute("src");
+                    if (placeholder) placeholder.hidden = false;
+                }
+                return;
+            }
+
+            img.onerror = () => {
+                img.onerror = null;
+
+                if (urlAlternativa && urlAlternativa !== url) {
+                    tentarImagem(urlAlternativa, "");
+                } else {
+                    img.hidden = true;
+                    img.removeAttribute("src");
+                    if (placeholder) placeholder.hidden = false;
+                }
+            };
+
+            img.hidden = false;
+            if (placeholder) placeholder.hidden = true;
+            img.src = url;
+        };
+
+        tentarImagem(principal, alternativa);
+    }
+
+    function esperarEventoHTMX(elemento, nomeEvento, timeout = 8000) {
+        return new Promise((resolve, reject) => {
+            let temporizador;
+
+            const aoOcorrer = (evento) => {
+                clearTimeout(temporizador);
+                elemento.removeEventListener(nomeEvento, aoOcorrer);
+                resolve(evento);
+            };
+
+            elemento.addEventListener(nomeEvento, aoOcorrer, { once: true });
+            temporizador = setTimeout(() => {
+                elemento.removeEventListener(nomeEvento, aoOcorrer);
+                reject(new Error(`Tempo esgotado aguardando ${nomeEvento}.`));
+            }, timeout);
+        });
+    }
+
+    async function alternarMinhasBuilds() {
+        const conteudo = document.getElementById("minhas-builds-conteudo");
+
+        if (conteudo.dataset.carregada === "true") {
+            conteudo.hidden = !conteudo.hidden;
+            return;
+        }
+
+        try {
+            const resposta = await fetch("/minhas-builds");
+            if (!resposta.ok) {
+                throw new Error("Não foi possível carregar as builds.");
+            }
+
+            conteudo.innerHTML = await resposta.text();
+            conteudo.dataset.carregada = "true";
+            conteudo.hidden = false;
+        } catch (erro) {
+            console.error(erro);
+            conteudo.innerHTML = "<p>Erro ao carregar suas builds.</p>";
+        }
+    }
+
+    async function buscarEquipamentoSalvo(tipo, id) {
+        if (!id) return null;
+
+        const resposta = await fetch(
+            `/minhas-builds/equipamentos/${encodeURIComponent(tipo)}/${encodeURIComponent(id)}`
+        );
+
+        if (!resposta.ok) {
+            throw new Error(`Não foi possível recuperar o equipamento ${id}.`);
+        }
+        return await resposta.json();
+    }
+
+    function valorCampo(objeto, caminhos, padrao = "") {
+        for (const caminho of caminhos) {
+            let valor = objeto;
+            for (const parte of caminho.split(".")) {
+                valor = valor?.[parte];
+            }
+            if (valor !== undefined && valor !== null && valor !== "") return valor;
+        }
+        return padrao;
+    }
+    
+    function atualizarNomeDetalhes(campo, item, tipo) {
+        const prefixo = campo === "arma" ? "arma" : campo;
+        const nomeEl = document.getElementById(`${prefixo}-selecionada-nome`);
+        const detalhesEl = document.getElementById(`${prefixo}-selecionada-detalhes`);
+        const placeholder = document.getElementById(`${prefixo}-placeholder`);
+
+        if (!item) {
+            if (nomeEl) {
+                nomeEl.textContent = campo === "arma"
+                    ? "Selecione uma arma"
+                    : campo === "talisma"
+                    ? "Selecione um talismã"
+                    : "Selecione uma peça de armadura";
+            }
+
+            if (detalhesEl) {
+                detalhesEl.innerHTML = "";
+                detalhesEl.hidden = true;
+            }
+
+            if (placeholder) {
+                placeholder.hidden = false;
+                placeholder.classList.remove("equipamento-placeholder-selecionado");
+            }
+
+            const imagemEl = document.getElementById(`${prefixo}-selecionada-imagem`);
+
+            if (imagemEl) {
+                imagemEl.hidden = true;
+                imagemEl.removeAttribute("src");
+                imagemEl.onerror = null;
+                imagemEl.dataset.imageMale = "";
+                imagemEl.dataset.imageFemale = "";
+            }
+
+            return;
+        }
+
+        if (nomeEl) nomeEl.textContent = item.nome || "Equipamento selecionado";
+
+        if (detalhesEl) {
+            detalhesEl.innerHTML = "";
+            detalhesEl.hidden = true;
+        }
+
+        if (placeholder) {
+            placeholder.classList.add("equipamento-placeholder-selecionado");
+        }
+
+        if (tipo === "armadura") {
+            const img = document.getElementById(`${campo}-selecionada-imagem`);
+
+            if (img) {
+                img.dataset.imageMale = valorCampo(item, [
+                    "assets.imageMale",
+                    "imageMale",
+                    "imagem_masculina"
+                ]);
+
+                img.dataset.imageFemale = valorCampo(item, [
+                    "assets.imageFemale",
+                    "imageFemale",
+                    "imagem_feminina"
+                ]);
+
+                atualizarImagemSelecionada(img);
+            }
+        }
+
+        if (tipo === "arma") {
+            const img = document.getElementById("arma-selecionada-imagem");
+
+            if (img) {
+                const url = valorCampo(item, [
+                    "image",
+                    "assets.image",
+                    "imagem"
+                ]);
+
+                img.onerror = () => {
+                    img.onerror = null;
+                    img.hidden = true;
+                    img.removeAttribute("src");
+                    if (placeholder) placeholder.hidden = false;
+                };
+
+                if (url) {
+                    img.src = url;
+                    img.hidden = false;
+                    if (placeholder) placeholder.hidden = true;
+                } else {
+                    img.hidden = true;
+                    img.removeAttribute("src");
+                    if (placeholder) placeholder.hidden = false;
+                }
+            }
+        }
+    }
+
+    async function carregarDecoracoesSalvas(campo, equipamentoId, decoracoesSalvas) {
+        const container = document.getElementById(`${campo}-decoracoes-container`);
+        if (!container) return;
+
+        if (!equipamentoId) {
+            container.innerHTML = "";
+            return;
+        }
+
+        const evento = esperarEventoHTMX(container, "htmx:afterSettle");
+        htmx.ajax("GET", `/decoracoes-select/${encodeURIComponent(campo)}/${encodeURIComponent(equipamentoId)}`, {
+            target: `#${campo}-decoracoes-container`,
+            swap: "innerHTML"
+        });
+
+        try {
+            await evento;
+        } catch (erro) {
+            console.warn(`Não foi possível carregar as decorações de ${campo}.`, erro);
+            return;
+        }
+
+        // O template de decorações atualmente inclui um wrapper com o mesmo ID
+        // do container. Procura seletores tanto no próprio container quanto nos filhos.
+        const seletores = [
+            ...container.querySelectorAll('select[name$="_decoracoes"]')
+        ];
+        seletores.forEach((select, indice) => {
+            select.value = decoracoesSalvas?.[indice] ?? "";
+        });
+    }
+
+    async function carregarKinsectSalvo(armaId, kinsectId) {
+        const container = document.getElementById("kinsect-container");
+        if (!container) return;
+
+        const evento = esperarEventoHTMX(container, "htmx:afterSettle");
+        htmx.ajax("GET", `/kinsect-select?arma_id=${encodeURIComponent(armaId || "")}`, {
+            target: "#kinsect-container",
+            swap: "innerHTML"
+        });
+
+        try {
+            await evento;
+        } catch (erro) {
+            console.warn("Não foi possível carregar o seletor de kinsect.", erro);
+            return;
+        }
+
+        const select = container.querySelector('select[name="kinsect_id"]');
+        if (select) select.value = kinsectId ?? "";
+    }
+
+    async function carregarBuildSalva(buildId) {
+        try {
+            const resposta = await fetch(`/minhas-builds/api/${encodeURIComponent(buildId)}`);
+            if (!resposta.ok) throw new Error("Não foi possível carregar a build salva.");
+
+            const resultado = await resposta.json();
+            const build = resultado.dados;
+
+            const ids = {
+                arma: build.arma_id,
+                cabeca: build.cabeca_id,
+                peito: build.peito_id,
+                bracos: build.bracos_id,
+                cintura: build.cintura_id,
+                pernas: build.pernas_id,
+                talisma: build.talisma_id
+            };
+
+            const decoracoes = {
+                arma: build.arma_decoracoes || [],
+                cabeca: build.cabeca_decoracoes || [],
+                peito: build.peito_decoracoes || [],
+                bracos: build.bracos_decoracoes || [],
+                cintura: build.cintura_decoracoes || [],
+                pernas: build.pernas_decoracoes || []
+            };
+
+            // Primeiro recupera os dados dos equipamentos, para atualizar nomes e imagens.
+            const [arma, cabeca, peito, bracos, cintura, pernas, talisma] =
+                await Promise.all([
+                    buscarEquipamentoSalvo("arma", ids.arma),
+                    buscarEquipamentoSalvo("armadura", ids.cabeca),
+                    buscarEquipamentoSalvo("armadura", ids.peito),
+                    buscarEquipamentoSalvo("armadura", ids.bracos),
+                    buscarEquipamentoSalvo("armadura", ids.cintura),
+                    buscarEquipamentoSalvo("armadura", ids.pernas),
+                    buscarEquipamentoSalvo("talisma", ids.talisma)
+                ]);
+
+            const camposIds = {
+                arma_id_input: ids.arma,
+                cabeca_id_select: ids.cabeca,
+                peito_id_select: ids.peito,
+                bracos_id_select: ids.bracos,
+                cintura_id_select: ids.cintura,
+                pernas_id_select: ids.pernas,
+                talisma_id_select: ids.talisma
+            };
+
+            for (const [id, valor] of Object.entries(camposIds)) {
+                const elemento = document.getElementById(id);
+                if (elemento) elemento.value = valor ?? "";
+            }
+
+            atualizarNomeDetalhes("arma", arma, "arma");
+            atualizarNomeDetalhes("cabeca", cabeca, "armadura");
+            atualizarNomeDetalhes("peito", peito, "armadura");
+            atualizarNomeDetalhes("bracos", bracos, "armadura");
+            atualizarNomeDetalhes("cintura", cintura, "armadura");
+            atualizarNomeDetalhes("pernas", pernas, "armadura");
+            atualizarNomeDetalhes("talisma", talisma, "talisma");
+
+            // Aguarda cada grupo de slots antes de definir as decorações salvas.
+            await Promise.all([
+                carregarDecoracoesSalvas("arma", ids.arma, decoracoes.arma),
+                carregarDecoracoesSalvas("cabeca", ids.cabeca, decoracoes.cabeca),
+                carregarDecoracoesSalvas("peito", ids.peito, decoracoes.peito),
+                carregarDecoracoesSalvas("bracos", ids.bracos, decoracoes.bracos),
+                carregarDecoracoesSalvas("cintura", ids.cintura, decoracoes.cintura),
+                carregarDecoracoesSalvas("pernas", ids.pernas, decoracoes.pernas)
+            ]);
+
+            await carregarKinsectSalvo(ids.arma, build.kinsect_id);
+
+            const formulario = document.getElementById("build-form");
+            if (formulario) htmx.trigger(formulario, "change");
+
+            console.log(`Build "${resultado.nome}" carregada.`);
+        } catch (erro) {
+            console.error(erro);
+            alert(
+                "Não foi possível carregar a build salva. Verifique se a rota " +
+                "/minhas-builds/equipamentos/{tipo}/{item_id} está implementada."
+            );
+        }
+    }
+    </script>
 
     <style>
         body {
@@ -162,12 +649,76 @@
         }
 
         .equipamento-icone {
-            width: 44px;
-            flex-shrink: 0;
+            width: 64px;
+            height: 64px;
+            flex: 0 0 64px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 28px;
+            box-sizing: border-box;
+            border: 1px dashed #566274;
+            border-radius: 9px;
+            background: #171a1f;
+            color: #9ba9bb;
+            font-size: 27px;
+        }
+
+        .equipamento-placeholder {
+            flex-direction: column;
+            gap: 2px;
+            font-size: 25px;
+        }
+
+        .equipamento-placeholder small {
+            font-size: 9px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #8d9bb0;
+        }
+
+        .equipamento-placeholder[hidden] {
+            display: none;
+        }
+
+        .caixa-filtro-arma {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            min-height: 100px;
+        }
+
+        .icone-tipo-arma {
+            width: 48px;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        .caixa-filtro-arma span {
+            text-align: center;
+        }
+
+        img.equipamento-icone.imagem-armadura-selecionada {
+            border: 0;
+            background: transparent;
+            width: 64px;
+            height: 64px;
+            display: block;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        img.equipamento-icone.imagem-armadura-selecionada {
+            width: 64px;
+            height: 64px;
+            display: block;
+            flex-shrink: 0;
+            object-fit: contain;
+        }
+
+        img.imagem-armadura-selecionada[hidden] {
+            display: none;
         }
 
         .equipamento-conteudo {
@@ -300,6 +851,42 @@
             border: none;
         }
 
+        .lista-armas li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .arma-imagem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: 0 0 100px;
+            width: 100px;
+            min-height: 90px;
+        }
+
+        .arma-imagem img {
+            display: block;
+            width: 100%;
+            max-height: 100px;
+            object-fit: contain;
+        }
+
+        .arma-imagem-placeholder {
+            font-size: 32px;
+            color: #9ba9bb;
+        }
+
+        .arma-detalhes-selecao {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .arma-imagem img[hidden] {
+            display: none;
+        }
+
         .lista-armaduras {
             list-style: none;
             padding: 0;
@@ -310,6 +897,27 @@
             padding: 12px;
             border-bottom: 1px solid #444;
             cursor: pointer;
+        }
+
+        .armadura-imagem {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 90px;
+            min-width: 90px;
+            min-height: 90px;
+        }
+
+        .armadura-imagem img {
+            display: block;
+            width: 100%;
+            max-height: 110px;
+            object-fit: contain;
+        }
+
+        .armadura-detalhes-selecao {
+            flex: 1;
+            min-width: 0;
         }
 
         .lista-armaduras li:hover {
@@ -473,6 +1081,167 @@
             border-radius: 8px;
             padding: 12px;
         }
+
+        .filtros-equipamento {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 10px;
+            margin-bottom: 18px;
+        }
+
+        .filtros-equipamento input,
+        .filtros-equipamento select {
+            width: 100%;
+            min-width: 0;
+            padding: 11px 12px;
+            border: 1px solid #485363;
+            border-radius: 7px;
+            background: #171a1f;
+            color: #e4e8ef;
+            box-sizing: border-box;
+        }
+
+        .filtros-equipamento input:focus,
+        .filtros-equipamento select:focus {
+            outline: 1px solid #899fbd;
+            border-color: #899fbd;
+        }
+
+        .filtro-sexo-armadura {
+            display: flex;
+            gap: 12px;
+            margin: 12px 0 20px;
+        }
+
+        .filtro-sexo-armadura label {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 14px;
+            border: 1px solid #485363;
+            border-radius: 8px;
+            background: #20242b;
+            cursor: pointer;
+        }
+
+        .filtro-sexo-armadura input {
+            accent-color: #91b8ed;
+        }
+
+        .armadura-imagem img[hidden] {
+            display: none;
+        }
+
+        .lista-armaduras li[hidden] {
+            display: none;
+        }
+
+        .equipamento-detalhes[hidden] {
+            display: none;
+        }
+
+        .arma-detalhes-selecao {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        #minhas-builds {
+            max-width: 1000px;
+            margin: 24px 0;
+        }
+
+        #minhas-builds h2 {
+            margin-bottom: 14px;
+        }
+
+        .minhas-builds-acoes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .minhas-builds-acoes button {
+            padding: 11px 16px;
+            border: 1px solid #485363;
+            border-radius: 8px;
+            background: #20242b;
+            color: #e4e8ef;
+            cursor: pointer;
+        }
+
+        .minhas-builds-acoes button:hover {
+            background: #292f38;
+            border-color: #899fbd;
+        }
+
+        #minhas-builds-conteudo {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .build-salva {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px;
+            border: 1px solid #3a3a3a;
+            border-radius: 10px;
+            background: #202020;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+        }
+
+        .build-salva:hover,
+        .build-salva:focus-visible {
+            background: #2b2b2b;
+            border-color: #777;
+            outline: none;
+        }
+
+        .build-salva-imagem {
+            display: flex;
+            flex-shrink: 0;
+            align-items: center;
+            justify-content: center;
+            width: 90px;
+            height: 90px;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #151515;
+        }
+
+        .build-salva-imagem img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .build-salva-placeholder {
+            font-size: 32px;
+        }
+
+        .build-salva-info {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            min-width: 0;
+        }
+
+        .build-salva-info strong {
+            overflow-wrap: anywhere;
+        }
+
+        .build-salva-info span,
+        .build-salva-info small {
+            color: #b5b5b5;
+            overflow-wrap: anywhere;
+        }
+
     </style>
 
 </head>
@@ -480,36 +1249,30 @@
     <h1>{{ titulo }}</h1>
     <p>Bem-vindo ao MHW Build Planner! Em breve você poderá criar e compartilhar suas builds de Monster Hunter World.</p>
 
-    <button hx-get="ping" hx-target="#resultado">
-        Testar HTMX
-    </button>
-    <div id="resultado"></div>
+    
+    <section id="minhas-builds">
+        <h2>Minhas Builds</h2>
 
-    <hr>
+        <div class="minhas-builds-acoes">
+            <button
+                type="button"
+                onclick="alternarMinhasBuilds()">
+                Ver minhas builds
+            </button>
+    
+            <button
+                type="button"
+                hx-get="/minhas-builds/salvar-modal"
+                hx-target="#modal-container"
+                hx-swap="innerHTML">
+                Salvar build atual
+            </button>
 
-    <button hx-get="/armas" hx-target="#lista-armas">
-        Listar Armas
-    </button>
-    <div id="lista-armas"></div>
+        </div>
 
-    <hr>
+        <div id="minhas-builds-conteudo"></div>
+    </section>
 
-    <button hx-get="/armaduras" hx-target="#lista-armaduras">
-        Listar Armaduras
-    </button>
-    <div id="lista-armaduras"></div>
-
-    <hr>
-
-    <button hx-get="/decoracoes" hx-target="#lista-decoracoes">
-        Listar Decorações
-    </button>
-    <div id="lista-decoracoes"></div>
-
-    <button hx-get="/kinsects" hx-target="#lista-kinsects">
-        Listar Kinsects (teste — depois vira condicional à Glaive de Insetos)
-    </button>
-    <div id="lista-kinsects"></div>
 
     <hr>
 
@@ -522,13 +1285,32 @@
     >
         <div class="equipamentos">
 
+            
             <button type="button"
                     class="equipamento-linha"
                     onclick="abrirModalArma()">
-                <span class="equipamento-icone">⚔</span>
-                <span class="equipamento-nome" id="arma-selecionada-nome">
-                    Selecione uma arma
+                <span id="arma-placeholder" class="equipamento-icone equipamento-placeholder" aria-hidden="true">
+                    ⚔
+                    <small>ARMA</small>
                 </span>
+
+                <img
+                    id="arma-selecionada-imagem"
+                    class="equipamento-icone imagem-armadura-selecionada"
+                    alt="Imagem da arma selecionada"
+                    hidden>
+
+                <span class="equipamento-conteudo">
+                    <span class="equipamento-nome" id="arma-selecionada-nome">
+                        Selecione uma arma
+                    </span>
+
+                    <span class="equipamento-detalhes"
+                        id="arma-selecionada-detalhes"
+                        hidden>
+                    </span>
+                </span>
+
                 <span class="equipamento-seta">›</span>
             </button>
 
@@ -538,7 +1320,16 @@
                 class="equipamento-linha"
                 onclick="abrirModalArmadura('cabeca')">
 
-            <span class="equipamento-icone">⛑</span>
+            <span id="cabeca-placeholder" class="equipamento-icone equipamento-placeholder" aria-hidden="true">
+                ⛑
+                <small>CABEÇA</small>
+            </span>
+
+            <img
+                id="cabeca-selecionada-imagem"
+                class="equipamento-icone imagem-armadura-selecionada"
+                alt="Imagem da armadura de cabeça"
+                hidden>
 
             <span class="equipamento-conteudo">
                 <span class="equipamento-nome"
@@ -565,7 +1356,16 @@
                 class="equipamento-linha"
                 onclick="abrirModalArmadura('peito')">
 
-            <span class="equipamento-icone">🛡</span>
+            <span id="peito-placeholder" class="equipamento-icone equipamento-placeholder" aria-hidden="true">
+                🛡
+                <small>PEITO</small>
+            </span>
+
+            <img
+                id="peito-selecionada-imagem"
+                class="equipamento-icone imagem-armadura-selecionada"
+                alt="Imagem da armadura de peito"
+                hidden>
 
             <span class="equipamento-conteudo">
                 <span class="equipamento-nome"
@@ -592,7 +1392,16 @@
                 class="equipamento-linha"
                 onclick="abrirModalArmadura('bracos')">
 
-            <span class="equipamento-icone">🧤</span>
+            <span id="bracos-placeholder" class="equipamento-icone equipamento-placeholder" aria-hidden="true">
+                🧤
+                <small>BRAÇOS</small>
+            </span>
+
+            <img
+                id="bracos-selecionada-imagem"
+                class="equipamento-icone imagem-armadura-selecionada"
+                alt="Imagem da armadura de braços"
+                hidden>
 
             <span class="equipamento-conteudo">
                 <span class="equipamento-nome"
@@ -620,7 +1429,16 @@
                     class="equipamento-linha"
                     onclick="abrirModalArmadura('cintura')">
 
-                <span class="equipamento-icone">🥋</span>
+                <span id="cintura-placeholder" class="equipamento-icone equipamento-placeholder" aria-hidden="true">
+                    🥋
+                    <small>CINTURA</small>
+                </span>
+
+                <img
+                    id="cintura-selecionada-imagem"
+                    class="equipamento-icone imagem-armadura-selecionada"
+                    alt="Imagem da armadura de cintura"
+                    hidden>
 
                 <span class="equipamento-conteudo">
                     <span class="equipamento-nome"
@@ -649,7 +1467,16 @@
                     class="equipamento-linha"
                     onclick="abrirModalArmadura('pernas')">
 
-                <span class="equipamento-icone">🥾</span>
+                <span id="pernas-placeholder" class="equipamento-icone equipamento-placeholder" aria-hidden="true">
+                    🥾
+                    <small>BOTAS</small>
+                </span>
+
+                <img
+                    id="pernas-selecionada-imagem"
+                    class="equipamento-icone imagem-armadura-selecionada"
+                    alt="Imagem da armadura de pernas"
+                    hidden>
 
                 <span class="equipamento-conteudo">
                     <span class="equipamento-nome"
@@ -676,9 +1503,14 @@
             <button type="button"
                     class="equipamento-linha"
                     onclick="abrirModalTalisma()">
-                <span class="equipamento-icone">💎</span>
+                <span id="talisma-placeholder" class="equipamento-icone equipamento-placeholder" aria-hidden="true">
+                    💎
+                    <small>TALISMÃ</small>
+                </span>
+                <span class="equipamento-conteudo">
                 <span class="equipamento-nome" id="talisma-selecionada-nome">
                     Selecione um talismã
+                </span>
                 </span>
                 <span class="equipamento-seta">›</span>
             </button>

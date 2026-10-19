@@ -1,46 +1,32 @@
-"""
-Script para importar armas da API pública mhw-db.com e converter para o
-formato usado pelo Arma model (app/models/arma.py).
-
-Rode este script na SUA máquina (aqui não tenho acesso à rede):
-
-    python -m app.scripts.importar_armas
-
-Ele salva o resultado em app/data/armas.json, sobrescrevendo o que já existe.
-Faça um backup do armas.json atual antes de rodar, se quiser manter os dados
-de teste.
-"""
-
 import json
+import os
+import tempfile
 from pathlib import Path
+from urllib.request import Request, urlopen
 
-import requests
+URL_API = "https://mhw-db.com/weapons"
 
-MHW_DB_URL = "https://mhw-db.com/weapons"
-DATA_PATH = Path("app/data/armas.json")
+DIRETORIO_PROJETO = Path(__file__).resolve().parents[2]
+ARQUIVO_DESTINO = DIRETORIO_PROJETO / "app" / "data" / "armas.json"
 
-# Mapeia o "type" da mhw-db para o nosso "tipo" em português.
-# Confira os valores reais retornados pela API caso algum tipo não seja
-# mapeado corretamente (ficará com o valor original em inglês).
-MAPA_TIPOS = {
+TIPOS = {
     "great-sword": "grande_espada",
     "long-sword": "espada_longa",
     "sword-and-shield": "espada_e_escudo",
     "dual-blades": "laminas_duplas",
     "hammer": "martelo",
-    "hunting-horn": "chifre_de_caca",
+    "hunting-horn": "corneta_de_caca",
     "lance": "lanca",
-    "gunlance": "lanca_de_fogo",
-    "switch-axe": "machado_de_troca",
-    "charge-blade": "espada_e_machado_de_carga",
+    "gunlance": "lanca_arma",
+    "switch-axe": "machado_espada",
+    "charge-blade": "lamina_carregada",
     "insect-glaive": "glaive_insetos",
+    "light-bowgun": "fuzil_leve",
+    "heavy-bowgun": "fuzil_pesado",
     "bow": "arco",
-    "light-bowgun": "bowgun_leve",
-    "heavy-bowgun": "bowgun_pesado",
 }
 
-# Mapeia as cores do "durability" da mhw-db para os campos do nosso Sharpness.
-MAPA_CORES = {
+CORES_AFIAÇÃO = {
     "red": "vermelho",
     "orange": "laranja",
     "yellow": "amarelo",
@@ -51,98 +37,152 @@ MAPA_CORES = {
 }
 
 
-def converter_sharpness(durability: list[dict]) -> list[dict] | None:
-    if not durability:
-        return None
-    return [
-        {MAPA_CORES[cor]: valor for cor, valor in nivel.items() if cor in MAPA_CORES}
-        for nivel in durability
+def converter_arma(dado: dict) -> dict:
+    ataque = dado.get("attack") or {}
+    atributos = dado.get("attributes") or {}
+    crafting = dado.get("crafting") or {}
+    assets = dado.get("assets") or {}
+    phial = dado.get("phial") or {}
+    shelling = dado.get("shelling") or {}
+
+    elementos = [
+        {
+            "tipo": elemento["type"],
+            "valor": elemento.get("damage", 0) or 0,
+            "oculto": elemento.get("hidden", False),
+        }
+        for elemento in dado.get("elements", [])
     ]
 
+    sharpness = []
+    for nivel in dado.get("durability") or []:
+        sharpness.append({
+            CORES_AFIAÇÃO[cor]: nivel.get(cor, 0)
+            for cor in CORES_AFIAÇÃO
+        })
 
-def converter_arma(item: dict) -> dict:
-    arma = {
-        "id": str(item["id"]),
-        "nome": item["name"],
-        "tipo": MAPA_TIPOS.get(item["type"], item["type"]),
-        "raridade": item["rarity"],
-        "ataque_display": item["attack"]["display"],
-        "ataque_bruto": item["attack"]["raw"],
-        "afinidade": item.get("attributes", {}).get("affinity", 0),
-        "defesa_bonus": item.get("attributes", {}).get("defense", 0),
-        "elderseal": item.get("elderseal"),
-        "tipo_dano": item.get("damageType"),
-        "elementos": [
-            {"tipo": e["type"], "valor": e["damage"], "oculto": e.get("hidden", False)}
-            for e in item.get("elements", [])
+    slots = [
+        slot.get("rank", 0)
+        for slot in dado.get("slots", [])
+    ]
+
+    municoes = []
+    for municao in dado.get("ammo") or []:
+        capacidades = municao.get("capacities") or [0]
+
+        # O modelo atual suporta uma capacidade por tipo.
+        # Guardamos a maior capacidade disponível entre os níveis.
+        municoes.append({
+            "tipo": municao.get("type", "desconhecido"),
+            "capacidade": max(capacidades, default=0),
+        })
+
+    coatings = dado.get("coatings")
+    if isinstance(coatings, dict):
+        coatings = [
+            nome
+            for nome, habilitado in coatings.items()
+            if habilitado
+        ]
+
+    return {
+        "id": str(dado["id"]),
+        "nome": dado["name"],
+        "tipo": TIPOS.get(dado["type"], dado["type"]),
+        "raridade": dado.get("rarity", 0),
+        "ataque_display": ataque.get("display", 0),
+        "ataque_bruto": ataque.get("raw", 0),
+        "afinidade": atributos.get("affinity", 0) or 0,
+        "defesa_bonus": atributos.get("defense", 0) or 0,
+        "elderseal": dado.get("elderseal"),
+        "tipo_dano": dado.get("damageType"),
+        "elementos": elementos,
+        "slots": slots,
+        "imagem": assets.get("image"),
+        "icone": assets.get("icon"),
+        "anterior_id": (
+            str(crafting["previous"])
+            if crafting.get("previous") is not None
+            else None
+        ),
+        "proximos_ids": [
+            str(id_)
+            for id_ in crafting.get("branches", [])
         ],
-        "slots": [s["rank"] for s in item.get("slots", [])],
+        "sharpness": sharpness or None,
+        "melodias": dado.get("melodies"),
+        "tipo_disparo": shelling.get("type"),
+        "nivel_disparo": shelling.get("level"),
+        "tipo_frasco": phial.get("type"),
+        "nivel_frasco": phial.get("damage"),
+        "bonus_kinsect": dado.get("boostType"),
+        "coatings": coatings,
+        "niveis_carga": dado.get("chargeLevels"),
+        "municoes": municoes or None,
+        "recuo": dado.get("recoil"),
+        "velocidade_recarga": dado.get("reload"),
     }
-
-    crafting = item.get("crafting") or {}
-    if crafting.get("previous"):
-        arma["anterior_id"] = str(crafting["previous"])
-    if crafting.get("branches"):
-        arma["proximos_ids"] = [str(b) for b in crafting["branches"]]
-
-    sharpness = converter_sharpness(item.get("durability", []))
-    if sharpness:
-        arma["sharpness"] = sharpness
-
-    # Campos específicos por tipo de arma — a mhw-db pode retornar chaves
-    # diferentes dependendo do tipo (ex: "notes" para Chifre de Caça,
-    # "coatings" para Arco, "ammo" para Bowguns, "phial"/"phialType" para
-    # Machado de Troca / Espada e Machado de Carga, "shelling" para Lança de
-    # Fogo). Ajuste os nomes das chaves abaixo conforme o que a API
-    # realmente devolver para cada tipo (confira imprimindo um item bruto).
-    if "notes" in item:
-        arma["melodias"] = item["notes"]
-    if "shelling" in item and isinstance(item["shelling"], dict):
-        arma["tipo_disparo"] = item["shelling"].get("type")
-        arma["nivel_disparo"] = item["shelling"].get("level")
-    if "phial" in item and isinstance(item["phial"], dict):
-        arma["tipo_frasco"] = item["phial"].get("type")
-        arma["nivel_frasco"] = item["phial"].get("damage")
-    if "kinsectBonus" in item:
-        arma["bonus_kinsect"] = item["kinsectBonus"]
-    if "coatings" in item:
-        coatings = item["coatings"]
-        if coatings and isinstance(coatings[0], dict):
-            arma["coatings"] = [c.get("type", str(c)) for c in coatings]
-        else:
-            arma["coatings"] = coatings
-    if "ammo" in item:
-        ammo = item["ammo"]
-        if isinstance(ammo, dict):
-            arma["municoes"] = [
-                {"tipo": tipo, "capacidade": capacidade}
-                for tipo, capacidade in ammo.items()
-            ]
-        elif isinstance(ammo, list):
-            arma["municoes"] = [
-                {
-                    "tipo": m.get("type", str(i)),
-                    "capacidade": m.get("capacity", m.get("clip", 0)),
-                }
-                for i, m in enumerate(ammo)
-                if isinstance(m, dict)
-            ]
-
-    return arma
 
 
 def main():
-    resposta = requests.get(MHW_DB_URL, timeout=30)
-    resposta.raise_for_status()
-    dados_brutos = resposta.json()
+    print("Baixando dados das armas...")
 
-    armas = [converter_arma(item) for item in dados_brutos]
+    requisicao = Request(
+        URL_API,
+        headers={"User-Agent": "MHW-Build-Planner/1.0"},
+    )
 
-    DATA_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(DATA_PATH, "w", encoding="utf-8") as f:
-        json.dump(armas, f, ensure_ascii=False, indent=2)
+    with urlopen(requisicao, timeout=60) as resposta:
+        dados_api = json.load(resposta)
 
-    print(f"{len(armas)} armas importadas em {DATA_PATH}")
+    if not isinstance(dados_api, list) or not dados_api:
+        raise ValueError("A API não retornou uma lista válida de armas.")
+
+    armas = [converter_arma(arma) for arma in dados_api]
+
+    # Valida os dados antes de substituir o JSON existente.
+    ids = set()
+    for arma in armas:
+        if arma["id"] in ids:
+            raise ValueError(f"ID duplicado encontrado: {arma['id']}")
+        ids.add(arma["id"])
+
+        if not arma["nome"] or not arma["tipo"]:
+            raise ValueError("Arma sem nome ou tipo.")
+
+    # Valida cada registro usando o modelo Pydantic do projeto.
+    from app.models.arma import Arma
+
+    for arma in armas:
+        Arma.model_validate(arma)
+
+    ARQUIVO_DESTINO.parent.mkdir(parents=True, exist_ok=True)
+
+    # Grava em arquivo temporário e só depois substitui o destino.
+    arquivo_temporario = None
+    try:
+        with tempfile.NamedTemporaryFile(
+            mode="w",
+            encoding="utf-8",
+            dir=ARQUIVO_DESTINO.parent,
+            suffix=".tmp",
+            delete=False,
+        ) as arquivo:
+            arquivo_temporario = Path(arquivo.name)
+            json.dump(
+                armas,
+                arquivo,
+                ensure_ascii=False,
+                indent=2,
+            )
+
+        os.replace(arquivo_temporario, ARQUIVO_DESTINO)
+    finally:
+        if arquivo_temporario and arquivo_temporario.exists():
+            arquivo_temporario.unlink()
+
+    print(f"Importação concluída: {len(armas)} armas.")
+    print(f"Arquivo atualizado: {ARQUIVO_DESTINO}")
 
 
 if __name__ == "__main__":

@@ -1,0 +1,47 @@
+<div class="lista-minhas-builds">
+    {% if builds_salvas %}
+        {% for build_salva in builds_salvas %}
+            <div
+                class="build-salva"
+                data-build-id="{{ build_salva.id }}"
+                role="button"
+                tabindex="0"
+                onclick="carregarBuildSalva(this.dataset.buildId)"
+                onkeydown="if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    carregarBuildSalva(this.dataset.buildId);
+                }"
+            >
+                <div class="build-salva-imagem">
+                    {% if build_salva.arma_imagem %}
+                        <img
+                            src="{{ build_salva.arma_imagem }}"
+                            alt="{{ build_salva.arma_nome or 'Arma da build' }}"
+                            loading="lazy"
+                        >
+                    {% else %}
+                        <div class="build-salva-placeholder">
+                            ⚔️
+                        </div>
+                    {% endif %}
+                </div>
+
+                <div class="build-salva-info">
+                    <strong>{{ build_salva.nome }}</strong>
+
+                    {% if build_salva.arma_nome %}
+                        <span>{{ build_salva.arma_nome }}</span>
+                    {% else %}
+                        <span>Arma não selecionada</span>
+                    {% endif %}
+
+                    <small>
+                        Salva em: {{ build_salva.criada_em }}
+                    </small>
+                </div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Você ainda não salvou nenhuma build.</p>
+    {% endif %}
+</div>

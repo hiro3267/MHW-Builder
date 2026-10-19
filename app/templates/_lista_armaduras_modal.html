@@ -8,27 +8,101 @@
             </button>
         </div>
 
-        <ul class="lista-armaduras">
+        <div class="filtro-sexo-armadura">
+            <label>
+                <input
+                    type="radio"
+                    name="sexo-armadura"
+                    value="male"
+                    onchange="alterarSexoArmadura('male')"
+                >
+                Male
+            </label>
+
+            <label>
+                <input
+                    type="radio"
+                    name="sexo-armadura"
+                    value="female"
+                    onchange="alterarSexoArmadura('female')"
+                >
+                Female
+            </label>
+        </div>
+
+        <div class="filtros-equipamento">
+            <input
+                type="search"
+                id="busca-armadura"
+                placeholder="Buscar armadura pelo nome..."
+                oninput="filtrarArmadurasModal()"
+            >
+
+            <select id="filtro-rank-armadura"
+                    onchange="filtrarArmadurasModal()">
+                <option value="todos">Todos os ranks</option>
+                <option value="low">Low Rank</option>
+                <option value="high">High Rank</option>
+                <option value="master">Master Rank</option>
+            </select>
+
+            <select id="filtro-raridade-armadura"
+                    onchange="filtrarArmadurasModal()">
+                <option value="todas">Todas as raridades</option>
+                {% for raridade in armaduras | map(attribute='raridade') | unique | sort %}
+                <option value="{{ raridade }}">Raridade {{ raridade }}</option>
+                {% endfor %}
+            </select>
+
+            <select id="ordem-armadura"
+                    onchange="ordenarArmadurasModal()">
+                <option value="nome">Nome (A–Z)</option>
+                <option value="raridade-desc">Maior raridade</option>
+                <option value="raridade-asc">Menor raridade</option>
+                <option value="defesa-desc">Maior defesa</option>
+                <option value="defesa-asc">Menor defesa</option>
+            </select>
+        </div>
+
+        <ul class="lista-armaduras" id="lista-armaduras-modal">
             {% for peca in armaduras %}
             <li
                 data-id="{{ peca.id }}"
                 data-nome="{{ peca.nome }}"
                 data-campo="{{ campo }}"
+                data-rank="{{ peca.rank or '' }}"
+                data-raridade="{{ peca.raridade }}"
+                data-defesa="{{ peca.defesa }}"
+                data-image-male="{{ peca.assets.imageMale or '' if peca.assets else '' }}"
+                data-image-female="{{ peca.assets.imageFemale or '' if peca.assets else '' }}"
                 onclick="selecionarArmadura(
                     this.dataset.id,
                     this.dataset.nome,
                     this.dataset.campo,
-                    this.querySelector('.armadura-detalhes-selecao').innerHTML
+                    this.querySelector('.armadura-detalhes-selecao').innerHTML,
+                    this.dataset.imageMale,
+                    this.dataset.imageFemale
                 )"
             >
+                <div class="armadura-imagem">
+                    {% if peca.assets %}
+                    <img
+                        src="{{ peca.assets.imageMale or peca.assets.imageFemale or '' }}"
+                        data-image-male="{{ peca.assets.imageMale or '' }}"
+                        data-image-female="{{ peca.assets.imageFemale or '' }}"
+                        alt="{{ peca.nome }}"
+                        loading="lazy"
+                        onerror="this.onerror=null; const alternativa=this.dataset.imageFemale || this.dataset.imageMale; if(alternativa && this.src !== alternativa){this.src=alternativa}else{this.hidden=true}"
+                    >
+                    {% endif %}
+                </div>
+
                 <div class="armadura-detalhes-selecao">
                     <div class="armadura-info">
                         <strong>{{ peca.nome }}</strong>
-
                         <span class="armadura-raridade">
                             Raridade {{ peca.raridade }}
                         </span>
-
                         {% if peca.rank %}
                         <span>Rank: {{ peca.rank }}</span>
                         {% endif %}
@@ -47,23 +121,21 @@
                     <div class="armadura-skills">
                         <strong>Habilidades:</strong>
                         {% for skill in peca.skills %}
-                            <span>{{ skill.nome }} +{{ skill.nivel }}</span>{% if not loop.last %}, {% endif %}
+                        <span>{{ skill.nome }} +{{ skill.nivel }}</span>{% if not loop.last %}, {% endif %}
                         {% endfor %}
                     </div>
                     {% endif %}
 
-                    {% if peca.slots %}
                     <div class="armadura-slots">
                         <strong>Slots:</strong>
-                        {% for slot in peca.slots %}
+                        {% if peca.slots %}
+                            {% for slot in peca.slots %}
                             <span class="slot-nivel">Nível {{ slot }}</span>
-                        {% endfor %}
+                            {% endfor %}
+                        {% else %}
+                            <span>Sem slots para decorações</span>
+                        {% endif %}
                     </div>
-                    {% else %}
-                    <div class="armadura-slots">
-                        Sem slots para decorações
-                    </div>
-                    {% endif %}
                 </div>
             </li>
             {% else %}

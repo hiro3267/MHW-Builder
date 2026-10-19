@@ -20,20 +20,20 @@ def carregar_armas() -> list[Arma]:
     return [Arma(**item) for item in dados]
 
 TIPOS_ARMAS = {
-    "grande_espada": "Grande Espada",
+     "grande_espada": "Grande Espada",
     "espada_e_escudo": "Espada e Escudo",
     "laminas_duplas": "Lâminas Duplas",
     "espada_longa": "Espada Longa",
     "martelo": "Martelo",
     "lanca": "Lança",
-    "lanca_de_fogo": "Lança-arma",
-    "chifre_de_caca": "Chifre de Caça",
-    "espada_e_machado_de_carga": "Lâmina Dínamo",
-    "machado_sw_troca": "Transmachado",
+    "lanca_arma": "Lança-arma",
+    "corneta_de_caca": "Corneta de Caça",
+    "lamina_carregada": "Lâmina Dínamo",
+    "machado_espada": "Transmachado",
     "glaive_insetos": "Glaive Inseto",
     "arco": "Arco",
-    "bowgun_leve": "Fuzilarco Leve",
-    "bowgun_pesado": "Fuzilarco Pesado",
+    "fuzil_leve": "Fuzilarco Leve",
+    "fuzil_pesado": "Fuzilarco Pesado",
 }
 
 ELEMENTOS = {
@@ -49,7 +49,6 @@ ELEMENTOS = {
     "nenhum": "Sem elemento",
 }
 
-
 @router.get("/modal")
 def modal_armas(request: Request):
     armas = carregar_armas()
@@ -58,11 +57,11 @@ def modal_armas(request: Request):
         request=request,
         name="_lista_armas_modal.html",
         context={
+            "armas": armas,
             "tipos_armas": TIPOS_ARMAS,
             "elementos": ELEMENTOS,
         },
     )
-
 
 @router.get("/modal/lista")
 def lista_armas_modal(

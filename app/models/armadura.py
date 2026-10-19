@@ -1,6 +1,5 @@
 from typing import Optional
-
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class Skill(BaseModel):
@@ -8,11 +7,16 @@ class Skill(BaseModel):
     nivel: int
 
 
+class AssetsArmadura(BaseModel):
+    imageMale: Optional[str] = None
+    imageFemale: Optional[str] = None
+
+
 class Armadura(BaseModel):
     id: str
     nome: str
-    peca: str  # "cabeca", "peito", "braco", "cintura", "perna"
-    rank: Optional[str] = None  # "low" ou "high"
+    peca: str
+    rank: Optional[str] = None
     raridade: int
     defesa: int
     resistencia_fogo: int = 0
@@ -20,5 +24,6 @@ class Armadura(BaseModel):
     resistencia_trovao: int = 0
     resistencia_gelo: int = 0
     resistencia_dragao: int = 0
-    skills: list[Skill] = []
-    slots: list[int] = []  # ex: [2, 0, 0]
+    skills: list[Skill] = Field(default_factory=list)
+    slots: list[int] = Field(default_factory=list)
+    assets: Optional[AssetsArmadura] = None

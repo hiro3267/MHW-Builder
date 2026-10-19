@@ -1,0 +1,39 @@
+<div class="modal-overlay"
+     onclick="if (event.target === this) this.remove()">
+
+    <div class="modal-armaduras">
+        <h2>Salvar build</h2>
+
+        <form
+            hx-post="/minhas-builds/salvar"
+            hx-include="#build-form"
+            hx-target="#minhas-builds-conteudo"
+            hx-swap="innerHTML"
+            hx-on::after-request="
+                if (event.detail.successful) {
+                    document.getElementById('modal-container').innerHTML = '';
+                }
+            ">
+
+            <label for="nome-build">Nome da build</label>
+
+            <input
+                type="text"
+                id="nome-build"
+                name="nome"
+                placeholder="Ex.: Espadão - dano bruto"
+                maxlength="100"
+                required>
+
+            <div class="minhas-builds-acoes">
+                <button type="submit">Salvar</button>
+
+                <button
+                    type="button"
+                    onclick="document.getElementById('modal-container').innerHTML = ''">
+                    Cancelar
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
