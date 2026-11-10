@@ -1,4 +1,4 @@
-Instruções para rexecução.
+Instruções para execução.
 
 No terminal:
 soure venv/bin/activate
