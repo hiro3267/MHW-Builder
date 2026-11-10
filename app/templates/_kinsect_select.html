@@ -1,9 +1,20 @@
-<label>
-    Kinsect:
-    <select name="kinsect_id">
-        <option value="">—</option>
-        {% for kinsect in kinsects %}
-        <option value="{{ kinsect.id }}">{{ kinsect.nome }}</option>
-        {% endfor %}
-    </select>
-</label>
+<div class="equipamento-linha kinsect-linha">
+    <div class="equipamento-icone">
+        <span class="kinsect-emoji">🪲</span>
+        <small>KINSECT</small>
+    </div>
+
+    <div class="kinsect-conteudo">
+        <button
+            type="button"
+            class="kinsect-botao-selecao"
+            onclick="abrirModalKinsect()"
+        >
+            <span id="kinsect-selecionado-nome">Selecione um kinsect</span>
+            <span class="equipamento-seta">›</span>
+        </button>
+    </div>
+</div>
+
+<input type="hidden" name="kinsect_id" id="kinsect_id_input" value="">
+<div id="kinsect-modal-container"></div>

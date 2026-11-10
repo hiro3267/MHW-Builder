@@ -15,6 +15,12 @@
         });
     }
 
+    function abrirModalKinsect() {
+        htmx.ajax("GET", "/kinsect-modal", {
+            target: "#kinsect-modal-container",
+            swap: "innerHTML"
+        });
+    }
 
     function abrirModalArmadura(campo) {
         htmx.ajax('GET', `/armaduras/modal?campo=${encodeURIComponent(campo)}`, {
@@ -22,28 +28,97 @@
             swap: 'innerHTML'
         });
     }
-
-    function selecionarArma(id, nome, detalhesHtml) {
+    
+    function selecionarArma(id, nome, detalhesHtml, imagem = "", tipo = "") {
         const input = document.getElementById("arma_id_input");
         const nomeElemento = document.getElementById("arma-selecionada-nome");
         const detalhesElemento = document.getElementById("arma-selecionada-detalhes");
+        const imagemElemento = document.getElementById("arma-selecionada-imagem");
+        const placeholder = document.getElementById("arma-placeholder");
 
-        if (!input || !nomeElemento || !detalhesElemento) {
+        if (!input || !nomeElemento || !detalhesElemento || !imagemElemento) {
             console.error("Não encontrei os campos da arma selecionada.");
             return;
         }
 
         input.value = id;
         nomeElemento.textContent = nome;
-        document.getElementById("arma-placeholder")?.classList.add("equipamento-placeholder-selecionado");
 
         detalhesElemento.innerHTML = detalhesHtml || "";
         detalhesElemento.hidden = !detalhesHtml;
 
+        imagemElemento.onerror = () => {
+            imagemElemento.onerror = null;
+            imagemElemento.hidden = true;
+            imagemElemento.removeAttribute("src");
+
+            if (placeholder) {
+                placeholder.hidden = false;
+            }
+        };
+
+        if (imagem) {
+            imagemElemento.src = imagem;
+            imagemElemento.hidden = false;
+
+            if (placeholder) {
+                placeholder.hidden = true;
+            }
+        } else {
+            imagemElemento.hidden = true;
+            imagemElemento.removeAttribute("src");
+
+            if (placeholder) {
+                placeholder.hidden = false;
+            }
+        }
+
         input.dispatchEvent(new Event("change", { bubbles: true }));
 
         document.getElementById("modal-container").innerHTML = "";
-    }   
+
+        // Atualiza o seletor de kinsect conforme a arma escolhida.
+        const kinsectContainer = document.getElementById("kinsect-container");
+
+        if (kinsectContainer) {
+            if (tipo === "glaive_insetos") {
+                htmx.ajax(
+                    "GET",
+                    `/kinsect-select?arma_id=${encodeURIComponent(id)}`,
+                    {
+                        target: "#kinsect-container",
+                        swap: "innerHTML"
+                    }
+                );
+            } else {
+                // Remove o seletor e qualquer kinsect selecionado anteriormente.
+                kinsectContainer.innerHTML = "";
+
+                kinsectContainer.innerHTML = "";
+
+                const kinsectInput = document.getElementById("kinsect_id_input");
+
+                if (kinsectInput) {
+                    kinsectInput.value = "";
+                }
+            }
+        }
+    }
+
+    function selecionarKinsect(id, nome) {
+        const input = document.getElementById("kinsect_id_input");
+        const nomeElemento = document.getElementById("kinsect-selecionado-nome");
+        const modal = document.getElementById("kinsect-modal-container");
+
+        if (!input || !nomeElemento) return;
+
+        input.value = id;
+        nomeElemento.textContent = nome;
+
+        if (modal) {
+            modal.innerHTML = "";
+        }
+    }
 
     function selecionarArmadura(
         id,
@@ -230,6 +305,108 @@
         itens.forEach(item => lista.appendChild(item));
     }
 
+    function inicializarFiltrosTalismas() {
+        const lista = document.getElementById("lista-talismas-modal");
+
+        if (!lista) return;
+
+        const itens = [...lista.querySelectorAll("li[data-id]")];
+
+        const filtroRaridade = document.getElementById("filtro-raridade-talisma");
+        const filtroNivel = document.getElementById("filtro-nivel-talisma");
+
+        const raridades = [...new Set(
+            itens.map(item => item.dataset.raridade)
+        )].sort((a, b) => Number(a) - Number(b));
+
+        const niveis = [...new Set(
+            itens.map(item => item.dataset.nivel)
+        )].sort((a, b) => Number(a) - Number(b));
+
+        raridades.forEach(raridade => {
+            filtroRaridade.add(
+                new Option(`Raridade ${raridade}`, raridade)
+            );
+        });
+
+        niveis.forEach(nivel => {
+            filtroNivel.add(
+                new Option(`Nível ${nivel}`, nivel)
+            );
+        });
+    }
+
+
+    function filtrarTalismasModal() {
+        const busca = document
+            .getElementById("busca-talisma")
+            .value.toLocaleLowerCase("pt-BR");
+
+        const buscaSkill = document
+            .getElementById("busca-skill-talisma")
+            .value.toLocaleLowerCase("pt-BR");
+
+        const raridade = document.getElementById("filtro-raridade-talisma").value;
+        const nivel = document.getElementById("filtro-nivel-talisma").value;
+
+        const itens = document.querySelectorAll(
+            "#lista-talismas-modal li[data-id]"
+        );
+
+        itens.forEach(item => {
+            const nome = item.dataset.nome.toLocaleLowerCase("pt-BR");
+            const skills = item.dataset.skills.toLocaleLowerCase("pt-BR");
+
+            const correspondeNome = nome.includes(busca);
+            const correspondeSkill = skills.includes(buscaSkill);
+
+            const correspondeRaridade =
+                raridade === "todos" || item.dataset.raridade === raridade;
+
+            const correspondeNivel =
+                nivel === "todos" || item.dataset.nivel === nivel;
+
+            item.hidden = !(
+                correspondeNome &&
+                correspondeSkill &&
+                correspondeRaridade &&
+                correspondeNivel
+            );
+        });
+    }
+
+
+    function ordenarTalismasModal() {
+        const lista = document.getElementById("lista-talismas-modal");
+
+        if (!lista) return;
+
+        const ordem = document.getElementById("ordem-talisma").value;
+
+        const itens = [...lista.querySelectorAll("li[data-id]")];
+
+        itens.sort((a, b) => {
+            switch (ordem) {
+                case "raridade-desc":
+                    return Number(b.dataset.raridade) - Number(a.dataset.raridade);
+
+                case "raridade-asc":
+                    return Number(a.dataset.raridade) - Number(b.dataset.raridade);
+
+                case "nivel-desc":
+                    return Number(b.dataset.nivel) - Number(a.dataset.nivel);
+
+                case "nivel-asc":
+                    return Number(a.dataset.nivel) - Number(b.dataset.nivel);
+
+                default:
+                    return a.dataset.nome.localeCompare(b.dataset.nome);
+            }
+        });
+
+        itens.forEach(item => lista.appendChild(item));
+    }
+
     let sexoArmaduraSelecionado = "male";
 
     function alterarSexoArmadura(sexo) {
@@ -259,6 +436,7 @@
 
         if (event.target.id === "modal-container") {
             atualizarModalArmaduras();
+            inicializarFiltrosTalismas();
         }
     });
 
@@ -326,21 +504,30 @@
 
     async function alternarMinhasBuilds() {
         const conteudo = document.getElementById("minhas-builds-conteudo");
+        const botao = document.getElementById("botao-minhas-builds");
 
+        // Se a lista já foi carregada, apenas recolhe ou expande.
         if (conteudo.dataset.carregada === "true") {
             conteudo.hidden = !conteudo.hidden;
+            botao.textContent = conteudo.hidden
+                ? "Ver minhas builds"
+                : "Recolher minhas builds";
             return;
         }
 
         try {
             const resposta = await fetch("/minhas-builds");
+
             if (!resposta.ok) {
                 throw new Error("Não foi possível carregar as builds.");
             }
 
             conteudo.innerHTML = await resposta.text();
+            htmx.process(conteudo);
+
             conteudo.dataset.carregada = "true";
             conteudo.hidden = false;
+            botao.textContent = "Recolher minhas builds";
         } catch (erro) {
             console.error(erro);
             conteudo.innerHTML = "<p>Erro ao carregar suas builds.</p>";
@@ -369,6 +556,80 @@
             if (valor !== undefined && valor !== null && valor !== "") return valor;
         }
         return padrao;
+    }
+
+    function escaparHTML(valor) {
+        return String(valor ?? "").replace(/[&<>"']/g, caractere => ({
+            "&": "&amp;",
+            "<": "&lt;",
+            ">": "&gt;",
+            '"': "&quot;",
+            "'": "&#39;"
+        })[caractere]);
+    }
+
+    function montarDetalhesArma(arma) {
+        const elementos = (arma.elementos || [])
+            .filter(elemento => !elemento.oculto);
+
+        const slots = arma.slots || [];
+
+        return `
+            <div class="armadura-info">
+                <strong>${escaparHTML(arma.nome)}</strong>
+                <span class="armadura-raridade">
+                    Raridade ${escaparHTML(arma.raridade)}
+                </span>
+            </div>
+
+            <div class="armadura-atributos">
+                <span>⚔️ Ataque: ${escaparHTML(arma.ataque_display)}</span>
+                <span>🎯 Afinidade: ${escaparHTML(arma.afinidade)}%</span>
+                ${arma.defesa_bonus
+                    ? `<span>🛡️ Defesa: +${escaparHTML(arma.defesa_bonus)}</span>`
+                    : ""}
+            </div>
+
+            <div class="armadura-skills">
+                <strong>Elementos e efeitos:</strong>
+                ${elementos.length
+                    ? elementos.map(elemento =>
+                        `<span>${escaparHTML(elemento.tipo)}: ${escaparHTML(elemento.valor)}</span>`
+                    ).join(" ")
+                    : "<span>Sem elemento listado</span>"
+                }
+            </div>
+
+            <div class="armadura-slots">
+                <strong>Slots:</strong>
+                ${slots.length
+                    ? slots.map(slot =>
+                        `<span class="slot-nivel">Nível ${escaparHTML(slot)}</span>`
+                    ).join("")
+                    : "<span>Sem slots para decorações</span>"
+                }
+            </div>
+
+            ${arma.tipo_disparo
+                ? `<div class="armadura-skills">
+                    Disparo: ${escaparHTML(arma.tipo_disparo)}
+                    ${arma.nivel_disparo
+                        ? ` — Nível ${escaparHTML(arma.nivel_disparo)}`
+                        : ""}
+                </div>`
+                : ""
+            }
+
+            ${arma.tipo_frasco
+                ? `<div class="armadura-skills">
+                    Tipo de frasco: ${escaparHTML(arma.tipo_frasco)}
+                    ${arma.nivel_frasco
+                        ? ` — Nível ${escaparHTML(arma.nivel_frasco)}`
+                        : ""}
+                </div>`
+                : ""
+            }
+        `;
     }
     
     function atualizarNomeDetalhes(campo, item, tipo) {
@@ -409,15 +670,49 @@
             return;
         }
 
-        if (nomeEl) nomeEl.textContent = item.nome || "Equipamento selecionado";
-
-        if (detalhesEl) {
-            detalhesEl.innerHTML = "";
-            detalhesEl.hidden = true;
+        if (nomeEl) {
+            nomeEl.textContent = item.nome || "Equipamento selecionado";
         }
 
         if (placeholder) {
             placeholder.classList.add("equipamento-placeholder-selecionado");
+        }
+
+        if (tipo === "arma") {
+            if (detalhesEl) {
+                detalhesEl.innerHTML = montarDetalhesArma(item);
+                detalhesEl.hidden = false;
+            }
+
+            const img = document.getElementById("arma-selecionada-imagem");
+
+            if (img) {
+                const url = valorCampo(item, [
+                    "image",
+                    "assets.image",
+                    "imagem"
+                ]);
+
+                img.onerror = () => {
+                    img.onerror = null;
+                    img.hidden = true;
+                    img.removeAttribute("src");
+
+                    if (placeholder) placeholder.hidden = false;
+                };
+
+                if (url) {
+                    img.src = url;
+                    img.hidden = false;
+
+                    if (placeholder) placeholder.hidden = true;
+                } else {
+                    img.hidden = true;
+                    img.removeAttribute("src");
+
+                    if (placeholder) placeholder.hidden = false;
+                }
+            }
         }
 
         if (tipo === "armadura") {
@@ -438,34 +733,21 @@
 
                 atualizarImagemSelecionada(img);
             }
+
+            // Os detalhes das armaduras ainda serão montados
+            // com base nos campos do objeto de armadura.
+            if (detalhesEl) {
+                detalhesEl.innerHTML = "";
+                detalhesEl.hidden = true;
+            }
         }
 
-        if (tipo === "arma") {
-            const img = document.getElementById("arma-selecionada-imagem");
+        if (tipo === "talisma") {
+            const imagemEl = document.getElementById("talisma-selecionada-imagem");
 
-            if (img) {
-                const url = valorCampo(item, [
-                    "image",
-                    "assets.image",
-                    "imagem"
-                ]);
-
-                img.onerror = () => {
-                    img.onerror = null;
-                    img.hidden = true;
-                    img.removeAttribute("src");
-                    if (placeholder) placeholder.hidden = false;
-                };
-
-                if (url) {
-                    img.src = url;
-                    img.hidden = false;
-                    if (placeholder) placeholder.hidden = true;
-                } else {
-                    img.hidden = true;
-                    img.removeAttribute("src");
-                    if (placeholder) placeholder.hidden = false;
-                }
+            if (detalhesEl) {
+                detalhesEl.innerHTML = "";
+                detalhesEl.hidden = true;
             }
         }
     }
@@ -499,18 +781,25 @@
         ];
         seletores.forEach((select, indice) => {
             select.value = decoracoesSalvas?.[indice] ?? "";
+            select.dispatchEvent(new Event("change", { bubbles: true }));
         });
     }
 
     async function carregarKinsectSalvo(armaId, kinsectId) {
         const container = document.getElementById("kinsect-container");
+
         if (!container) return;
 
         const evento = esperarEventoHTMX(container, "htmx:afterSettle");
-        htmx.ajax("GET", `/kinsect-select?arma_id=${encodeURIComponent(armaId || "")}`, {
-            target: "#kinsect-container",
-            swap: "innerHTML"
-        });
+
+        htmx.ajax(
+            "GET",
+            `/kinsect-select?arma_id=${encodeURIComponent(armaId || "")}`,
+            {
+                target: "#kinsect-container",
+                swap: "innerHTML"
+            }
+        );
 
         try {
             await evento;
@@ -519,8 +808,18 @@
             return;
         }
 
-        const select = container.querySelector('select[name="kinsect_id"]');
-        if (select) select.value = kinsectId ?? "";
+        const campoId = document.getElementById("kinsect_id_input");
+        const nome = document.getElementById("kinsect-selecionado-nome");
+
+        if (!campoId || !kinsectId) return;
+
+        const kinsect = await buscarEquipamentoSalvo("kinsect", kinsectId);
+
+        campoId.value = kinsect.id;
+
+        if (nome) {
+            nome.textContent = kinsect.nome;
+        }
     }
 
     async function carregarBuildSalva(buildId) {
@@ -1089,6 +1388,10 @@
             margin-bottom: 18px;
         }
 
+        .filtros-equipamento input[type="text"] {
+            margin-bottom: 0;
+        }
+
         .filtros-equipamento input,
         .filtros-equipamento select {
             width: 100%;
@@ -1146,6 +1449,57 @@
             gap: 6px;
         }
 
+        .lista-habilidades {
+            padding-left: 20px;
+        }
+
+        .habilidade-item {
+            position: relative;
+            margin-bottom: 8px;
+        }
+
+        .habilidade-com-tooltip {
+            display: inline-block;
+            cursor: help;
+            border-bottom: 1px dotted #899fbd;
+        }
+
+        .tooltip-habilidade {
+            position: absolute;
+            left: 0;
+            top: calc(100% + 8px);
+
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+
+            width: min(340px, 80vw);
+            padding: 14px;
+
+            background: #20242b;
+            color: #e4e8ef;
+
+            border: 1px solid #485363;
+            border-radius: 8px;
+
+            box-shadow: 0 4px 12px rgb(0 0 0 / 40%);
+
+            font-size: 14px;
+            line-height: 1.5;
+
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+
+            z-index: 100;
+        }
+
+        .habilidade-com-tooltip:hover .tooltip-habilidade,
+        .habilidade-com-tooltip:focus .tooltip-habilidade {
+            opacity: 1;
+            visibility: visible;
+        }
+
         #minhas-builds {
             max-width: 1000px;
             margin: 24px 0;
@@ -1175,25 +1529,14 @@
             border-color: #899fbd;
         }
 
+        #minhas-builds-conteudo[hidden] {
+            display: none !important;
+        }
+
         #minhas-builds-conteudo {
             display: flex;
             flex-direction: column;
             gap: 10px;
-        }
-
-        .build-salva {
-            display: flex;
-            align-items: center;
-            gap: 14px;
-            padding: 12px;
-            border: 1px solid #3a3a3a;
-            border-radius: 10px;
-            background: #202020;
-            cursor: pointer;
-            transition: background 0.2s, border-color 0.2s;
-            width: 100%;
-            max-width: 500px;
-            box-sizing: border-box;
         }
 
         .build-salva:hover,
@@ -1242,6 +1585,113 @@
             overflow-wrap: anywhere;
         }
 
+        .build-salva {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 12px 42px 12px 12px;
+            border: 1px solid #3a3a3a;
+            border-radius: 10px;
+            background: #202020;
+            cursor: pointer;
+            transition: background 0.2s, border-color 0.2s;
+            width: 100%;
+            max-width: 500px;
+            box-sizing: border-box;
+        }
+
+        .build-salva-excluir {
+            position: absolute;
+            top: 6px;
+            right: 6px;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            padding: 0;
+            border: 1px solid #a44;
+            border-radius: 6px;
+            background: #5a2525;
+            color: white;
+            font-size: 22px;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .build-salva-excluir:hover {
+            background: #8b3030;
+        }
+
+        .kinsect-linha {
+            width: 100%;
+            padding: 12px 18px;
+            border: 1px solid transparent;
+            border-radius: 10px;
+            background: #20242b;
+            color: #dce4f0;
+            box-sizing: border-box;
+        }
+
+        .kinsect-linha .equipamento-icone {
+            width: 64px;
+            height: 64px;
+            min-width: 64px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 3px;
+            padding: 4px;
+            overflow: hidden;
+        }
+
+        .kinsect-linha .kinsect-emoji {
+            display: block;
+            font-size: 22px;
+            line-height: 1;
+        }
+
+        .kinsect-linha .equipamento-icone small {
+            display: block;
+            font-size: 9px;
+            line-height: 1.2;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .kinsect-linha .kinsect-conteudo {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .kinsect-botao-selecao {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            padding: 12px;
+            border: 1px solid #485363;
+            border-radius: 8px;
+            background: #20242b;
+            color: #e4e8ef;
+            cursor: pointer;
+            text-align: left;
+        }
+
+        .kinsect-botao-selecao:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .kinsect-botao-selecao .equipamento-seta {
+            color: #8ba9c9;
+            font-size: 24px;
+            margin-left: 12px;
+        }
+
     </style>
 
 </head>
@@ -1255,6 +1705,7 @@
 
         <div class="minhas-builds-acoes">
             <button
+                id="botao-minhas-builds"
                 type="button"
                 onclick="alternarMinhasBuilds()">
                 Ver minhas builds
@@ -1315,6 +1766,8 @@
             </button>
 
             <input type="hidden" name="arma_id" id="arma_id_input">
+
+            <div id="kinsect-container"></div>
 
             <button type="button"
                 class="equipamento-linha"
@@ -1516,7 +1969,6 @@
             </button>
             <input type="hidden" name="talisma_id" id="talisma_id_select">
 
-            <div id="kinsect-container"></div>
             <div id="arma-decoracoes-container"></div>
         </div>
     </form>

@@ -6,10 +6,13 @@
         data-raridade="{{ arma.raridade }}"
         data-ataque="{{ arma.ataque_display }}"
         data-afinidade="{{ arma.afinidade }}"
+        data-tipo="{{ arma.tipo }}"
         onclick="selecionarArma(
             this.dataset.id,
             this.dataset.nome,
-            this.querySelector('.arma-detalhes-selecao').innerHTML
+            this.querySelector('.arma-detalhes-selecao').innerHTML,
+            this.querySelector('.arma-imagem img')?.src || '',
+            this.dataset.tipo
         )"
     >
         <div class="arma-imagem">

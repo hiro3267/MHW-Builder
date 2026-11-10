@@ -1,4 +1,5 @@
 import json
+import sqlite3
 
 from app.database import conectar
 from app.models.build import Build
@@ -78,3 +79,12 @@ def obter_build(build_id: int) -> dict | None:
     )
 
     return resultado
+
+def excluir_build(build_id: int) -> bool:
+    with conectar() as conexao:
+        cursor = conexao.execute(
+            "DELETE FROM builds WHERE id = ?",
+            (build_id,),
+        )
+
+        return cursor.rowcount > 0

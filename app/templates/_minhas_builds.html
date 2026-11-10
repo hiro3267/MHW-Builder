@@ -12,6 +12,19 @@
                     carregarBuildSalva(this.dataset.buildId);
                 }"
             >
+                <button
+                    type="button"
+                    class="build-salva-excluir"
+                    title="Excluir build"
+                    aria-label="Excluir {{ build_salva.nome }}"
+                    hx-post="/minhas-builds/excluir/{{ build_salva.id }}"
+                    hx-target=".lista-minhas-builds"
+                    hx-swap="outerHTML"
+                    hx-confirm="Tem certeza de que deseja excluir a build '{{ build_salva.nome }}'?"
+                    onclick="event.stopPropagation()"
+                    onkeydown="event.stopPropagation()"
+                >×</button>
+
                 <div class="build-salva-imagem">
                     {% if build_salva.arma_imagem %}
                         <img

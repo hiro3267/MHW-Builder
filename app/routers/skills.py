@@ -15,3 +15,14 @@ def carregar_niveis_maximos() -> dict[str, int]:
         for skill in dados
         if skill.get("ranks")
     }
+
+@lru_cache
+def carregar_skills() -> dict[str, dict]:
+    with open(DATA_PATH, encoding="utf-8") as f:
+        dados = json.load(f)
+
+    return {
+        skill["name"]: skill
+        for skill in dados
+        if skill.get("ranks")
+    }

@@ -21,10 +21,33 @@
         <h4>Habilidades</h4>
 
         {% if habilidades is defined and habilidades %}
-            <ul>
+            <ul class="lista-habilidades">
                 {% for nome, dados in habilidades.items() %}
-                    <li>
-                        {{ nome }}: {{ dados.nivel }}/{{ dados.maximo }}
+                    <li class="habilidade-item">
+
+                        <span
+                            class="habilidade-com-tooltip"
+                            tabindex="0"
+                        >
+                            {{ nome }}: {{ dados.nivel }}/{{ dados.maximo }}
+
+                            <span class="tooltip-habilidade" role="tooltip">
+                                <strong>{{ nome }}</strong>
+
+                                {% if dados.descricao %}
+                                    <span>{{ dados.descricao }}</span>
+                                {% endif %}
+
+                                <strong>
+                                    Efeito no nível {{ dados.nivel }}
+                                </strong>
+
+                                <span>
+                                    {{ dados.efeito or 'Efeito não disponível.' }}
+                                </span>
+                            </span>
+                        </span>
+
                     </li>
                 {% endfor %}
             </ul>

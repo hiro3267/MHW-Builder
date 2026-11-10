@@ -1,17 +1,71 @@
-<div class="modal-overlay">
+
+<div class="modal-overlay"
+     onclick="if (event.target === this) this.remove()">
+
     <div class="modal-box">
+
         <div class="modal-cabecalho">
             <h2>Selecionar Talismã</h2>
 
             <button type="button"
-                    onclick="document.getElementById('modal-container').innerHTML = ''">
+                    onclick="this.closest('.modal-overlay').remove()">
                 ✕
             </button>
         </div>
 
-        <ul class="lista-armaduras">
+        <div class="filtros-equipamento">
+
+            <input
+                type="text"
+                id="busca-talisma"
+                placeholder="Pesquisar talismã..."
+                oninput="filtrarTalismasModal()"
+            >
+
+            <input
+                type="text"
+                id="busca-skill-talisma"
+                placeholder="Pesquisar habilidade..."
+                oninput="filtrarTalismasModal()"
+            >
+
+            <select
+                id="filtro-raridade-talisma"
+                onchange="filtrarTalismasModal()"
+            >
+                <option value="todos">Todas as raridades</option>
+            </select>
+
+            <select
+                id="filtro-nivel-talisma"
+                onchange="filtrarTalismasModal()"
+            >
+                <option value="todos">Todos os níveis</option>
+            </select>
+
+            <select
+                id="ordem-talisma"
+                onchange="ordenarTalismasModal()"
+            >
+                <option value="nome">Nome (A-Z)</option>
+                <option value="raridade-desc">Maior raridade</option>
+                <option value="raridade-asc">Menor raridade</option>
+                <option value="nivel-desc">Maior nível</option>
+                <option value="nivel-asc">Menor nível</option>
+            </select>
+
+        </div>
+
+        <ul class="lista-armaduras" id="lista-talismas-modal">
+
             {% for talisma in talismas %}
-                <li>
+                <li
+                    data-id="{{ talisma.id }}"
+                    data-nome="{{ talisma.nome | lower }}"
+                    data-raridade="{{ talisma.raridade }}"
+                    data-nivel="{{ talisma.nivel }}"
+                    data-skills="{{ talisma.skills | map(attribute='nome') | join('|') | lower }}"
+                >
                     <button
                         type="button"
                         onclick="selecionarTalisma(
@@ -19,9 +73,12 @@
                             this.dataset.nome
                         )"
                         data-nome="{{ talisma.nome }}"
-                        style="width: 100%; background: transparent;
-                               color: inherit; border: none;
-                               text-align: left; cursor: pointer;"
+                        style="width: 100%;
+                               background: transparent;
+                               color: inherit;
+                               border: none;
+                               text-align: left;
+                               cursor: pointer;"
                     >
                         <strong>{{ talisma.nome }}</strong>
                         (raridade {{ talisma.raridade }})
@@ -34,9 +91,12 @@
                         {% endif %}
                     </button>
                 </li>
+
             {% else %}
                 <li>Nenhum talismã cadastrado ainda.</li>
             {% endfor %}
+
         </ul>
+
     </div>
 </div>

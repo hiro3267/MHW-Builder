@@ -1,0 +1,148 @@
+<div class="modal-overlay" onclick="if (event.target === this) this.remove()">
+    <div class="modal-armaduras">
+        <h2>Selecionar Kinsect</h2>
+
+        <div class="filtros-kinsects">
+            <input
+                type="text"
+                id="busca-kinsect"
+                placeholder="Buscar Kinsect por nome..."
+                oninput="filtrarKinsects()"
+            >
+
+            <select id="filtro-tipo-ataque" onchange="filtrarKinsects()">
+                <option value="">Todos os tipos de ataque</option>
+                {% for tipo in tipos_ataque %}
+                <option value="{{ tipo }}">{{ tipo }}</option>
+                {% endfor %}
+            </select>
+
+            <select id="filtro-efeito-poeira" onchange="filtrarKinsects()">
+                <option value="">Todos os efeitos de poeira</option>
+                {% for efeito in efeitos_poeira %}
+                <option value="{{ efeito }}">{{ efeito }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <ul class="lista-armaduras lista-kinsects" id="lista-kinsects">
+            {% for kinsect in kinsects %}
+            <li
+                class="kinsect-item"
+                data-nome="{{ kinsect.nome | lower }}"
+                data-tipo-ataque="{{ kinsect.tipo_ataque | lower }}"
+                data-efeito-poeira="{{ kinsect.efeito_poeira | lower }}"
+                onclick="selecionarKinsect(
+                    '{{ kinsect.id }}',
+                    '{{ kinsect.nome | e }}'
+                )"
+            >
+                <strong>{{ kinsect.nome }}</strong>
+                <p>Linhagem: {{ kinsect.linhagem }}</p>
+                <p>Ataque: {{ kinsect.tipo_ataque }}</p>
+                <p>Efeito de poeira: {{ kinsect.efeito_poeira }}</p>
+                <p>Elemento: {{ kinsect.nivel_elemento }}</p>
+                <p>Poder: {{ kinsect.nivel_poder }}</p>
+                <p>Velocidade: {{ kinsect.nivel_velocidade }}</p>
+                <p>Cura: {{ kinsect.nivel_cura }}</p>
+            </li>
+            {% else %}
+            <li>Nenhum kinsect cadastrado ainda.</li>
+            {% endfor %}
+        </ul>
+
+        <p id="nenhum-kinsect-encontrado" hidden>
+            Nenhum Kinsect corresponde aos filtros.
+        </p>
+    </div>
+</div>
+
+<script>
+function filtrarKinsects() {
+    const busca = document
+        .getElementById("busca-kinsect")
+        .value
+        .trim()
+        .toLocaleLowerCase();
+
+    const tipoAtaque = document
+        .getElementById("filtro-tipo-ataque")
+        .value
+        .toLocaleLowerCase();
+
+    const efeitoPoeira = document
+        .getElementById("filtro-efeito-poeira")
+        .value
+        .toLocaleLowerCase();
+
+    const itens = document.querySelectorAll(
+        "#lista-kinsects .kinsect-item"
+    );
+
+    let encontrados = 0;
+
+    itens.forEach(item => {
+        const nome = item.dataset.nome;
+        const tipo = item.dataset.tipoAtaque;
+        const efeito = item.dataset.efeitoPoeira;
+
+        const correspondeNome = nome.includes(busca);
+        const correspondeTipo = !tipoAtaque || tipo === tipoAtaque;
+        const correspondeEfeito = !efeitoPoeira || efeito === efeitoPoeira;
+
+        const mostrar =
+            correspondeNome &&
+            correspondeTipo &&
+            correspondeEfeito;
+
+        item.hidden = !mostrar;
+
+        if (mostrar) {
+            encontrados++;
+        }
+    });
+
+    const mensagem = document.getElementById(
+        "nenhum-kinsect-encontrado"
+    );
+
+    mensagem.hidden = encontrados > 0;
+}
+</script>
+
+<style>
+.filtros-kinsects {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 16px 0;
+}
+
+.filtros-kinsects input,
+.filtros-kinsects select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 12px;
+    border: 1px solid #485363;
+    border-radius: 8px;
+    background: #20242b;
+    color: #e4e8ef;
+    font-size: 14px;
+}
+
+.filtros-kinsects input:focus,
+.filtros-kinsects select:focus {
+    outline: 2px solid #899fbd;
+    outline-offset: 1px;
+}
+
+.kinsect-item[hidden] {
+    display: none !important;
+}
+
+#nenhum-kinsect-encontrado {
+    color: #b8c1ce;
+    text-align: center;
+    padding: 16px;
+}
+</style>

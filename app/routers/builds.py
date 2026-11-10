@@ -12,11 +12,12 @@ from app.routers.armaduras import carregar_armaduras
 from app.routers.kinsects import carregar_kinsects
 from app.routers.talismas import carregar_talismas
 from app.routers.decoracoes import carregar_decoracoes
-from app.routers.skills import carregar_niveis_maximos
+from app.routers.skills import (carregar_niveis_maximos, carregar_skills)
 from app.services.builds_service import (
     salvar_build,
     listar_builds,
     obter_build,
+    excluir_build,
 )
 
 
@@ -124,6 +125,31 @@ def kinsect_select(
         context={"kinsects": carregar_kinsects()},
     )
 
+@router.get("/kinsect-modal", response_class=HTMLResponse)
+def kinsect_modal(request: Request):
+    kinsects = carregar_kinsects()
+
+    tipos_ataque = sorted({
+        kinsect.tipo_ataque
+        for kinsect in kinsects
+        if kinsect.tipo_ataque
+    })
+
+    efeitos_poeira = sorted({
+        kinsect.efeito_poeira
+        for kinsect in kinsects
+        if kinsect.efeito_poeira
+    })
+
+    return templates.TemplateResponse(
+        request=request,
+        name="_kinsect_modal.html",
+        context={
+            "kinsects": kinsects,
+            "tipos_ataque": tipos_ataque,
+            "efeitos_poeira": efeitos_poeira,
+        },
+    )
 
 @router.get("/decoracoes-select/{campo}/{item_id}")
 def decoracoes_select(
@@ -201,6 +227,21 @@ def obter_build_salva(build_id: int):
         "dados": registro["dados"].model_dump(),
     }
 
+@router.post("/minhas-builds/excluir/{build_id}", response_class=HTMLResponse)
+def excluir_build_salva(request: Request, build_id: int):
+    excluida = excluir_build(build_id)
+
+    if not excluida:
+        return HTMLResponse(
+            "Build não encontrada.",
+            status_code=404,
+        )
+
+    return templates.TemplateResponse(
+        request=request,
+        name="_minhas_builds.html",
+        context={"builds_salvas": listar_builds()},
+    )
 
 @router.get("/minhas-builds/{build_id}")
 def carregar_build_salva(build_id: int):
@@ -425,6 +466,7 @@ def montar_build(
     }
 
     niveis_maximos = carregar_niveis_maximos()
+    skills_detalhes = carregar_skills()
     habilidades_totais = {}
 
     for armadura in pecas:
@@ -472,9 +514,33 @@ def montar_build(
 
     for nome, nivel in habilidades_totais.items():
         maximo = niveis_maximos.get(nome, nivel)
+        nivel_atual = min(nivel, maximo)
+
+        skill_info = skills_detalhes.get(nome)
+
+        efeito = None
+        descricao = None
+
+        if skill_info:
+            descricao = skill_info.get("description")
+
+            rank_atual = next(
+                (
+                    rank
+                    for rank in skill_info.get("ranks", [])
+                    if rank["level"] == nivel_atual
+                ),
+                None,
+            )
+
+            if rank_atual:
+                efeito = rank_atual.get("description")
+
         habilidades[nome] = {
             "nivel": min(nivel, maximo),
             "maximo": maximo,
+            "descricao": descricao,
+            "efeito": efeito,
         }
 
     context = {
